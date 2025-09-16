@@ -1,0 +1,24 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,432;1,432&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.roboto-tmp {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 432;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.sansation-light {
+  font-family: "Sansation", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body, html {
+    font-family: "Roboto";
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 20vh;
+}
