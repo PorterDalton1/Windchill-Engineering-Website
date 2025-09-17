@@ -4,6 +4,9 @@
     color: white;
     padding: 12px;
     padding-left: 23px;
+    position: fixed;
+    width: 100%;
+    z-index: 150;
 }
 
 #top_header a {
@@ -26,12 +29,8 @@
 
 #site_header {
     display: flex;
-    height: 100px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    flex-direction: column;
+    border-bottom: 1px solid lightgrey;
 }
 
 #site_header i.nf-fa-navicon, #nav_icons .nf {
@@ -43,18 +42,29 @@
     display: none;
 }
 
+#main_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    margin-top: 35px;
+
+}
+
 #windchill_logo {
-    height: 80px;
+    height: 60px;
     margin-left: 30px;
 }
 
 #nav_tabs {
     display: flex;
-    font-size: 25px;
+    font-size: 15px;
+    border-top: 1px solid lightgrey;
     color: #525252;
     align-items: center;
-    height: 100%;
     position: relative;
+    background-color: #ececec;
+    height: 35px;
 }
 
 
@@ -70,13 +80,8 @@
 }
 
 #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
-    background-color: #e9e9e9;
+    background-color: #d1d1d1;
     cursor: pointer;
-}
-
-.uicon {
-    height: 35px;
-    width: 35px;
 }
 
 .dropdown_content {
@@ -85,8 +90,7 @@
     /*display: none;*/
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     flex-direction: column;
     width: max-content;
     min-width: 300px;
@@ -105,7 +109,6 @@
 }
 
 .dropdown_content .option {
-    font-size: 25px;
     padding-left: 20px;
     padding-right: 20px;
     height: 70px;
@@ -125,7 +128,7 @@
 }
 
 .dropdown_content .option:hover {
-    background-color: #edefff;
+    background-color: #bfd0df;
     color: black;
 }
 
@@ -147,8 +150,8 @@
 }
 
 .tab_clicked {
-    background-color: #e9e9e9;
-    outline: 2px solid #97005E;
+    background-color: #d1d1d1;
+    outline: 2px dotted #97005E;
     z-index: 10;
     color: black;
 }

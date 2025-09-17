@@ -1,5 +1,4 @@
-const logofiles = ["Amazon_2024.svg", "AMD_Logo.svg", "BP_Helios_logo.svg", "Brigham_Young_University_medallion.svg", "Fibernet_Corp._logo.svg", "Google_2015_logo.svg", "IBM_logo.svg", "Intermountain_Health_2023_logo.svg", "Mark_of_the_United_States_Army.svg", "Microsoft_logo_(2012).svg", "NASA_logo.svg", "Nokia_2023.svg", "Oracle_logo.svg", "Roblox_Logo_2022.svg", "Seal_of_the_U.S._National_Security_Agency.svg", "Seal_of_the_United_States_National_Guard.svg", "Seal_of_the_United_States_Space_Force.svg", "SymbolofLatter-daySaintchurch.png", "US_Air_Force_Logo_Solid_Colour.svg", "Wells_Fargo_Logo_(2020).svg", "Xerox_logo.svg"]
-
+const logofiles = ["Amazon_2024.svg", "AMD_Logo.svg", "BP_Helios_logo.svg", "Brigham_Young_University_medallion.svg", "Seal_of_the_United_States_Environmental_Protection_Agency.svg","Fibernet_Corp._logo.svg", "Google_2015_logo.svg", "IBM_logo.svg", "Intermountain_Health_2023_logo.svg", "Mark_of_the_United_States_Army.svg", "Microsoft_logo_(2012).svg", "NASA_logo.svg", "Nokia_2023.svg", "Oracle_logo.svg", "Roblox_Logo_2022.svg", "Seal_of_the_U.S._National_Security_Agency.svg", "Seal_of_the_United_States_National_Guard.svg", "Seal_of_the_United_States_Space_Force.svg", "SymbolofLatter-daySaintchurch.png", "US_Air_Force_Logo_Solid_Colour.svg", "Wells_Fargo_Logo_(2020).svg", "Xerox_logo.svg"]
 $(document).ready(function () {
     const area = 180**2;
     const dirPath = './img/partners/'
@@ -32,6 +31,6 @@ $(document).ready(function () {
 
 function right() {
     const container = document.getElementById('client_list');
-    container.scrollBy({ left: 2, behavior: 'smooth' });
+    container.scrollBy({ left: 1, behavior: 'smooth' });
 
 }
