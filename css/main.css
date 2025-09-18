@@ -17,8 +17,10 @@
 }
 
 body, html {
-    font-family: "Roboto";
+    font-family: "Sansation", sans-serif;
+
     margin: 0px;
     padding: 0px;
     padding-bottom: 20vh;
+    font-size: 100%;
 }
