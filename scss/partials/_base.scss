@@ -1,0 +1,35 @@
+@mixin textStyle($h3-color: #5b5b5b, $h2-color: #0062B8, $p-color: #5b5b5b) {
+    h3 {
+        color: $h3-color;
+        text-transform: uppercase;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 1.17em;
+        margin-bottom: .2em;
+        font-weight: 600;
+    }
+
+    h2 {
+        color: $h2-color;
+        text-transform: uppercase;
+        font-size: 2em;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-weight: 800;
+    }
+
+    p {
+        color: $p-color;
+        line-height: 1.5;
+        font-size: 1.1em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+    }
+}
+
+@mixin sectionDefs {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 10%;
+    padding-right: 10%;
+}

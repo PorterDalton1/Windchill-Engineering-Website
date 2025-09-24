@@ -1,7 +1,7 @@
 fetch('./partials/header.html')
 .then(r => r.text())
 .then(html => {
-    const header = document.createElement('div');
+    const header = document.createElement('header');
     header.id = 'main_header';
     const body = document.body;
     if (body.firstChild) {

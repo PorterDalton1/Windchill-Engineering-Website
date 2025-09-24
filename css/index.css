@@ -6,6 +6,7 @@
 .heading .content_heading {
   height: 550px;
   flex: 45;
+  order: 2;
 }
 .heading .content_heading video, .heading .content_heading img {
   width: 100%;
@@ -15,6 +16,7 @@
   display: block;
 }
 .heading > div:not(.content_heading) {
+  order: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,10 +55,20 @@
 .heading .text_heading .button_flex button {
   font-size: 1.05em;
   font-weight: 600;
-  background: none;
+  background-color: #0062b8;
+  color: white;
   border: 1px solid #0062b8;
   outline: none;
-  padding: 0.7em;
+  padding: 1em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
+}
+.heading .text_heading .button_flex button:hover {
+  color: #0062b8;
+  background-color: white;
 }
 
 @media (max-width: 1100px) {
@@ -107,7 +119,6 @@
   cursor: pointer;
   transition-duration: 0.5s;
   transition-property: background-color, color, width;
-  width: 19.75ch;
 }
 #contact_button:hover, #learn_button:hover {
   width: 21ch;
@@ -407,6 +418,4 @@ div.arrow {
     gap: 0.1%;
     animation: 80s linear 0s slide infinite;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

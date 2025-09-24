@@ -1,4 +1,4 @@
-@use "main-heading";
+@use "partials/main-heading";
 
 $windchill-blue: #0062b8;
 
@@ -26,7 +26,6 @@ $windchill-blue: #0062b8;
     cursor: pointer;
     transition-duration: .5s;
     transition-property: background-color, color, width;
-    width: 19.75ch;
 
     &:hover {
         width: 21ch;

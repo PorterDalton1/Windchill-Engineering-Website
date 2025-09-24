@@ -1,6 +1,76 @@
-@use "main-heading";
+$windchill-yellow: #ffa200;
+$windchill-yellow-light: #F4B860;
+@use "partials/main-heading" with (
+    $color-main: $windchill-yellow
+);
+
+@use "partials/base";
+
 
 .content_heading {
     background: #ffebc9;
     background: radial-gradient(circle,rgba(255, 235, 201, 1) 0%, rgba(244, 184, 96, 1) 100%);
+}
+
+
+#rigid_second {
+    @include base.textStyle($h3-color: white, $h2-color: $windchill-yellow-light, $p-color: white);
+    @include base.sectionDefs();
+    background-color: grey;
+
+    > div {
+        display: flex;
+        gap: 20px;
+    }
+
+    .RW_card {
+        text-align: left;
+        width: 300px;
+        border: 6px solid lightgray;
+        position : relative;
+
+        h5 {
+            margin: 0;
+            padding-top: 1em;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            background-color: #0062B8;
+            color: white;
+            margin: 0;
+            padding: .4em;
+            padding-right: 2em;
+            padding-left: 2em;
+            position: absolute;
+            top:0;
+            left: 0;
+            margin-top: -6px;
+            margin-left: -6px;
+            border-bottom-right-radius: 10px;
+
+            &.app {
+                background-color: #97005E;
+            }
+        }
+        
+        h3 {
+            margin: 0;
+            color: $windchill-yellow-light;
+        }
+
+        /* forgive me for this style */
+        >*:not(div):not(h4) {
+            margin: .5rem;
+        }
+
+        div {
+            width: 100%;
+            background-color: grey;
+
+            img {
+                height: 215px;
+            }
+        }
+    }
 }

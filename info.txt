@@ -21,7 +21,10 @@ Industrial Green
 #75B09C
 
 Racecar Yellow
-#F4B860 
+#F4B860
+
+Orange Yellow
+#ffa200
 --------------------------------------------------------------
 
 Others Used
