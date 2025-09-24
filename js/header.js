@@ -1,7 +1,9 @@
 function headerEvents() {
     console.log('loaded');
-    $('#nav_tabs > div').on('click', function (e) {
 
+    $('#windchill_logo').on('click', () => location.href = './index.html');
+
+    $('#nav_tabs > div').on('click', function (e) {
         if ($(e.target).closest('.dropdown_content').length) {
             return;
         }

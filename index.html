@@ -13,29 +13,33 @@
     <script src="./js/includeHeader.js"></script>
 </head>
 <body>
-    <div id="first_content">
-        <div class="center_child">
-            <div id="first_left_content">
-                <div id="main_quote" class="sansation-light">Understand the <br><span>WindChill Advantage</span></div>
-                <div id="sub_quote">We are committed to working with our clients to create and maintain the best solutions in the industry.</div>
-                <div id="learn_buttons">
+    <div id="first_content" class="heading">
+        <div>
+            <div class="text_heading">
+                <h2>Understand the <br><span>WindChill Advantage</span></h2>
+                <p>We are committed to working with our clients to create and maintain the best solutions in the industry.</p>
+                <div class="button_flex">
                     <button id="contact_button" class="sansation-light">
                         <div>    
                             Contact Us to Get Started
                         </div>
-                        <i class="nf nf-cod-arrow_right"></i>
+                        <div class="arrow">
+                            <i class="nf nf-cod-arrow_right"></i>
+                        </div>
                     </button>
     
                     <button id="learn_button" class="sansation-light">
                         <div>    
                             How We Make a Difference
                         </div>
-                        <i class="nf nf-cod-arrow_right"></i>
+                        <div class="arrow">
+                            <i class="nf nf-cod-arrow_right"></i>
+                        </div>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="video_div">
+        <div class="content_heading">
             <video autoplay loop muted id="data_center_video">
                 <source src="./video/data_center_video.mp4">
             </video>
@@ -43,9 +47,12 @@
     </div>
 
     <div id="second_content">
-        <h2>Our Products Are Trusted and used by:</h2>
-        <div id="client_list">
-    
+        <h2>Trusted Across The Industry</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, optio!</h3>
+        <div id="spacing_client_list">
+            <div id="client_list">
+        
+            </div>
         </div>
     </div>
 
@@ -115,7 +122,7 @@
         </div>
     </div>
     <div id="third_content">
-        <div class="image_crop_box" id="third_content_background">
+        <div class="back_image" id="third_content_background">
             <img src="./img/Background.svg">
         </div>
         <h3 id="third_content_h3">LEARN</h3>
@@ -159,10 +166,11 @@
                 </p>
             </div>
         </div>
-        <div class="image_crop_box" id="third_content_background2">
+        <div class="back_image" id="third_content_background2">
             <img src="./img/Background.svg">
         </div>
     </div>
+    <!---
     <div id="fourth_content">
         <h2>Examples of <span>Our Products</span></h2>
         <div id="cards_flex">
@@ -204,7 +212,8 @@
             </div>
         </div>
     </div>
-
+    --->
+    
     <script src="./js/index.js"></script>
 </body>
 </html> 

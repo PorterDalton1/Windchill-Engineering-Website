@@ -1,3 +1,7 @@
+#top_header, #site_header, #nav_tabs {
+    z-index: 2;
+}
+
 #top_header {
     background: #0062B8;
     background: linear-gradient(332deg,rgba(0, 98, 184, 1) 0%, rgba(45, 171, 227, 1) 100%);
@@ -29,8 +33,10 @@
 
 #site_header {
     display: flex;
+    position: relative;
     flex-direction: column;
     border-bottom: 1px solid lightgrey;
+    background-color: white;
 }
 
 #site_header i.nf-fa-navicon, #nav_icons .nf {
@@ -54,6 +60,7 @@
 #windchill_logo {
     height: 60px;
     margin-left: 30px;
+    cursor: pointer;
 }
 
 #nav_tabs {

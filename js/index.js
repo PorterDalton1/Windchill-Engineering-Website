@@ -9,28 +9,18 @@ $(document).ready(function () {
         });
 
         $img.on('load', function () {
-            const screenSize = 1800;
+            const screenSize = 1280;
             const imageWidth = this.naturalWidth;
             const imageHeight = this.naturalHeight;
             const ratio = imageHeight / imageWidth;
 
             let newWidth = Math.sqrt(area/ratio);
 
-            newWidth = newWidth / screenSize * 100;
+            //newWidth = newWidth / screenSize * 100;
 
-
-            $(this).css('width', newWidth  + 'vw');
+            $(this).css('width', newWidth  + 'px');
             console.log(newWidth + ' - ' + i);
             $('#client_list').append($(this));
         });
     }
-    window.setInterval(() => {
-        right();
-    }, 1000 / 60);
 });
-
-function right() {
-    const container = document.getElementById('client_list');
-    container.scrollBy({ left: 1, behavior: 'smooth' });
-
-}
