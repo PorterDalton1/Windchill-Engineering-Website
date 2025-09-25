@@ -1,4 +1,4 @@
-fetch('./partials/header.html')
+fetch('/partials/header.html')
 .then(r => r.text())
 .then(html => {
     const header = document.createElement('header');

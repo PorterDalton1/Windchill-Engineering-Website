@@ -1,0 +1,65 @@
+$windchill-blue: #0062B8;
+
+@mixin footerStyle($background-color) {
+    footer {
+        background-color: $background-color;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 7%;
+        
+        #footer_center {
+            width: min-content;
+            font-size: 1.1rem;
+            & > div {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: .5rem;
+
+                & > div {
+                    font-weight: 600;
+                }
+
+                span {
+                    display: flex;
+                    gap: .5rem;
+                }
+
+                .nf {
+                    font-size: 1.2rem;
+                }
+            }
+            
+            img#footer_logo {
+                background-color: white;
+                height: 100px;
+                padding: 15px;
+                border-radius: 15px;
+            }
+        }
+
+        #web_map_links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            a {
+                font-size: 1.1rem;
+                color: black;
+                font-weight: 800;
+                cursor: pointer;
+                
+            }
+        }
+
+        #info_footer {
+            #info_address {
+                font-size: 1.1rem;
+                display: flex;
+                flex-direction: column;
+                gap: .3em;
+            }
+        }
+    }
+}

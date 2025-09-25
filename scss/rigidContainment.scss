@@ -1,11 +1,12 @@
 $windchill-yellow: #ffa200;
 $windchill-yellow-light: #F4B860;
+@use "partials/header";
 @use "partials/main-heading" with (
     $color-main: $windchill-yellow
 );
 
 @use "partials/base";
-
+@use "partials/footer";
 
 .content_heading {
     background: #ffebc9;
@@ -18,7 +19,7 @@ $windchill-yellow-light: #F4B860;
     @include base.sectionDefs();
     background-color: grey;
 
-    > div {
+    & > div {
         display: flex;
         gap: 20px;
     }
@@ -60,7 +61,7 @@ $windchill-yellow-light: #F4B860;
         }
 
         /* forgive me for this style */
-        >*:not(div):not(h4) {
+        & > *:not(div):not(h4) {
             margin: .5rem;
         }
 
@@ -74,3 +75,5 @@ $windchill-yellow-light: #F4B860;
         }
     }
 }
+
+@include footer.footerStyle(#dbdbdb);

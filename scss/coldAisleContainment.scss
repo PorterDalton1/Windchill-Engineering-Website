@@ -1,3 +1,5 @@
+@use "partials/header";
+
 @use "partials/main-heading" with (
     $color-main: #2DABE3,
     $default-order: false

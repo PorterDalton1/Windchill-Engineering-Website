@@ -23,4 +23,9 @@ $(document).ready(function () {
             $('#client_list').append($(this));
         });
     }
+
 });
+
+function setWebPageName() {
+    $('#webpage_title').html('Home');
+}
