@@ -19,7 +19,7 @@ $(document).ready(function () {
             //newWidth = newWidth / screenSize * 100;
 
             $(this).css('width', newWidth  + 'px');
-            console.log(newWidth + ' - ' + i);
+            //console.log(newWidth + ' - ' + i);
             $('#client_list').append($(this));
         });
     }
