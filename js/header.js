@@ -1,8 +1,9 @@
 function removeMobileNav() {
-    $('body').removeClass('no_overflow');
+    $('body, html').removeClass('no_overflow');
     $('.mobile_nav').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
         $('.mobile_nav').remove();
     });
+    
     $('.mobile_nav').removeClass('is_visible');
 }
 
@@ -25,34 +26,8 @@ function headerEvents() {
         $mobileNav.addClass('mobile_nav');
 
         $mobileNav.prepend($mobileButtons);
-        
 
-        /*
-        $('.mobile_nav > div').on('click', function (e) {
-            if ($(e.target).closest('.dropdown_content').length) {
-                return;
-            }
-
-            if ($(this).hasClass('tab_clicked')) {
-                $(this).removeClass('tab_clicked');
-                $(this).children('.dropdown_content').removeClass('show_dropdown');
-                e.stopPropagation();
-            } else {
-                $('#nav_tabs > div').removeClass('tab_clicked');
-                $('#nav_tabs > div').children('.dropdown_content').removeClass('show_dropdown');
-                $(this).addClass('tab_clicked');
-                $(this).children('.dropdown_content').addClass('show_dropdown');
-                e.stopPropagation();
-            }
-
-            $(document).on('click', function () {
-                $('#nav_tabs > div').removeClass('tab_clicked');
-                $('#nav_tabs > div').children('.dropdown_content').removeClass('show_dropdown');
-            });
-        });
-        */
-
-        $('body').addClass('no_overflow');
+        $('body, html').addClass('no_overflow');
 
         $mobileNav.addClass('slide_in');
         $('nav').after($mobileNav);
@@ -63,17 +38,41 @@ function headerEvents() {
 
         const screenHeight = document.documentElement.clientHeight;
 
-        //const vhToPxMargin= (4 * screenHeight) / 100 / 2;
-        const elemHeight = screenHeight - fromTop -1;
-
-        console.log(fromTop);
-        console.log(screenHeight);
+        const elemHeight = screenHeight - fromTop;
 
         $mobileNav.css('height', elemHeight);
 
-        $('#x_button_mobile').on('click', function () {
-            removeMobileNav();
+        $('.mobile_nav > div:not(.mobile_buttons)').on('click', function () {
+            $content = $(this).find('.dropdown_content');
+            
+            if ($(this).hasClass('open_mobile_nav')) {
+                $('.open_mobile_nav').removeClass('open_mobile_nav');
+                return;
+            }
+
+            $('.open_mobile_nav').removeClass('open_mobile_nav');
+
+            $(this).addClass('open_mobile_nav');
         });
+
+        $('.mobile_nav i.nf, .mobile_nav span').on('mouseenter', function () {
+            $(this).parent().addClass('hover_mobile_category');
+        })
+        .on('mouseleave', function () {
+            $(this).parent().removeClass('hover_mobile_category')
+        });
+        
+
+
+        const mediaQuery = window.matchMedia("(min-width: 750px)");
+        function handleScreenChange(e) {
+            if (e.matches) {
+                removeMobileNav();
+            }
+        }
+        handleScreenChange(mediaQuery);
+        mediaQuery.addEventListener("change", handleScreenChange);
+
     }); 
 
     $('#nav_tabs > div').on('click', function (e) {

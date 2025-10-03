@@ -69,8 +69,7 @@ $default-order: true !default;
         .button_flex {
             display: flex;
             justify-content: space-between;
-            max-width: 30em;
-            width: 100%;
+            width: 90%;
             font-family: "Sansation", sans-serif;
 
             button {
@@ -87,6 +86,7 @@ $default-order: true !default;
                 transition-property: color, background-color;
                 transition-duration: .5s;
 
+                font-family: "Sansation", sans-serif;
                 &:hover {
                     color: $color-main;
                     background-color: white;
@@ -106,6 +106,8 @@ $default-order: true !default;
     }
 
     .heading > div:not(.content_heading) {
+        margin-top: 3em;
+        margin-bottom: 3em;
         order: 1;
     }
 
@@ -114,15 +116,24 @@ $default-order: true !default;
     }
 
     .heading > .content_heading {
-        width: 90%;
+        width: 100%;
         height: 60%;
     }
 }
 
 @media (max-width: 650px) {
+
+    .heading {
+        justify-content: center;
+    }
+
     .heading .button_flex {
         flex-direction: column;
         gap: 1.5em;
         width: 100%;
+    }
+
+    .heading h2 {
+        font-size: 2.2em !important;
     }
 }

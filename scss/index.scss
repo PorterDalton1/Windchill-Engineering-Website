@@ -1,15 +1,17 @@
 @use "partials/main-heading";
+@use "partials/base";
 @use "partials/header";
 
 $windchill-blue: #0062b8;
+$raspberry-blue: #2DABE3;
 
 #contact_button {
     background: $windchill-blue;
     color: white;
 
     &:hover {
-        background-color: white;
-        color: $windchill-blue;
+        background-color: #2DABE3;
+        border-color: $raspberry-blue;
     }
 }
 
@@ -18,25 +20,15 @@ $windchill-blue: #0062b8;
     color: $windchill-blue;
 
     &:hover {
-        background-color: $windchill-blue;
+        background-color: $raspberry-blue;
+        border-color: $raspberry-blue;
         color: white;
     }
 }
 
-#contact_button, #learn_button {
-    cursor: pointer;
-    transition-duration: .5s;
-    transition-property: background-color, color, width;
-
-    &:hover {
-        width: 21ch;
-    }
-}
 
 div.arrow {
     text-align: center;
-    padding-top: .2em;
-    padding-bottom: .2em;
 
 }
 
@@ -231,64 +223,7 @@ div.arrow {
 
 
     #third_cards_flex {
-        display: flex;
-        justify-content: space-between;
-        row-gap: 40px;
-        width: 80%;
-        margin-left: 10%;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        padding-bottom: 170px;
-        
-        .card {
-            width: 350px;
-            min-height: 450px;
-            height: auto;
-            border: 2px solid lightgray;
-            background-color: lightgray;
-            cursor: pointer;
-            transform: scale(1);
-            transition: transform 0.5s ease;
-            
-            &:hover {
-                transform: scale(1.08);
-            }
-
-            .image_crop_box {
-                width: 100%;
-                height: 248px;
-                overflow: hidden;
-                position: relative;
-                background-color: white;
-                object-fit: cover;
-                outline: 1px solid lightgray;
-
-                img {
-                    width: 100%;
-                    height: 248px;
-                    object-fit: cover;
-                    object-position: center;
-                    display: block;
-                }
-            }
-
-
-            h3 {
-                font-size: 1.15em;
-                font-weight: 800;
-                color: $windchill-blue;
-                text-transform: uppercase;
-                padding: .5em;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            
-            p {
-                font-size: 1em;
-                padding: .5em;
-                line-height: 1.5;
-            }
-        }
+        @include base.cardsFlex($h3-color: $windchill-blue);
     }
 }
 
