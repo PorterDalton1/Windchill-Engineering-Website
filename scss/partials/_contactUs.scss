@@ -1,0 +1,28 @@
+@use "base";
+
+#contact_us_section {
+    @include base.textStyle;
+    
+    object-fit: cover;
+    height: 600px;
+    
+    .image_crop_background {
+        position: absolute;
+        overflow: hidden;
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        z-index: -1;
+        height: 600px;
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+    }
+
+    h2, p {
+        text-align: center;
+    }
+}

@@ -6,6 +6,7 @@ $windchill-yellow-light: #F4B860;
 );
 
 @use "partials/base";
+@use "partials/contactUs.scss";
 @use "partials/footer";
 
 .content_heading {
@@ -76,4 +77,4 @@ $windchill-yellow-light: #F4B860;
     }
 }
 
-@include footer.footerStyle(#dbdbdb);
+@include footer.footerStyle;
