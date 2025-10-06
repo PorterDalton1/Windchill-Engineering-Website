@@ -1,3 +1,5 @@
+@use "base";
+
 $windchill-blue: #0062B8;
 
 @mixin footerStyle($background-color: rgb(231, 231, 231)) {
@@ -49,7 +51,7 @@ $windchill-blue: #0062B8;
             column-gap: 1rem;
             grid-template-columns: 1fr 1fr;
             a {
-                color: #5B5B5B;
+                color: base.$mainDark;
                 font-weight: 400;
                 text-decoration: underline;
                 cursor: pointer;
@@ -68,7 +70,7 @@ $windchill-blue: #0062B8;
             padding-top: .5rem;
             padding-bottom: .5rem;
             border-top: 2px solid rgb(202, 202, 202);
-            color: #8f8f8f;
+            color: base.$mainDark;
             display: flex;
             justify-content: center;
             gap: 1ch;

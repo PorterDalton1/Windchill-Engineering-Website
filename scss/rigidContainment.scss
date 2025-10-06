@@ -1,11 +1,9 @@
-$windchill-yellow: #ffa200;
-$windchill-yellow-light: #F4B860;
+@use "partials/base";
 @use "partials/header";
 @use "partials/main-heading" with (
-    $color-main: $windchill-yellow
+    $color-main: base.$windchillYellow
 );
 
-@use "partials/base";
 @use "partials/contactUs.scss";
 @use "partials/footer";
 
@@ -16,7 +14,7 @@ $windchill-yellow-light: #F4B860;
 
 
 #rigid_second {
-    @include base.textStyle($h3-color: white, $h2-color: $windchill-yellow-light, $p-color: white);
+    @include base.textStyle($h3-color: white, $h2-color: base.$windchillYellowLight, $p-color: white);
     @include base.sectionDefs();
     background-color: grey;
 
@@ -38,7 +36,7 @@ $windchill-yellow-light: #F4B860;
         }
 
         h4 {
-            background-color: #0062B8;
+            background-color: base.$windchillBlue;
             color: white;
             margin: 0;
             padding: .4em;
@@ -52,13 +50,13 @@ $windchill-yellow-light: #F4B860;
             border-bottom-right-radius: 10px;
 
             &.app {
-                background-color: #97005E;
+                background-color: base.$windchillPurple;
             }
         }
         
         h3 {
             margin: 0;
-            color: $windchill-yellow-light;
+            color: base.$windchillYellowLight;
         }
 
         /* forgive me for this style */

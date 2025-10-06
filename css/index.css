@@ -1,3 +1,5 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,432;1,432&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 .heading {
   display: flex;
   align-items: center;
@@ -35,7 +37,7 @@
 }
 .heading .text_heading h2 span {
   font-weight: 600;
-  color: #0062b8;
+  color: #0062B8;
 }
 .heading .text_heading p {
   margin-top: 0.5em;
@@ -54,9 +56,9 @@
 .heading .text_heading .button_flex button {
   font-size: 1.05em;
   font-weight: 600;
-  background-color: #0062b8;
+  background-color: #0062B8;
   color: white;
-  border: 1px solid #0062b8;
+  border: 1px solid #0062B8;
   outline: none;
   padding: 1em;
   padding-left: 1.5em;
@@ -67,7 +69,7 @@
   font-family: "Sansation", sans-serif;
 }
 .heading .text_heading .button_flex button:hover {
-  color: #0062b8;
+  color: #0062B8;
   background-color: white;
 }
 
@@ -112,7 +114,7 @@ header {
 }
 header #top_header {
   background: #0062B8;
-  background: linear-gradient(332deg, rgb(0, 98, 184) 0%, rgb(45, 171, 227) 100%);
+  background: linear-gradient(332deg, #0062B8 0%, #2DABE3 100%);
   color: white;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
@@ -241,7 +243,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   margin-top: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   outline: 1px solid lightgrey;
-  color: #525252;
+  color: #5b5b5b;
   flex-shrink: 0;
   flex-grow: 0;
   overflow: hidden;
@@ -255,7 +257,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   display: flex !important;
 }
 #main_header #nav_tabs .dropdown_content a {
-  color: #525252;
+  color: #5b5b5b;
   text-decoration: none;
 }
 #main_header .option {
@@ -304,7 +306,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   color: white;
 }
 #nav_icons a:first-child:hover, .mobile_buttons a:first-child:hover {
-  background-color: #00aeff;
+  background-color: #2DABE3;
 }
 #nav_icons a:last-child, .mobile_buttons a:last-child {
   background-color: white;
@@ -502,8 +504,30 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   background-color: lightgrey !important;
 }
 
+.roboto-tmp {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 432;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.sansation-light {
+  font-family: "Sansation", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body, html {
+  font-family: "Sansation", sans-serif;
+  color: #5b5b5b;
+  margin: 0px;
+  padding: 0px;
+  font-size: 100%;
+}
+
 #contact_button {
-  background: #0062b8;
+  background: #0062B8;
   color: white;
 }
 #contact_button:hover {
@@ -513,7 +537,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 
 #learn_button {
   background-color: white;
-  color: #0062b8;
+  color: #0062B8;
 }
 #learn_button:hover {
   background-color: #2DABE3;
@@ -536,7 +560,7 @@ div.arrow {
   overflow: hidden;
 }
 #second_content h2 {
-  color: #0062b8;
+  color: #0062B8;
   padding-top: 50px;
   font-size: 2.2em;
   width: 100%;
@@ -581,7 +605,7 @@ div.arrow {
   padding-left: 10%;
   width: 80%;
   padding-right: 10%;
-  background-color: #585858;
+  background-color: #5b5b5b;
   color: white;
 }
 #text_content h3 {
@@ -596,7 +620,7 @@ div.arrow {
   margin-block-end: 0;
   margin: none;
   padding: none;
-  color: var(--raspberry-blue);
+  color: #2DABE3;
   font-size: 2em;
 }
 #text_content p {
@@ -631,7 +655,7 @@ div.arrow {
 }
 #text_content #icon_content_flex img {
   width: 80px;
-  background-color: var(--raspberry-blue);
+  background-color: #2DABE3;
   color: white;
   padding: 30px;
   border-radius: 20px;
@@ -641,7 +665,7 @@ div.arrow {
   margin-bottom: 0;
 }
 #text_content #icon_content_flex h4 {
-  color: var(--raspberry-blue);
+  color: #2DABE3;
   font-size: 1.5em;
   margin: 0;
   margin-top: 50px;
@@ -679,7 +703,7 @@ div.arrow {
   padding: none;
   padding-left: 10%;
   font-size: 2em;
-  color: #0062b8;
+  color: #0062B8;
 }
 #third_content .back_image {
   height: 230px;
@@ -733,7 +757,7 @@ div.arrow {
 #third_content #third_cards_flex .card h3 {
   font-size: 1.15em;
   font-weight: 800;
-  color: #0062b8;
+  color: #0062B8;
   text-transform: uppercase;
   padding: 0.5em;
   margin-top: 0;
@@ -751,7 +775,7 @@ div.arrow {
   padding-left: 10%;
   padding-right: 10%;
   height: 700px;
-  background-color: #585858;
+  background-color: #5b5b5b;
   color: white;
   font-family: "Sansation", sans-serif;
 }

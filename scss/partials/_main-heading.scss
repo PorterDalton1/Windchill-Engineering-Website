@@ -1,4 +1,6 @@
-$color-main: #0062b8 !default;
+@use "base";
+
+$color-main: base.$windchillBlue !default;
 $default-order: true !default;
 
 .heading {

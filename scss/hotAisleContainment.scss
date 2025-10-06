@@ -1,13 +1,15 @@
-$windchill-purple: #97005E;
+@use "partials/base";
 @use "partials/header";
 @use "partials/main-heading" with (
-    $color-main: $windchill-purple,
+    $color-main: base.$windchillPurple,
     $default-order: false
 );
 
+@include base.universalStyle;
+
 .content_heading {
     img {
-        background-color: #5B5B5B;
+        background-color: base.$mainDark;
     }
 }
 
@@ -32,10 +34,10 @@ $windchill-purple: #97005E;
 
 #second_hot h2, #third_hot h2 {
     font-size: 2em;
-    color: var(--windchill-purple);
+    color: base.$windchillPurple;
 }
 
-#second_hot p, third_hot p {
+#second_hot p, #third_hot p {
     line-height: 1.5;
     font-size: 1.1em;
 }
@@ -49,7 +51,7 @@ $windchill-purple: #97005E;
     gap: 35px;
     padding-top: 35px;
     margin-bottom: 17.5px;
-    border-bottom: 2px solid var(--windchill-purple);
+    border-bottom: 2px solid base.$windchillPurple;
     padding-bottom: 25px;
 }
 
@@ -95,7 +97,7 @@ $windchill-purple: #97005E;
 }
 
 #flex_third_hot h3 {
-    color: var(--windchill-purple);
+    color: base.$windchillPurple;
     padding-top: 1.15em;
     font-weight: 800;
 }

@@ -1,4 +1,4 @@
-
+@use "base";
 
 header {
     position: sticky;
@@ -6,8 +6,8 @@ header {
     z-index: 100;
 
     #top_header {
-        background: #0062B8;
-        background: linear-gradient(332deg,rgba(0, 98, 184, 1) 0%, rgba(45, 171, 227, 1) 100%);
+        background: base.$windchillBlue;
+        background: linear-gradient(332deg, base.$windchillBlue 0%, base.$raspberryBlue 100%);
         color: white;
         padding-top: .4rem;
         padding-bottom: .4rem;
@@ -154,7 +154,7 @@ header {
         margin-top: 10px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         outline: 1px solid lightgrey;
-        color: #525252;
+        color: base.$mainDark;
         flex-shrink: 0;
         flex-grow: 0;
         overflow: hidden;
@@ -170,7 +170,7 @@ header {
         }
     
         a {
-            color: #525252;
+            color: base.$mainDark;
             text-decoration: none;
         }
     
@@ -220,7 +220,7 @@ header {
         }
 
         &:first-child {
-            background-color: #0062B8;
+            background-color: base.$windchillBlue;
             color: white !important;
             transition-property: background-color;
             transition-duration: .2s;
@@ -230,19 +230,19 @@ header {
             }
 
             &:hover {
-                background-color: #00aeff;
+                background-color: base.$raspberryBlue;
             }           
         }
 
         &:last-child {
             background-color: white;
-            color: #0062B8 !important;
+            color: base.$windchillBlue !important;
             outline: 2px solid #0062B8;
             transition-property: color, outline-color;
             transition-duration: .2s;
     
             .nf {
-                color: #0062B8;
+                color: base.$windchillBlue;
             }
 
             &:hover, &:hover .nf {

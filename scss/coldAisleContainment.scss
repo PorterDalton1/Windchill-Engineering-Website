@@ -1,13 +1,16 @@
+@use "partials/base";
 @use "partials/header";
 
 @use "partials/main-heading" with (
-    $color-main: #2DABE3,
+    $color-main: base.$raspberryBlue,
     $default-order: false
 );
 
+@include base.universalStyle;
+
 .content_heading {
     img {
-        background-color: #5B5B5B;
+        background-color: base.$mainDark;
     }
 }
 
@@ -33,7 +36,7 @@
 
 #second_hot h2, #third_hot h2 {
     font-size: 2em;
-    color: var(--raspberry-blue);
+    color: base.$raspberryBlue;
 }
 
 #second_hot p, #third_hot p {
@@ -50,7 +53,7 @@
     gap: 35px;
     padding-top: 35px;
     margin-bottom: 17.5px;
-    border-bottom: 2px solid var(--raspberry-blue);
+    border-bottom: 2px solid base.$raspberryBlue;
     padding-bottom: 25px;
 }
 
@@ -95,7 +98,7 @@
 }
 
 #flex_third_hot h3 {
-    color: var(--raspberry-blue);
+    color: base.$raspberryBlue;
     padding-top: 1em;
 }
 

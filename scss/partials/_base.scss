@@ -1,4 +1,43 @@
-@mixin textStyle($h3-color: #5b5b5b, $h2-color: #0062B8, $p-color: #5b5b5b) {
+// Colors
+$mainDark: #5b5b5b;
+$windchillBlue: #0062B8;
+$raspberryBlue: #2DABE3;
+$windchillPurple: #97005E;
+$windchillYellow: #ffa200;
+$windchillYellowLight: #F4B860;
+
+// Fonts
+$mainFont: "Sansation", sans-serif;
+
+@mixin universalStyle {
+    @import "https://www.nerdfonts.com/assets/css/webfont.css";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,432;1,432&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+    .roboto-tmp {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 432;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+    .sansation-light {
+        font-family: "Sansation", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    body, html {
+        font-family: $mainFont;
+        color: $mainDark;
+        margin: 0px;
+        padding: 0px;
+        font-size: 100%;
+    }
+}
+
+@mixin textStyle($h3-color: $mainDark, $h2-color: $windchillBlue, $p-color: $mainDark) {
     h3 {
         color: $h3-color;
         text-transform: uppercase;
