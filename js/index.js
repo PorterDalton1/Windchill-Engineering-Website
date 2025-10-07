@@ -9,7 +9,7 @@ $(document).ready(function () {
         });
 
         $img.on('load', function () {
-            const screenSize = 1280;
+            // const screenSize = 1280;
             const imageWidth = this.naturalWidth;
             const imageHeight = this.naturalHeight;
             const ratio = imageHeight / imageWidth;

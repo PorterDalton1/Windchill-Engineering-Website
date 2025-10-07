@@ -14,7 +14,7 @@
 }
 
 #second_hot {
-    background-color: lightgray;
+    background-color: base.$backgroundLightGrey;
     width: 100%;
     padding-top: 70px;
     padding-bottom: 140px;
@@ -113,8 +113,8 @@
     width: 350px;
     min-height: 450px;
     height: auto;
-    border: 2px solid lightgrey;
-    background-color: lightgrey;
+    border: 2px solid base.$backgroundLightGrey;
+    background-color: base.$backgroundLightGrey;
     cursor: pointer;
     transform: scale(1);
     transition: transform 0.5s ease;

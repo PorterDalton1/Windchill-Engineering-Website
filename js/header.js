@@ -98,5 +98,43 @@ function headerEvents() {
         });
 
     });
+
+    transitionEnd = true;
+
+    function showHeader() {
+
+        $('.init_header').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
+            transitionEnd = true;
+        });
+
+        $('#site_header').addClass('is_visible');
+    }
+
+    function hideHeader() {
+
+        $('.init_header').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
+            transitionEnd = true;
+        });
+
+        $('#site_header').removeClass('is_visible');
+    }
+
+
+    let lastScrollTop = 0;
+    $(window).on('scroll', function () {
+        if (!transitionEnd) {
+            return;
+        }
+        let currentScrollTop = $(this).scrollTop(); // Current scroll position
+        if (currentScrollTop > lastScrollTop) {
+            hideHeader();
+            console.log('User scrolled down!');
+        } else {
+            showHeader();
+            console.log('User scrolled up!');
+        }
+        lastScrollTop = currentScrollTop;
+    });
+
     setWebPageName();
 }

@@ -469,3 +469,14 @@ header {
         background-color: lightgrey !important;
     }
 }
+
+.init_header {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 400ms cubic-bezier(.2,.9,.2,1), opacity 300ms ease;
+    will-change: max-height, opacity;
+
+    &.is_visible {
+        max-height: 200px;
+    }
+}

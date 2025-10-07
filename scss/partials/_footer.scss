@@ -1,8 +1,6 @@
 @use "base";
 
-$windchill-blue: #0062B8;
-
-@mixin footerStyle($background-color: rgb(231, 231, 231)) {
+@mixin footerStyle($background-color: base.$backgroundLightGrey) { // #e7e7e7 <--- old color
     footer {
         background-color: $background-color;
         padding-top: 70px;

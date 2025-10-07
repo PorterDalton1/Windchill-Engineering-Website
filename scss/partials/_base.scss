@@ -1,10 +1,13 @@
 // Colors
-$mainDark: #5b5b5b;
 $windchillBlue: #0062B8;
 $raspberryBlue: #2DABE3;
 $windchillPurple: #97005E;
 $windchillYellow: #ffa200;
 $windchillYellowLight: #F4B860;
+
+    // Different greys used
+    $mainDark: #5b5b5b;
+    $backgroundLightGrey: #ececec;
 
 // Fonts
 $mainFont: "Sansation", sans-serif;
@@ -37,32 +40,44 @@ $mainFont: "Sansation", sans-serif;
     }
 }
 
-@mixin textStyle($h3-color: $mainDark, $h2-color: $windchillBlue, $p-color: $mainDark) {
+@mixin textStyle($h3-color: $mainDark, $h2-color: $windchillBlue, $p-color: $mainDark, $h4-color: $windchillBlue) {
+    h4 {
+        color: $h4-color;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
     h3 {
         color: $h3-color;
         text-transform: uppercase;
         margin-block-start: 0;
         margin-block-end: 0;
-        font-size: 1.17em;
-        margin-bottom: .2em;
-        font-weight: 600;
+        font-size: 1.17rem;
+        margin-bottom: .2rem;
+        font-weight: 200;
     }
 
     h2 {
         color: $h2-color;
         text-transform: uppercase;
-        font-size: 2em;
+        font-size: 2rem;
         margin-block-start: 0;
         margin-block-end: 0;
-        font-weight: 800;
+        font-weight: 200;
     }
 
     p {
         color: $p-color;
         line-height: 1.5;
-        font-size: 1.1em;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
+        font-size: 1.1rem;
+        font-weight: 200;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+    }
+
+    h1 {
+        font-weight: 400;
     }
 }
 
@@ -73,7 +88,12 @@ $mainFont: "Sansation", sans-serif;
     padding-right: 10%;
 }
 
-@mixin cardsFlex($h3-color) {
+@mixin cardsFlex($h3-color, $border-color: $raspberryBlue) {
+
+    $marginCard: 1.2rem;
+
+    @include textStyle($h3-color: $h3-color);
+
     display: flex;
     justify-content: space-between;
     row-gap: 40px;
@@ -83,18 +103,22 @@ $mainFont: "Sansation", sans-serif;
     margin-top: 50px;
     padding-bottom: 170px;
 
+
     .card {
         width: 350px;
         min-height: 450px;
         height: auto;
-        border: 2px solid lightgray;
-        background-color: lightgray;
+        border: 2px solid $border-color;
+        background-color: white;
         cursor: pointer;
         transform: scale(1);
-        transition: transform 0.5s ease;
-        
+        transition: transform 0.3s ease;
+        display: grid;
+        grid-template-rows: 248px 2.5rem 1fr 1rem;
+        padding-bottom: $marginCard;
+
         &:hover {
-            transform: scale(1.08);
+            transform: scale(1.03);
         }
 
         .image_crop_box {
@@ -104,7 +128,7 @@ $mainFont: "Sansation", sans-serif;
             position: relative;
             background-color: white;
             object-fit: cover;
-            outline: 1px solid lightgray;
+            border-bottom: 2px solid $border-color;
 
             img {
                 width: 100%;
@@ -116,19 +140,44 @@ $mainFont: "Sansation", sans-serif;
         }
 
         h3 {
-            font-size: 1.15em;
-            font-weight: 800;
-            color: $h3-color;
             text-transform: uppercase;
-            padding: .5em;
-            margin-top: 0;
-            margin-bottom: 0;
+            padding-left: $marginCard;
+            padding-top: $marginCard;
+            color: $h3-color;
+            font-weight: 400;
+            flex-grow: 1;
         }
         
         p {
-            font-size: 1em;
-            padding: .5em;
-            line-height: 1.5;
+            flex-grow: 1;
+            padding: $marginCard;
         }
+
+        .learn_more {
+            color: $h3-color;
+            text-align: right;
+            padding-right: $marginCard;
+        }
+    }
+
+    @media (max-width: 1300) {
+        justify-content: space-evenly !important;
+    }
+}
+
+@mixin centerFlex($x: true, $y: true) {
+    .center_flex {
+        display: flex;
+
+        @if $x {
+            width: 100%;
+            justify-content: center;
+        }
+
+        @if $y {
+            height: 100%;
+            align-items: center;
+        }
+
     }
 }
