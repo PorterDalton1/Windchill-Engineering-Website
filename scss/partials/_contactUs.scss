@@ -1,20 +1,26 @@
 @use "base";
 
-@include base.centerFlex($x: false);
+// @include base.centerFlex($x: false);
 
 .center_flex {
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+    height: 100%;
     margin-left: 10%;
+    flex-wrap: nowrap;
+    gap: 2.5rem;
 }
 
 
 #contact_about_card {
-    padding-left: 2.5rem;
     background-color: white;
-    border-left: 2px solid base.$backgroundLightGrey;
-    margin-left: 2.5rem;
-    width: 45ch;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    max-width: 45ch;
     flex-direction: column;
     justify-content: center;
+    border-left: 2px solid base.$backgroundLightGrey;
 }
 
 #contact_icons {
@@ -27,7 +33,6 @@
     border-top: 8px solid base.$windchillBlue;
     @include base.textStyle;
 
-    background-color: white;
     position: relative;
     z-index: 1;
     
@@ -35,7 +40,7 @@
     height: 600px;
     
     .image_crop_background {
-        z-index: 2;
+        z-index: 8;
         position: absolute;
         right: 0;
         overflow: hidden;
@@ -64,7 +69,6 @@
         
         img {
             height: 4rem;
-            margin-bottom: .8rem;
             
             &.contact_hover {
                 display: none;
@@ -89,10 +93,43 @@
     }
 }
 
-@media (max-width: 1200) {
-    .center_flex {
-        flex-direction: column;
+@media (max-width: 1300px) {
+    #contact_us_section {
+        .center_flex {
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.651);
+            margin-left: 0px;
+            width: fit-content;
+            max-width: 85%;
+            margin: 0 auto;
+        }
+
+        .image_crop_background {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            img {
+                height: auto;
+                width: 1300px;
+                clip-path: none;
+            }
+        }
     }
+
+    #small_card {
+        text-align: center;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        max-width: 80%;
+    }
+
+    #contact_about_card {
+        border-left: none;
+        background-color: transparent;
+    }
+    
 }
 
 /*

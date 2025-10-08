@@ -29,15 +29,16 @@ header {
         }
 
         #splitter {
-            margin-right: 12px;
-            margin-left: 12px;
+            margin-right: .75rem;
+            margin-left: .75rem;
         }
     }
 
     #site_header {
-        display: flex;
-        position: relative;
-        flex-direction: column;
+        //display: flex;
+        position: absolute;
+        width: 100%;
+        //flex-direction: column;
         border-bottom: 1px solid lightgrey;
         background-color: white;
 
@@ -68,13 +69,13 @@ header {
         color: #525252;
         align-items: center;
         position: relative;
-        background-color: #ececec;
+        background-color: base.$backgroundLightGrey;
         height: 3em;
         font-weight: 400;
 
         & > div {
             display: flex;
-            gap: 5px;
+            gap: .4rem;
             align-items: center;
             justify-content: space-between;
             height: 100%;
@@ -119,25 +120,26 @@ header {
     cursor: pointer;
 }
 
+@keyframes expand {
+    from {
+        max-height: 0px;
+    }
+    to {
+        max-height: 700px; /* Adjust this based on your content */
+    }
+}
+
+@keyframes shrink {
+    from {
+        max-height: 700px;
+    }
+    to {
+        height: 0px; /* Adjust this based on your content */
+    }
+}
+
 #main_header {
 
-        @keyframes expand {
-            from {
-                max-height: 0px;
-            }
-            to {
-                max-height: 700px; /* Adjust this based on your content */
-            }
-        }
-
-        @keyframes shrink {
-            from {
-                max-height: 700px;
-            }
-            to {
-                height: 0px; /* Adjust this based on your content */
-            }
-        }
 
     #nav_tabs .dropdown_content {
         display: none;
@@ -193,7 +195,7 @@ header {
     
     .tab_clicked {
         background-color: #d1d1d1;
-        outline: 2px dotted #97005E;
+        outline: 2px dotted base.$windchillPurple;
         z-index: 10;
         color: black;
     }
@@ -344,6 +346,9 @@ header {
     color: #525252;
 }
 
+#header_margin {
+    margin-bottom: 150px;
+}
 
 @media (max-width: 750px) {
 
@@ -473,10 +478,11 @@ header {
 .init_header {
     overflow: hidden;
     max-height: 0px;
-    transition: max-height 400ms cubic-bezier(.2,.9,.2,1), opacity 300ms ease;
+    transition: max-height 700ms cubic-bezier(.2,.9,.2,1), opacity 300ms ease;
     will-change: max-height, opacity;
 
     &.is_visible {
         max-height: 200px;
+        overflow: visible;
     }
 }

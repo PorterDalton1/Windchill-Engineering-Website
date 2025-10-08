@@ -88,6 +88,50 @@ $mainFont: "Sansation", sans-serif;
     padding-right: 10%;
 }
 
+@mixin paragraphSpans($primary: $mainDark, $secondary: $windchillBlue, $justSingle: false) {
+    @include textStyle($h3-color: $primary, $h2-color: $secondary, $p-color: $primary, $h4-color: $secondary);
+
+    h3 {
+        font-weight: 400;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 1.7;
+    }
+
+    .single_span, .double_span {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    @if not $justSingle {
+        .double_span {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            flex-shrink: 1;
+            &  > span {
+                min-width: 25ch;
+            }
+            gap: 2rem;
+    
+            & > span:first-child {
+                flex: 45;
+            }
+    
+            & > span:last-child {
+                flex: 55;
+            }
+        }
+    }
+}
+
 @mixin cardsFlex($h3-color, $border-color: $raspberryBlue) {
 
     $marginCard: 1.2rem;
@@ -101,7 +145,6 @@ $mainFont: "Sansation", sans-serif;
     margin-left: 10%;
     flex-wrap: wrap;
     margin-top: 50px;
-    padding-bottom: 170px;
 
 
     .card {
@@ -160,7 +203,7 @@ $mainFont: "Sansation", sans-serif;
         }
     }
 
-    @media (max-width: 1300) {
+    @media (max-width: 1350px) {
         justify-content: space-evenly !important;
     }
 }

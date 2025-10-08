@@ -34,12 +34,14 @@ function headerEvents() {
         $mobileNav[0].offsetWidth;
         $mobileNav.addClass('is_visible');
 
-        const fromTop = $mobileNav[0].getBoundingClientRect().top; 
+        //const fromTop = $mobileNav[0].getBoundingClientRect().top; 
+        const fromTop = $('#site_header').height() + $('#top_header').height(); 
 
         const screenHeight = document.documentElement.clientHeight;
 
         const elemHeight = screenHeight - fromTop;
 
+        $mobileNav.css('margin-top', fromTop);
         $mobileNav.css('height', elemHeight);
 
         $('.mobile_nav > div:not(.mobile_buttons)').on('click', function () {
@@ -99,39 +101,50 @@ function headerEvents() {
 
     });
 
-    transitionEnd = true;
+
+
+    // Show / Hide header
+    let lastScrollTop = $(window).scrollTop();
+    let transitionEnd = true;
+    const MOVE_THRESHOLD = 200;
+
+    function onTransitionEnd() {
+        transitionEnd = true;
+    }
 
     function showHeader() {
+        if ($('#site_header').hasClass('is_visible')) return;
 
-        $('.init_header').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
-            transitionEnd = true;
-        });
+        $('.init_header').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', onTransitionEnd);
+        $('#site_header').addClass('is_visible'); //start transition to show
 
-        $('#site_header').addClass('is_visible');
+        lastScrollTop = $(window).scrollTop();
     }
 
     function hideHeader() {
+        if (!$('#site_header').hasClass('is_visible')) return;
+        
+        $('.init_header').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', onTransitionEnd);
 
-        $('.init_header').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
-            transitionEnd = true;
-        });
+        $('#site_header').removeClass('is_visible'); //start transition to hide
 
-        $('#site_header').removeClass('is_visible');
+        lastScrollTop = $(window).scrollTop();
     }
 
 
-    let lastScrollTop = 0;
+
     $(window).on('scroll', function () {
-        if (!transitionEnd) {
-            return;
-        }
-        let currentScrollTop = $(this).scrollTop(); // Current scroll position
-        if (currentScrollTop > lastScrollTop) {
+        if (!transitionEnd) return;
+
+        const currentScrollTop = $(this).scrollTop(); // Current scroll position
+        const delta = currentScrollTop - lastScrollTop;
+
+        if (Math.abs(delta) < MOVE_THRESHOLD) return;
+
+        if (delta > 0) { //user scrolls down
             hideHeader();
-            console.log('User scrolled down!');
-        } else {
+        } else {   // user scrolls up
             showHeader();
-            console.log('User scrolled up!');
         }
         lastScrollTop = currentScrollTop;
     });
