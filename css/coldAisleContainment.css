@@ -820,6 +820,37 @@ body, html {
 #second_cold .double_span > span:last-child, #third_cold .double_span > span:last-child {
   flex: 55;
 }
+#second_cold .double_span:has(ul) > span, #third_cold .double_span:has(ul) > span {
+  flex: 55 !important;
+}
+#second_cold .double_span:has(ul) > span:has(ul), #third_cold .double_span:has(ul) > span:has(ul) {
+  flex: 45 !important;
+}
+#second_cold ul, #third_cold ul {
+  list-style: none;
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+}
+#second_cold ul li, #third_cold ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+#second_cold ul .nf, #third_cold ul .nf {
+  display: inline-flex;
+  vertical-align: middle;
+  color: #5b5b5b;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  border: 1px solid #2DABE3;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}
 #second_cold .double_span, #third_cold .double_span {
   margin-top: 2.5em;
   margin-bottom: 1.25em;
@@ -874,6 +905,9 @@ body, html {
 }
 #flex_third_cold h1 {
   font-weight: 400;
+}
+#flex_third_cold a.card {
+  text-decoration: none;
 }
 #flex_third_cold .card {
   width: 350px;

@@ -97,60 +97,101 @@ div.arrow {
 
     .single_span, .double_span {
         margin-bottom: 2.5rem;
+    }    
+}
+
+#stats_card {
+
+    color: base.$mainDark;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    margin-left: calc(10% - 3rem);
+    width: 80%;
+    padding: 3rem;
+    border-radius: 20px;
+    margin-bottom: -250px;
+    
+
+    & > h3, & > h2 {
+        text-align: center;
     }
 
-    .advantage {
-        text-align: center;
+    & > h3 {
+        color: base.$mainDark;
     }
 
     #icon_content_flex {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        row-gap: 80px;
-        justify-content: space-between;
+        row-gap: 3em;
+        column-gap: 3em;
+        justify-content: space-around;
         margin-top: 75px;        
-
-        margin-left: 10%;
-        width: 80%;
         
         & > div {
             display: flex;
-            max-width: 20ch;
+            max-width: 28ch;
             min-width: 15ch;
             flex-direction: column;
             align-items: center;
-            width: 250px;
             text-align: center;
             flex: 1 1 15ch;
         }
 
-        img {
-            width: 60px;
-            background-color: base.$raspberryBlue;
-            color: white;
-            padding: 20px;
-            border-radius: 20px;
+        .svg_icon {
+            display: flex;
+            padding: .75rem;
+            border-radius: 50%;
+            background-color: lightgrey;
+            margin-bottom: 1em;
+            // border: 3px solid white;
+            img {
+                width: 2rem;
+                color: white;
+            }
+        }
+
+        p {
+            margin:0;
+            font-weight: 400;
+            color: base.$mainDark;
+        }
+
+        h1 {
+            color: base.$windchillBlue;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        h2 {
+            color: base.$windchillBlue;
         }
 
         h3 {
-            color: base.$raspberryBlue;
-            margin-top: 50px;
+            text-transform: none !important;
+            text-align: center;
+            margin-top: .5em;
+            margin-bottom: .5em;
             text-transform: uppercase;
+            font-weight: 600;
+            width: 100%;
+            color: base.$mainDark;
+
         }
     }
-    
 }
 
 
 #third_content {
     position: relative;
     border-top: 8px solid base.$windchillYellow;
-    padding-top: 75px;
+    padding-top: 250px;
     padding-bottom: 75px;
     background-color: base.$backgroundLightGrey;
 
-    @include base.paragraphSpans($justSingle: true);
+    @include base.paragraphSpans;
     
     #third_cards_flex {
         @include base.cardsFlex($h3-color: base.$windchillBlue);
@@ -211,9 +252,6 @@ div.arrow {
         flex-direction: column;
         gap: 50px;
     }
-
-
-
 }
 
 @media (max-width: 650px) {

@@ -88,7 +88,7 @@ $mainFont: "Sansation", sans-serif;
     padding-right: 10%;
 }
 
-@mixin paragraphSpans($primary: $mainDark, $secondary: $windchillBlue, $justSingle: false) {
+@mixin paragraphSpans($primary: $mainDark, $secondary: $windchillBlue) {
     @include textStyle($h3-color: $primary, $h2-color: $secondary, $p-color: $primary, $h4-color: $secondary);
 
     h3 {
@@ -109,26 +109,63 @@ $mainFont: "Sansation", sans-serif;
         width: 80%;
     }
 
-    @if not $justSingle {
-        .double_span {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            flex-grow: 1;
-            flex-shrink: 1;
-            &  > span {
-                min-width: 25ch;
-            }
-            gap: 2rem;
-    
-            & > span:first-child {
-                flex: 45;
-            }
-    
-            & > span:last-child {
-                flex: 55;
-            }
+    .double_span {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-shrink: 1;
+        &  > span {
+            min-width: 25ch;
         }
+        gap: 2rem;
+
+        & > span:first-child {
+            flex: 45;
+        }
+
+        & > span:last-child {
+            flex: 55;
+        }
+    }
+
+    .double_span:has(ul) {
+        & > span {
+            flex: 55 !important;
+        }
+
+        & > span:has(ul) {
+            flex: 45 !important;
+        }
+    }
+
+    ul {
+        list-style: none;
+        font-size: 1.3rem;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: .5rem;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+            line-height: 1.5;
+        }
+
+        .nf {
+            display: inline-flex;
+            vertical-align: middle;
+            color: $primary;
+            font-size: .7rem;
+            padding: .3rem;
+            border: 1px solid $secondary;
+            border-radius: 50%;
+            margin-right: .5rem;
+            margin-top: .3rem;
+        }
+
     }
 }
 
@@ -146,6 +183,9 @@ $mainFont: "Sansation", sans-serif;
     flex-wrap: wrap;
     margin-top: 50px;
 
+    a.card {
+        text-decoration: none;
+    }
 
     .card {
         width: 350px;

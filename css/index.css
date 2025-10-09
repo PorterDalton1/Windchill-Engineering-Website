@@ -889,49 +889,115 @@ div.arrow {
 #text_content .double_span > span:last-child {
   flex: 55;
 }
+#text_content .double_span:has(ul) > span {
+  flex: 55 !important;
+}
+#text_content .double_span:has(ul) > span:has(ul) {
+  flex: 45 !important;
+}
+#text_content ul {
+  list-style: none;
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+}
+#text_content ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+#text_content ul .nf {
+  display: inline-flex;
+  vertical-align: middle;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  border: 1px solid #2DABE3;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}
 #text_content .single_span, #text_content .double_span {
   margin-bottom: 2.5rem;
 }
-#text_content .advantage {
+
+#stats_card {
+  color: #5b5b5b;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  margin-left: calc(10% - 3rem);
+  width: 80%;
+  padding: 3rem;
+  border-radius: 20px;
+  margin-bottom: -250px;
+}
+#stats_card > h3, #stats_card > h2 {
   text-align: center;
 }
-#text_content #icon_content_flex {
+#stats_card > h3 {
+  color: #5b5b5b;
+}
+#stats_card #icon_content_flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  row-gap: 80px;
-  justify-content: space-between;
+  row-gap: 3em;
+  column-gap: 3em;
+  justify-content: space-around;
   margin-top: 75px;
-  margin-left: 10%;
-  width: 80%;
 }
-#text_content #icon_content_flex > div {
+#stats_card #icon_content_flex > div {
   display: flex;
-  max-width: 20ch;
+  max-width: 28ch;
   min-width: 15ch;
   flex-direction: column;
   align-items: center;
-  width: 250px;
   text-align: center;
   flex: 1 1 15ch;
 }
-#text_content #icon_content_flex img {
-  width: 60px;
-  background-color: #2DABE3;
-  color: white;
-  padding: 20px;
-  border-radius: 20px;
+#stats_card #icon_content_flex .svg_icon {
+  display: flex;
+  padding: 0.75rem;
+  border-radius: 50%;
+  background-color: lightgrey;
+  margin-bottom: 1em;
 }
-#text_content #icon_content_flex h3 {
-  color: #2DABE3;
-  margin-top: 50px;
+#stats_card #icon_content_flex .svg_icon img {
+  width: 2rem;
+  color: white;
+}
+#stats_card #icon_content_flex p {
+  margin: 0;
+  font-weight: 400;
+  color: #5b5b5b;
+}
+#stats_card #icon_content_flex h1 {
+  color: #0062B8;
+  font-size: 3rem;
+  margin: 0;
+}
+#stats_card #icon_content_flex h2 {
+  color: #0062B8;
+}
+#stats_card #icon_content_flex h3 {
+  text-transform: none !important;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  color: #5b5b5b;
 }
 
 #third_content {
   position: relative;
   border-top: 8px solid #ffa200;
-  padding-top: 75px;
+  padding-top: 250px;
   padding-bottom: 75px;
   background-color: #ececec;
 }
@@ -983,6 +1049,54 @@ div.arrow {
   margin-left: 10%;
   width: 80%;
 }
+#third_content .double_span {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  gap: 2rem;
+}
+#third_content .double_span > span {
+  min-width: 25ch;
+}
+#third_content .double_span > span:first-child {
+  flex: 45;
+}
+#third_content .double_span > span:last-child {
+  flex: 55;
+}
+#third_content .double_span:has(ul) > span {
+  flex: 55 !important;
+}
+#third_content .double_span:has(ul) > span:has(ul) {
+  flex: 45 !important;
+}
+#third_content ul {
+  list-style: none;
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+}
+#third_content ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+#third_content ul .nf {
+  display: inline-flex;
+  vertical-align: middle;
+  color: #5b5b5b;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  border: 1px solid #0062B8;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}
 #third_content #third_cards_flex {
   display: flex;
   justify-content: space-between;
@@ -1025,6 +1139,9 @@ div.arrow {
 }
 #third_content #third_cards_flex h1 {
   font-weight: 400;
+}
+#third_content #third_cards_flex a.card {
+  text-decoration: none;
 }
 #third_content #third_cards_flex .card {
   width: 350px;

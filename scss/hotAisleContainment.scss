@@ -36,7 +36,7 @@
 
 #third_hot {
     border-top: 8px solid #7583b0;
-    @include base.paragraphSpans($primary: base.$mainDark, $secondary: base.$windchillPurple, $justSingle: true);
+    @include base.paragraphSpans($primary: base.$mainDark, $secondary: base.$windchillPurple);
     padding-top: 75px;
     padding-bottom: 75px;
     background-color: white;
