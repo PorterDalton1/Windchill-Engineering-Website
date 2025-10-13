@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindChill Engineering | Data Center Containment</title>
+    <link rel="icon" href="./img/WindChill_Icon.png">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/includeHeader.js"></script>
+</head>
+<body>
+    <div id="first_content" class="heading">
+        <div>
+            <div class="text_heading">
+                <h2>Understand the <br><span>WindChill Advantage</span></h2>
+                <p>We are committed to working with our clients to create and maintain the best solutions in the industry.</p>
+                <div class="button_flex">
+                    <button id="contact_button" class="sansation-light">
+                        <div>    
+                            Contact Us to Get Started
+                        </div>
+                        <div class="arrow">
+                            <i class="nf nf-cod-arrow_right"></i>
+                        </div>
+                    </button>
+    
+                    <button id="learn_button" class="sansation-light">
+                        <div>    
+                            How We Make a Difference
+                        </div>
+                        <div class="arrow">
+                            <i class="nf nf-cod-arrow_right"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="content_heading">
+            <video autoplay loop muted id="data_center_video">
+                <source src="./video/data_center_video.mp4">
+            </video>
+        </div>
+    </div>
+
+    <div id="second_content">
+        <h2>Trusted Across The Industry</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, optio!</h3>
+        <div id="spacing_client_list">
+            <div id="client_list">
+        
+            </div>
+        </div>
+    </div>
+
+    <section id="text_content">
+        <div class="single_span">
+            <span>
+                <h3>Data Center Containment Specialists</h3>
+                <h2>custom designed solutions exceeding needs</h2>
+                <p>
+                    At WindChill, we specialize in containment solutions. We collaborate closely with each client - regardless of project 
+                    scale - to design and fabricate custom systems that meet their specific requirements. Once the design is finalized, 
+                    we commence manufacturing. Our rigid containment units are constructed from robust aluminum frames and clear, 
+                    fire-rated polycarbonate that offers the industry's highest optical clarity. A variety of door configurations 
+                    are available to address distinct operational needs. In addition to our standard product line, we engineer and build 
+                    bespoke solutions to overcome unique obstacles or constraints present in any data-center environment. Whether implementing hot-aisle 
+                    or cold-aisle containment, we are dedicated to delivering reliable, precisely fitted products.
+                </p>
+            </span>
+        </div>
+        <div class="double_span">
+            <span>
+                <h3>Origins</h3>
+                <h2>40 years combined experience</h2>
+                <p>
+                    WindChill Engineering launched in 2012, building on more than four decades of combined manufacturing expertise. Recognizing 
+                    a gap in the market for a containment partner that collaborates closely with data-center stakeholders, our founders set out 
+                    to deliver fully customized containment solutions. Since our inception, we have teamed with industry experts to serve a 
+                    diverse clientele—including small businesses, colocation facilities, large private institutions, and Fortune 500 enterprises.
+                </p>
+            </span>
+            <span>
+                <h3>Meaningful Customer Connections</h3>
+                <h2>Direct support and stress-free </h2>
+                <p>
+                    Above all, we take pride in every facet of our customer support. From the initial design phase through installation, warranty, 
+                    and ongoing assistance, our team is always ready to answer questions and ensure the end-user is satisfied with the solution. 
+                    We back our commitment with responsive, knowledgeable service that anticipates needs at each step. Experience our support once, 
+                    and you'll never look elsewhere.
+                </p>
+            </span>
+        </div>
+
+        <div id="stats_card">
+            <h3 class="advantage">Data Center Containment</h3>
+            <h2 class="advantage">Advantages</h2>
+            <div id="icon_content_flex">
+                <div>
+                    <div class="svg_icon">
+                        <img src="./img/propeller_blue.svg">
+                    </div>
+                    <h1>25%</h1>
+                    <h3>Less Energy</h3>
+                    <p>
+                        Targeted airflow creates optimal 
+                        temperatures with less effort leading to 
+                        significant reductions in power usage and 
+                        operational costs.
+                        <sup>
+                            <a href="https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf" target="_blank">
+                                1
+                            </a>
+                        </sup>
+                    </p>
+                </div>
+                <div>
+                    <div class="svg_icon">
+                        <img src="./img/ROI_blue.svg">
+                    </div>
+                    <h1>12 mo</h1>
+                    <h3>For Full ROI</h3>
+                    <p>
+                        On average, the amount of costs saved
+                        through containment usually pays for
+                        itself in a year or less.
+                        <sup>
+                            <a href="https://www.energystar.gov/sites/default/files/asset/document/Google_Server_Room_Case_Study.pdf" target="_blank">
+                                2
+                            </a>
+                        </sup>
+                    </p>
+                </div>
+                <div>
+                    <div class="svg_icon">
+                        <img src="./img/Longevity_blue.svg">
+                    </div>
+                    <h3>Longevity</h3>
+                    <p>
+                        Protect servers from thermal stresses
+                    </p>
+                </div>
+                <div>
+                    <div class="svg_icon">
+                        <img src="./img/leaf_blue.svg">
+                    </div>
+                    
+                    <h3>Sustainability</h3>
+                    <p>
+                        Less energy means less environmental impact
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="third_content">
+        <!---
+        <div class="back_image" id="third_content_background">
+            <img src="./img/Background.svg">
+        </div>
+        --->
+        <div class="single_span">
+            <span>
+                <h3 id="third_content_h3">LEARN</h3>
+                <h2 id="third_content_h2">Delivering Custom Solutions</h2>
+                <p>
+                    Custom-fitted data center equipment delivers superior efficiency, reliability, and total cost of ownership 
+                    by matching hardware precisely to facility layout, cooling capacity, and workload profiles. Custom solutions 
+                    simplify maintenance, speed deployment, and improve fault isolation, resulting in higher uptime and predictable 
+                    service levels. For organizations with unique capacity needs or strict compliance and scalability goals, 
+                    custom-fitted equipment provides the best balance of performance, efficiency, and long-term value.
+                </p>
+            </span>
+        </div>
+        <div id="third_cards_flex">
+            <a class="card" href="/coldAisleContainment.html">
+                <div class="image_crop_box">
+                    <img src="./img/ColdAisleMain.jpg">
+                </div>
+                <h3>Cold Aisle Containment</h3>
+                <p>
+                    Cold Aisle Containment in data centers isolates the cold air as it is fed into the racks.
+                </p>
+                <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
+            </a>
+            <a class="card" href="hotAisleContainment.html">
+                <div class="image_crop_box">
+                    <img src="./img/HotAisleMain2.jpg">
+                </div>
+                <h3>Hot Aisle Containment</h3>
+                <p>
+                    Hot Aisle Containment is isolating the hot air in the return aisle and directing it back to the cooling unit.
+                </p>
+                <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
+            </a>
+            <a class="card" href="rigidContainment.html">
+                <div class="image_crop_box">
+                    <img src="./img/Double_Sliding_Door.png">
+                </div>
+                <h3>Rigid Containment</h3>
+                <p>
+                    WindChill rigid doors, rigid walls, cieling panels, and GapHOG products combine to create the best value in data center airflow containment.
+                </p>
+                <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
+            </a>
+    
+            <a class="card">
+                <div class="image_crop_box">
+                    <img src="./img/Soft_Containment.jpg">
+                </div>
+                <h3>Soft Containment</h3>
+                <p>
+                    WindChill data center curtains, or soft containment, are a low cost alternative to rigid containment.
+                </p>
+                <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
+            </a>
+        </div>
+    </section>
+    <script src="/js/includeContactUs.js"></script>
+    <script src="/js/includeFooter.js"></script>
+</body>
+</html> 
