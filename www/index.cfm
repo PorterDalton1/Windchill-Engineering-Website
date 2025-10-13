@@ -1,17 +1,26 @@
+<cfscript>
+    partnersListImgs = directoryList(expandPath("/assets/img/partners"), false, "name", "", "", "file");
+
+    boolean function onlyFiles(path, type, extension)  {
+        if(type is "dir") return false;
+            return 
+        }
+</cfscript>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WindChill Engineering | Data Center Containment</title>
-    <link rel="icon" href="./img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/includeHeader.js"></script>
+    <link rel="icon" href="./assets/img/WindChill_Icon.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/lib/min/index-min.css">
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/header.js"></script>
 </head>
 <body>
+    <cfinclude template="./partials/header.cfm">
     <div id="first_content" class="heading">
         <div>
             <div class="text_heading">
@@ -40,7 +49,7 @@
         </div>
         <div class="content_heading">
             <video autoplay loop muted id="data_center_video">
-                <source src="./video/data_center_video.mp4">
+                <source src="/assets/video/data_center_video.mp4">
             </video>
         </div>
     </div>
@@ -50,7 +59,51 @@
         <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, optio!</h3>
         <div id="spacing_client_list">
             <div id="client_list">
-        
+
+                <cfset folderpath = "/assets/img/partners/">
+                <cfloop array="#partnersListImgs#" index="src">
+                    <cfset imagepath="#folderpath##src#">
+
+                    <cfimage source="#imagepath#" name="tmpImage">
+
+                    <cfscript>
+                        area = 180^2;
+                        imageWidth = imageGetWidth(tmpImage);
+                        imageHeight = imageGetHeight(tmpImage);
+
+                        ratio = imageHeight / imageWidth;
+
+                        newWidth = sqr(area/ratio);
+
+                        filename = listToArray(src, '.');
+                        filename.pop();
+                        filename = arrayToList(filename, '.');
+
+                        if (fileExists(expandPath(folderpath) & '.svgs/' & filename & '.svg')) {
+                            srcimg =  folderpath & '.svgs/' & filename & '.svg';
+                        } else {
+                            srcimg = imagePath;
+                        }
+                    </cfscript>
+
+                    <cfoutput>
+                        <img src="#srcimg#" style="width: #newWidth#px">
+                    </cfoutput>
+
+                </cfloop>
+
+                <!---
+                <cfloop array="#partnersListImgs#" index="src">
+                    <cfimage source="#src#" name="thisImage">
+                    <cfscript>
+                        writeOutput("<script>console.log('" & imageGetHeight(thisImage) & "')</script>");
+                    </cfscript>
+                    <cfoutput>
+                        <img src="#replaceNoCase(src, '/var/www', '')#">
+                    </cfoutput>
+                </cfloop>
+            --->
+
             </div>
         </div>
     </div>
@@ -100,7 +153,7 @@
             <div id="icon_content_flex">
                 <div>
                     <div class="svg_icon">
-                        <img src="./img/propeller_blue.svg">
+                        <img src="./assets/img/propeller_blue.svg">
                     </div>
                     <h1>25%</h1>
                     <h3>Less Energy</h3>
@@ -118,7 +171,7 @@
                 </div>
                 <div>
                     <div class="svg_icon">
-                        <img src="./img/ROI_blue.svg">
+                        <img src="./assets/img/ROI_blue.svg">
                     </div>
                     <h1>12 mo</h1>
                     <h3>For Full ROI</h3>
@@ -135,7 +188,7 @@
                 </div>
                 <div>
                     <div class="svg_icon">
-                        <img src="./img/Longevity_blue.svg">
+                        <img src="./assets/img/Longevity_blue.svg">
                     </div>
                     <h3>Longevity</h3>
                     <p>
@@ -144,7 +197,7 @@
                 </div>
                 <div>
                     <div class="svg_icon">
-                        <img src="./img/leaf_blue.svg">
+                        <img src="./assets/img/leaf_blue.svg">
                     </div>
                     
                     <h3>Sustainability</h3>
@@ -156,11 +209,6 @@
         </div>
     </section>
     <section id="third_content">
-        <!---
-        <div class="back_image" id="third_content_background">
-            <img src="./img/Background.svg">
-        </div>
-        --->
         <div class="single_span">
             <span>
                 <h3 id="third_content_h3">LEARN</h3>
@@ -175,9 +223,9 @@
             </span>
         </div>
         <div id="third_cards_flex">
-            <a class="card" href="/coldAisleContainment.html">
+            <a class="card" href="/coldAisleContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="./img/ColdAisleMain.jpg">
+                    <img src="./assets/img/ColdAisleMain.jpg">
                 </div>
                 <h3>Cold Aisle Containment</h3>
                 <p>
@@ -185,9 +233,9 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card" href="hotAisleContainment.html">
+            <a class="card" href="hotAisleContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="./img/HotAisleMain2.jpg">
+                    <img src="./assets/img/HotAisleMain2.jpg">
                 </div>
                 <h3>Hot Aisle Containment</h3>
                 <p>
@@ -197,7 +245,7 @@
             </a>
             <a class="card" href="rigidContainment.html">
                 <div class="image_crop_box">
-                    <img src="./img/Double_Sliding_Door.png">
+                    <img src="./assets/img/Double_Sliding_Door.png">
                 </div>
                 <h3>Rigid Containment</h3>
                 <p>
@@ -208,7 +256,7 @@
     
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="./img/Soft_Containment.jpg">
+                    <img src="./assets/img/Soft_Containment.jpg">
                 </div>
                 <h3>Soft Containment</h3>
                 <p>
@@ -218,7 +266,7 @@
             </a>
         </div>
     </section>
-    <script src="/js/includeContactUs.js"></script>
-    <script src="/js/includeFooter.js"></script>
+    <cfinclude template="./partials/contactUs.cfm">
+    <cfinclude template="./partials/footer.cfm">
 </body>
 </html> 

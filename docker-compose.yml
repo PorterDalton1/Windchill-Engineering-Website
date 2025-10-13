@@ -1,0 +1,38 @@
+networks:
+    backend:
+        driver: bridge
+services:
+
+    lucee:
+        image: lucee/lucee:latest
+        container_name: wc_web_lucee
+        environment:
+            - LUCEE_ADMIN_PASSWORD=qwerty
+        ports:
+            - "8888:8888"
+        volumes:
+            - ./www:/var/www:Z
+            - ./config/lucee-web:/opt/lucee/web:Z
+            - ./config/lucee-server:/opt/lucee/server:Z
+        depends_on:
+            - mysql
+        links:
+            - mysql
+        networks:
+            - backend
+
+    mysql:
+        image: mysql:latest
+        container_name: wc_web_mysql
+        ports:
+            - "3333:3306/tcp"
+        environment:
+            - MYSQL_ROOT_PASSWORD=bdflFWr744hier
+            - MYSQL_DATABASE=simpleDB
+            - MYSQL_USER=simpleUser
+            - MYSQL_PASSWORD=bdflFWr744hier
+        volumes:
+            - ./mysql/data:/var/lib/mysql:Z
+            - ./backup:/docker-entrypoint-initdb.d:Z
+        networks:
+            - backend
