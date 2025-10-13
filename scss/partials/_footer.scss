@@ -2,21 +2,34 @@
 
 @mixin footerStyle($background-color: base.$backgroundLightGrey) { // #e7e7e7 <--- old color
     footer {
+
+        //Enforce default values in footer
+        h3 {
+            display: block;
+            font-size: .9rem;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
+        }
+
         background-color: $background-color;
         padding-top: 70px;
         font-size: .9rem;
 
         #footer_content_flex {
             display: flex;
-            column-gap: 10%;
-            row-gap: 50px;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: space-between;
+            gap: 4rem;
+            width: 80%;
+            margin-left: 10%;
             flex-shrink: 0;
             flex-grow: 1;
         }
         
-        #footer_center {
+        #footer_logo_flex {
             width: min-content;
             & > div {
                 display: flex;
@@ -39,7 +52,7 @@
             
             img#footer_logo {
                 height: 100px;
-                margin: 15px;
+                margin-bottom: 1em;
             }
         }
 
@@ -79,6 +92,16 @@
             & > span > span {
                 text-decoration: underline;
                 font-weight: 600;
+            }
+        }
+
+        #website_creds {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            img {
+                height: 1em;
             }
         }
     }

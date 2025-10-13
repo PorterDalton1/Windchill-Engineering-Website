@@ -1,0 +1,12 @@
+@use "partials/base";
+@use "partials/header";
+@use "partials/main-heading" with (
+    $color-main: base.$windchillYellow
+);
+
+@use "partials/contactUs";
+@use "partials/footer";
+
+@include base.universalStyle;
+
+@include footer.footerStyle;

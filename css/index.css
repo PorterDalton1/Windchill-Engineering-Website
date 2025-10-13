@@ -1272,36 +1272,46 @@ footer {
   padding-top: 70px;
   font-size: 0.9rem;
 }
+footer h3 {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
 footer #footer_content_flex {
   display: flex;
-  column-gap: 10%;
-  row-gap: 50px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 80%;
+  margin-left: 10%;
   flex-shrink: 0;
   flex-grow: 1;
 }
-footer #footer_center {
+footer #footer_logo_flex {
   width: min-content;
 }
-footer #footer_center > div {
+footer #footer_logo_flex > div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 0.5rem;
 }
-footer #footer_center > div > div {
+footer #footer_logo_flex > div > div {
   font-weight: 600;
 }
-footer #footer_center > div .nf:last-child {
+footer #footer_logo_flex > div .nf:last-child {
   margin-left: 0.5ch;
 }
-footer #footer_center > div .nf {
+footer #footer_logo_flex > div .nf {
   font-size: 1.2rem;
 }
-footer #footer_center img#footer_logo {
+footer #footer_logo_flex img#footer_logo {
   height: 100px;
-  margin: 15px;
+  margin-bottom: 1em;
 }
 footer #web_map_links {
   min-height: 160px;
@@ -1336,4 +1346,12 @@ footer #web_dev_info {
 footer #web_dev_info > span > span {
   text-decoration: underline;
   font-weight: 600;
+}
+footer #website_creds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer #website_creds img {
+  height: 1em;
 }/*# sourceMappingURL=index.css.map */
