@@ -4,6 +4,7 @@
 @use "partials/footer";
 
 @include base.universalStyle;
+@include header.headerStyle;
 
 #references {
     margin-left: 10%;
@@ -16,5 +17,5 @@
     gap:1em;
 }
 
-
+@include contactUs.contactUsStyle;
 @include footer.footerStyle;

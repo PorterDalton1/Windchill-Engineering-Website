@@ -14,13 +14,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cold Aisle Containment</title>
-    <link rel="icon" href="./img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="./css/coldAisleContainment.css">
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/includeHeader.js"></script>
+    <link rel="icon" href="/assets/img/WindChill_Icon.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/min/coldAisleContainment-min.css">
+    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/header.js"></script>
 </head>
 <body>
+    <cfset websiteTitle="Cold Aisle Containment">
+    <cfinclude template="./partials/header.cfm">
     <div id="first_hot" class="heading">
         <div>
             <div class="text_heading">
@@ -38,7 +39,7 @@
             </div>
         </div>
         <div class="content_heading">
-            <img src="./img/_Cold_aisle_iso_view_1_cropped.png">
+            <img src="/assets/img/_Cold_aisle_iso_view_1_cropped.png">
         </div>
     </div>
     <div id="second_cold">
@@ -143,7 +144,7 @@
         <div id="flex_third_cold">
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="./img/ColdAisleMain.jpg">
+                    <img src="/assets/img/ColdAisleMain.jpg">
                 </div>
                 <h3>Cold Aisle Containment</h3>
                 <p>
@@ -153,7 +154,7 @@
             </a>
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="./img/HotAisleMain2.jpg">
+                    <img src="/assets/img/HotAisleMain2.jpg">
                 </div>
                 <h3>Hot Aisle Containment</h3>
                 <p>
@@ -163,7 +164,7 @@
             </a>
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="./img/Double_Sliding_Door.png">
+                    <img src="/assets/img/Double_Sliding_Door.png">
                 </div>
                 <h3>Rigid Containment</h3>
                 <p>
@@ -174,7 +175,7 @@
     
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="./img/Soft_Containment.jpg">
+                    <img src="/assets/img/Soft_Containment.jpg">
                 </div>
                 <h3>Soft Containment</h3>
                 <p>
@@ -184,9 +185,7 @@
             </a>
         </div>
     </div>
-
-    <script src="./js/hotAisleContainment.js"></script>
-    <script src="/js/includeContactUs.js"></script>
-    <script src="/js/includeFooter.js"></script>
+    <cfinclude template="./partials/contactUs.cfm">
+    <cfinclude template="./partials/footer.cfm">
 </body>
 </html>

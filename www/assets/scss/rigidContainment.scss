@@ -7,6 +7,9 @@
 @use "partials/contactUs";
 @use "partials/footer";
 
+@include base.universalStyle;
+@include header.headerStyle;
+
 .content_heading {
     background: #ffebc9;
     background: radial-gradient(circle,rgba(255, 235, 201, 1) 0%, rgba(244, 184, 96, 1) 100%);
@@ -20,7 +23,8 @@
 
     .flex_rigid {
         @include base.cardsFlex($h3-color: base.$windchillYellow, $border-color: base.$windchillBlue);
-        justify-content: space-around;
+        justify-content: start;
+        gap: 20px;
         .card {
             cursor: default !important;
         }
@@ -34,14 +38,17 @@
 }
 
 #rigid_second {
+    border-top: 8px solid base.$windchillBlue;
     background-color: base.$backgroundLightGrey;
 }
 
 #rigid_third {
     background-color: base.$mainDark;
+    border-top: 8px solid base.$raspberryBlue;
     h3:not(.card h3), p:not(.card p), .nf {
         color: white !important;
     }
 }
 
+@include contactUs.contactUsStyle;
 @include footer.footerStyle;

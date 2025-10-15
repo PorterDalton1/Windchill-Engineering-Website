@@ -8,5 +8,8 @@
 @use "partials/footer";
 
 @include base.universalStyle;
+@include header.headerStyle;
 
+
+@include contactUs.contactUsStyle;
 @include footer.footerStyle;

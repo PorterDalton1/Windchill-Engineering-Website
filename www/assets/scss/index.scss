@@ -5,6 +5,7 @@
 @use "partials/footer";
 
 @include base.universalStyle;
+@include header.headerStyle;
 
 #contact_button {
     background: base.$windchillBlue;
@@ -280,4 +281,5 @@ div.arrow {
     }
 }
 
+@include contactUs.contactUsStyle;
 @include footer.footerStyle;

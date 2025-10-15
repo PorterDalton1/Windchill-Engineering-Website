@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>References</title>
     <link rel="icon" href="./img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="./css/references.css">
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/includeHeader.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/min/references-min.css">
+    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/header.js"></script>
 </head>
 <body>
+    <cfset websiteTitle="References">
+    <cfinclude template="./partials/header.cfm">
     <div id="references">
         <h1>References</h1>
         <div>
@@ -38,7 +39,8 @@
             </a>
         </div>
     </div>
-    <script src="/js/includeContactUs.js"></script>
-    <script src="/js/includeFooter.js"></script>
+
+    <cfinclude template="./partials/contactUs.cfm">
+    <cfinclude template="./partials/footer.cfm">
 </body>
 </html>

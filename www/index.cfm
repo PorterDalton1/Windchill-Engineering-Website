@@ -13,13 +13,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WindChill Engineering | Data Center Containment</title>
-    <link rel="icon" href="./assets/img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="/assets/css/lib/min/index-min.css">
-    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <link rel="icon" href="/assets/img/WindChill_Icon.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/min/index-min.css">
+    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/header.js"></script>
 </head>
 <body>
+    <cfset websiteTitle="Home">
     <cfinclude template="./partials/header.cfm">
     <div id="first_content" class="heading">
         <div>

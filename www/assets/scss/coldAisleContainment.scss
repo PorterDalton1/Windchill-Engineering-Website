@@ -10,6 +10,7 @@
 );
 
 @include base.universalStyle;
+@include header.headerStyle;
 
 .content_heading {
     img {
@@ -41,4 +42,5 @@
     @include base.cardsFlex(base.$raspberryBlue);
 }
 
+@include contactUs.contactUsStyle;
 @include footer.footerStyle;

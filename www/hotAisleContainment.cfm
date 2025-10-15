@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Aisle Containment</title>
-    <link rel="icon" href="./img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="./css/hotAisleContainment.css">
-    <script src="./js/header.js"></script>
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/includeHeader.js"></script>
+    <link rel="icon" href="/assets/img/WindChill_Icon.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/min/hotAisleContainment-min.css">
+    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/header.js"></script>
 </head>
 <body>
-    <div id="first_hot" class="heading">
+    <cfset websiteTitle="Hot Aisle Containment">
+    <cfinclude template="./partials/header.cfm">
+    <section id="first_hot" class="heading">
         <div>
             <div class="text_heading">
                 <h2>The Advantage of <br><span>Hot Aisle Containment</span></h2>
@@ -29,10 +30,10 @@
             </div>
         </div>
         <div class="content_heading">
-            <img src="./img/cropped_upscaled_hot_aisle1.png">
+            <img src="/assets/img/cropped_upscaled_hot_aisle1.png">
         </div>
-    </div>
-    <div id="second_hot">
+    </section>
+    <section id="second_hot">
         <div class="single_span">
             <span>
                 <h3>Understanding</h3>
@@ -87,9 +88,9 @@
                 </p>
             </span>
         </div>
-    </div>
+    </section>
 
-    <div id="third_hot">
+    <section id="third_hot">
         <div class="single_span">
             <span>
                 <h3>Leading the Industry</h3>
@@ -110,9 +111,9 @@
             </span>
         </div>
         <div id="flex_third_hot">
-            <a class="card">
+            <a class="card" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="/img/freestanding_hot_small.png">
+                    <img src="/assets/img/freestanding_hot_small.png">
                 </div>
                 <h3>Free Standing</h3>
                 <p>
@@ -120,9 +121,9 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card">
+            <a class="card" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="/img/Hot_aisle_iso_view_2.png">
+                    <img src="/assets/img/Hot_aisle_iso_view_2.png">
                 </div>
                 <h3>Rigid</h3>
                 <p>
@@ -131,9 +132,9 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card">
+            <a class="card" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="./img/hot_example_1.png">
+                    <img src="/assets/img/hot_example_1.png">
                 </div>
                 <h3>Custom Solution</h3>
                 <p>
@@ -142,9 +143,9 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card">
+            <a class="card" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="./img/Soft_Containment.jpg">
+                    <img src="/assets/img/Soft_Containment.jpg">
                 </div>
                 <h3>Soft Containment</h3>
                 <p>
@@ -154,10 +155,8 @@
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
         </div>
-    </div>
-
-    <script src="./js/hotAisleContainment.js"></script>
-    <script src="/js/includeContactUs.js"></script>
-    <script src="/js/includeFooter.js"></script>
+    </section>
+    <cfinclude template="./partials/contactUs.cfm">
+    <cfinclude template="./partials/footer.cfm">
 </body>
 </html>

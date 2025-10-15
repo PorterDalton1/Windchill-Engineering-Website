@@ -1,0 +1,116 @@
+@use "partials/base";
+@use "partials/header";
+@use "partials/main-heading" with (
+    $color-main: base.$windchillYellow
+);
+
+@use "partials/contactUs";
+@use "partials/footer";
+
+@include base.universalStyle;
+@include header.headerStyle;
+
+
+section {
+    // @include base.textStyle;
+
+    background-color: rgb(206, 220, 226);
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    & > div {
+        padding-top: 75px;
+        padding-bottom: 75px;
+        background-color: white;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        width: calc(50% + 8rem);
+
+        //width: calc((60% / 70% * 100%) - 8rem);
+        height: 100%;
+        margin: 0 auto;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+    }
+}
+
+
+
+.faq_card {
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.3rem;
+    width: 100%;
+    cursor: pointer;
+    
+    border-bottom: 1px solid base.$mainDark;
+
+    /*
+    &:hover {
+        outline: 3px solid base.$raspberryBlue;
+        .nf-md-plus {
+            color: base.$raspberryBlue;
+            transform: scale(1.05);
+        }
+    }
+    */
+    
+    /*
+    .nf-md-minus {
+        display: none;
+    }
+    */
+
+    .nf {
+        font-size: 1.5rem;
+    }
+
+    .question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        font-weight: 400;
+
+    }
+    
+    .answer {
+        display: none;
+        font-size: 1.1rem;
+    }
+}
+
+@include contactUs.contactUsStyle;
+@include footer.footerStyle;
+
+// Jquerry Classes
+
+.show_answer {
+    display: block !important;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 600ms ease;
+    will-change: opacity;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+.slide_in {
+    transform: translateX(100%);
+    transition: transform 400ms cubic-bezier(.2,.9,.2,1), opacity 300ms ease;
+    will-change: transform, opacity;
+
+    &.is_visible {
+        transform: translateX(0);
+    }
+}

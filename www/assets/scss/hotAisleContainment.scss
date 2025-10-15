@@ -8,6 +8,8 @@
 @use "partials/footer";
 
 @include base.universalStyle;
+@include header.headerStyle;
+
 
 .content_heading {
     img {
@@ -54,4 +56,5 @@
     @include base.cardsFlex($h3-color: base.$windchillPurple, $border-color: base.$windchillPurple);
 }
 
+@include contactUs.contactUsStyle;
 @include footer.footerStyle;

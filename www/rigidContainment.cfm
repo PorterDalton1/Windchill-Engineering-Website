@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        function setWebPageName() {
-            $('#webpage_title').html('Rigid Containment');
-        }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rigid Containment</title>
-    <link rel="icon" href="./img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <link rel="stylesheet" type="text/css" href="./css/rigidContainment.css">
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/includeHeader.js"></script>
-    <script src="./js/contactUs.js"></script>
+    <link rel="icon" href="/assets/img/WindChill_Icon.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/min/rigidContainment-min.css">
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/header.js"></script>
 </head>
 <body>
+    <cfset websiteTitle="Rigid Containment">
+    <cfinclude template="./partials/header.cfm">
     <div id="rigid_first" class="heading">
         <div>
             <div class="text_heading">
@@ -35,7 +29,7 @@
             </div>
         </div>
         <div class="content_heading">
-            <img src="./img/free_standing_cropped.png">
+            <img src="/assets/img/free_standing_cropped.png">
         </div>
     </div>
     
@@ -78,7 +72,7 @@
         <div class="flex_rigid">
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="/img/RW_filler_panel.png">
+                    <img src="/assets/img/RW_filler_panel.png">
                 </div>
                 <h3>Filler Panel</h3>
                 <p>
@@ -90,7 +84,7 @@
 
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="/img/RW_sliding_access.png">
+                    <img src="/assets/img/RW_sliding_access.png">
                 </div>
                 <h3>Sliding Access Panel</h3>
                 <p>
@@ -102,7 +96,7 @@
 
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="/img/Economy_Rigid_Wall.png">
+                    <img src="/assets/img/Economy_Rigid_Wall.png">
                 </div>
                 <h3>Economy Rigid Wall</h3>
                 <p>
@@ -129,7 +123,7 @@
         <div class="flex_rigid">
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="/img/DoubleSlidingDoor.png">
+                    <img src="/assets/img/DoubleSlidingDoor.png">
                 </div>
                 <h3>Double Sliding Door</h3>
                 <p>
@@ -140,7 +134,7 @@
             </a>
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="/img/single_sliding_door_cropped.png">
+                    <img src="/assets/img/single_sliding_door_cropped.png">
                 </div>
                 <h3>Single Sliding Door</h3>
                 <p>
@@ -151,7 +145,7 @@
             </a>
             <a class="card">
                 <div class="image_crop_box">
-                    <img src="/img/single_hinged_door_cropped.png">
+                    <img src="/assets/img/single_hinged_door_cropped.png">
                 </div>
                 <h3>Single Hinged Door</h3>
                 <p>
@@ -162,7 +156,7 @@
             </a>
                         <a class="card">
                 <div class="image_crop_box">
-                    <img src="/img/single_hinged_door_cropped.png">
+                    <img src="/assets/img/single_hinged_door_cropped.png">
                 </div>
                 <h3>Double Hinged Door</h3>
                 <p>
@@ -184,7 +178,7 @@
             </span>
         </div>
     </div>
-    <script src="/js/includeContactUs.js"></script>
-    <script src="/js/includeFooter.js"></script>
+    <cfinclude template="./partials/contactUs.cfm">
+    <cfinclude template="./partials/footer.cfm">
 </body>
 </html>
