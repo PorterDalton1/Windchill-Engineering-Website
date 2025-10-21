@@ -154,7 +154,7 @@
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
-                        <a class="card">
+            <a class="card">
                 <div class="image_crop_box">
                     <img src="/assets/img/single_hinged_door_cropped.png">
                 </div>
@@ -173,9 +173,35 @@
                 <h3>Effective</h3>
                 <h2>Ceiling Panels</h2>
                 <p>
-    
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et at ducimus odio nostrum. 
+                    Et dolorum sunt pariatur molestias velit iure.
                 </p>
             </span>
+        </div>
+
+        <div class="flex_rigid">
+            <a class="card">
+                <div class="image_crop_box">
+                    <img src="/assets/img/Ceiling_panel.png">
+                </div>
+                <h3>Shrink Away Ceiling</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatum exercitationem 
+                    dolorum excepturi officia asperiores perspiciatis
+                </p>
+                <div class="learn_more">Hot & Cold Aisle Application</div>
+            </a>
+            <a class="card">
+                <div class="image_crop_box">
+                    <img src="/assets/img/MHAC.png">
+                </div>
+                <h3>Mechanical Heat Activated Ceiling</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatum exercitationem 
+                    dolorum excepturi officia asperiores perspiciatis
+                </p>
+                <div class="learn_more">Hot & Cold Aisle Application</div>
+            </a>
         </div>
     </div>
     <cfinclude template="./partials/contactUs.cfm">

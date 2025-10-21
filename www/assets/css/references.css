@@ -231,6 +231,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 }
 
 #nav_icons a, .mobile_buttons a {
+  text-decoration: none;
   padding: 0.75rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -684,15 +685,6 @@ footer #web_dev_info {
 footer #web_dev_info > span > span {
   text-decoration: underline;
   font-weight: 600;
-}
-footer #website_creds {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-footer #website_creds img {
-  height: 1em;
-}/*# sourceMappingURL=references.css.map */font-weight: 600;
 }
 footer #website_creds {
   display: flex;

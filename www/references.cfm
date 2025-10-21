@@ -38,6 +38,36 @@
                 https://www.energystar.gov/sites/default/files/asset/document/Google_Server_Room_Case_Study.pdf
             </a>
         </div>
+
+        <div>
+            [3]
+            <br>
+            Masanet E., Shehabi A., LEI N., Smith S., & Koomey J. (2020),
+            <i>
+                Recalibrating global data center energy-use estimates.
+            </i>
+            (367,984-986.DOI:10.1126)
+            Science
+            <br>
+            <a href="https://www.science.org/doi/abs/10.1126/science.aba3758?mc_cid=a7138e6359">
+                https://www.science.org/doi/abs/10.1126/science.aba3758?mc_cid=a7138e6359
+            </a>
+        </div>
+
+        <div>
+            [3]
+            <br>
+            Manousakis I., Sankar S., McKnight G., Nguyen T. D., & Bianchini R. (2014),
+            <i>
+                Environmental Conditions and Disk Reliability in Free-Cooled Datacenters
+            </i>
+            [PDF]
+            Microsoft
+            <br>
+            <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2014/11/Reliability-FAST16.pdf">
+                https://www.microsoft.com/en-us/research/wp-content/uploads/2014/11/Reliability-FAST16.pdf
+            </a>
+        </div>
     </div>
 
     <cfinclude template="./partials/contactUs.cfm">

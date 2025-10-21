@@ -50,5 +50,9 @@
     }
 }
 
+#rigid_fourth {
+    border-top: 8px solid base.$windchillPurple;
+}
+
 @include contactUs.contactUsStyle;
 @include footer.footerStyle;

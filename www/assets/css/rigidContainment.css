@@ -85,11 +85,13 @@
 .heading .text_heading .button_flex {
   display: flex;
   justify-content: space-between;
-  width: 90%;
   font-family: "Sansation", sans-serif;
 }
+.heading .text_heading .button_flex a {
+  flex-shrink: 1;
+}
 .heading .text_heading .button_flex button {
-  font-size: 1.05em;
+  font-size: 1.05rem;
   font-weight: 600;
   background-color: #ffa200;
   color: white;
@@ -373,6 +375,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 }
 
 #nav_icons a, .mobile_buttons a {
+  text-decoration: none;
   padding: 0.75rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -701,6 +704,21 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   margin-right: 0.5rem;
   margin-top: 0.3rem;
 }
+@media (max-width: 500px) {
+  #rigid_second h2, #rigid_third h2, #rigid_fourth h2 {
+    font-size: 1.3rem;
+  }
+  #rigid_second h3, #rigid_third h3, #rigid_fourth h3 {
+    font-size: 1.1rem;
+  }
+  #rigid_second p, #rigid_third p, #rigid_fourth p {
+    font-size: 1rem;
+  }
+  #rigid_second .single_span, #rigid_second .double_span, #rigid_third .single_span, #rigid_third .double_span, #rigid_fourth .single_span, #rigid_fourth .double_span {
+    margin-left: 3%;
+    width: 94%;
+  }
+}
 #rigid_second .flex_rigid, #rigid_third .flex_rigid, #rigid_fourth .flex_rigid {
   display: flex;
   justify-content: space-between;
@@ -823,6 +841,10 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 }
 #rigid_third h3:not(.card h3), #rigid_third p:not(.card p), #rigid_third .nf {
   color: white !important;
+}
+
+#rigid_fourth {
+  border-top: 8px solid #97005E;
 }
 
 .center_flex {

@@ -1,0 +1,60 @@
+--------------------------------------------------------------
+Color Pallette WindChill
+https://coolors.co/0062b8-75b09c-97005e-f4b860-bcc6ff
+
+WindChill Blue
+#0062B8
+
+Raspberry Blue
+#2DABE3
+
+Subtle Sky Blue
+#BCC6FF
+
+WindChill Purple
+#97005E
+
+Maroon
+#6E1900
+
+Industrial Green
+#75B09C
+
+Racecar Yellow
+#F4B860
+
+Orange Yellow
+#ffa200
+--------------------------------------------------------------
+
+Others Used
+
+Slight blue background
+#edefff
+
+
+Cool Websites:
+
+SVG loading animations
+https://github.com/shubhamjain/svg-spinners?tab=readme-ov-file
+
+CSS shadow previews
+https://getcssscan.com/css-box-shadow-examples
+
+nerdfont icons
+https://www.nerdfonts.com/cheat-sheet
+
+
+
+Scratch pad
+
+1) detect scroll from user
+
+2) when scroll is detected check if header needs changed
+
+3) if header needs changed stop cheacking for scroll
+
+4) play transition that changes header state
+
+5) after transition ends start checking user scroll again
+

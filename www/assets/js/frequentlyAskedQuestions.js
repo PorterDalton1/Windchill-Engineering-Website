@@ -1,13 +1,28 @@
 $(document).ready(function () {
-    $('.faq_card').on('click', function () {
+    $('.question').on('click', function () {
 
-        if ($(this).children('.answer').hasClass('show_answer')) {
-            $('.answer').removeClass('show_answer');
+
+        $faqCard = $(this).closest('.faq_card');
+
+        $('.rotate').removeClass('rotate');
+
+        if ($faqCard.children('.answer').hasClass('show')) {
+            $('.show').removeClass('show');
             return;
         }
 
-        $('.answer').removeClass('show_answer');
-        $(this).children('.answer').addClass('show_answer');
-        $(this).children('.answer').addClass('show');
+        $('.show').removeClass('show');
+
+        $('.answer').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
+
+
+
+            $('html, body').animate({
+                scrollTop: $faqCard.offset().top - 100
+            }, 10);
+        });
+
+        $faqCard.find('.nf-md-plus').addClass('rotate');
+        $faqCard.children('.answer').addClass('show');
     });
 });

@@ -46,43 +46,61 @@ section {
     padding-bottom: 2rem;
     font-size: 1.3rem;
     width: 100%;
-    cursor: pointer;
-    
     border-bottom: 1px solid base.$mainDark;
-
-    /*
-    &:hover {
-        outline: 3px solid base.$raspberryBlue;
-        .nf-md-plus {
-            color: base.$raspberryBlue;
-            transform: scale(1.05);
-        }
-    }
-    */
-    
-    /*
-    .nf-md-minus {
-        display: none;
-    }
-    */
 
     .nf {
         font-size: 1.5rem;
+        transform: rotate(0deg);
+        transition: transform 500ms;
+        will-change: transform;
+
+        &.rotate {
+            transform: rotate(225deg);
+        }
     }
 
     .question {
         display: flex;
+        cursor: pointer;
         align-items: center;
         justify-content: space-between;
         font-size: 1.5rem;
         font-weight: 400;
 
+        &:hover {
+            color: black;
+        }
+
     }
     
     .answer {
-        display: none;
         font-size: 1.1rem;
+        overflow: hidden;
+        opacity: 0;
+        max-height: 0px;
+        transition: opacity 400ms ease, max-height 400ms;
+        will-change: opacity, max-height;
+    
+        &.show {
+            opacity: 1;
+            max-height: 1000px;
+        }
     }
+}
+
+@media (max-width: 800px) {
+
+    section {
+        background-color: white;
+    }
+
+    section > div {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        width: 90%;
+
+        border: none;
+    }        
 }
 
 @include contactUs.contactUsStyle;
@@ -90,21 +108,7 @@ section {
 
 // Jquerry Classes
 
-.show_answer {
-    display: block !important;
-}
-
-
-.fade-in {
-    opacity: 0;
-    transition: opacity 600ms ease;
-    will-change: opacity;
-
-    &.show {
-        opacity: 1;
-    }
-}
-
+/*
 .slide_in {
     transform: translateX(100%);
     transition: transform 400ms cubic-bezier(.2,.9,.2,1), opacity 300ms ease;
@@ -114,3 +118,4 @@ section {
         transform: translateX(0);
     }
 }
+*/

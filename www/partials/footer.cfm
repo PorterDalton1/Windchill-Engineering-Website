@@ -24,17 +24,17 @@
         <div>
             <h3>Website Map</h3>
             <div id="web_map_links">
-                <a>Home</a>
-                <a>Cold Aisle Containment</a>
-                <a>Hot Aisle Containment</a>
-                <a>Rigid Containment</a>
-                <a>Soft Containment</a>
-                <a>Industry Standards</a>
-                <a>Vendor Resources</a>
-                <a>Frequenty Asked Questions</a>
-                <a>References</a>
-                <a>Contact</a>
-                <a>About Us</a>
+                <a href="/index.cfm">Home</a>
+                <a href="/coldAisleContainment.cfm">Cold Aisle Containment</a>
+                <a href="/hotAisleContainment.cfm">Hot Aisle Containment</a>
+                <a href="rigidContainment.cfm">Rigid Containment</a>
+                <a href="/softContainment.cfm">Soft Containment</a>
+                <a href="">Industry Standards</a>
+                <a href="/vendorlogin.cfm">Vendor Resources</a>
+                <a href="/frequentlyAskedQuestions.cfm">Frequenty Asked Questions</a>
+                <a href="/references.cfm">References</a>
+                <a href="/getAQuote.cfm">Contact</a>
+                <a href="">About Us</a>
             </div>
         </div>
     

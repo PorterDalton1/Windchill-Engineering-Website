@@ -28,23 +28,27 @@
                 <h2>Understand the <br><span>WindChill Advantage</span></h2>
                 <p>We are committed to working with our clients to create and maintain the best solutions in the industry.</p>
                 <div class="button_flex">
-                    <button id="contact_button" class="sansation-light">
-                        <div>    
-                            Contact Us to Get Started
-                        </div>
-                        <div class="arrow">
-                            <i class="nf nf-cod-arrow_right"></i>
-                        </div>
-                    </button>
+                    <a href="/getAQuote.cfm">
+                        <button id="contact_button" class="sansation-light">
+                            <div>    
+                                Contact Us to Get Started
+                            </div>
+                            <div class="arrow">
+                                <i class="nf nf-cod-arrow_right"></i>
+                            </div>
+                        </button>
+                    </a>
     
-                    <button id="learn_button" class="sansation-light">
-                        <div>    
-                            How We Make a Difference
-                        </div>
-                        <div class="arrow">
-                            <i class="nf nf-cod-arrow_right"></i>
-                        </div>
-                    </button>
+                    <a href="">
+                        <button id="learn_button" class="sansation-light">
+                            <div>    
+                                How We Make a Difference
+                            </div>
+                            <div class="arrow">
+                                <i class="nf nf-cod-arrow_right"></i>
+                            </div>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -61,6 +65,11 @@
         <div id="spacing_client_list">
             <div id="client_list">
 
+                <!--- 
+                    This could be cleaned up a bit. Svgs can't be opened in cfimage, so I created pngs
+                    of all the svg images just to get the ratio of the images. I could read all the svgs as
+                    xml objects directly, but at this point it works anyways so why change it.
+                --->
                 <cfset folderpath = "/assets/img/partners/">
                 <cfloop array="#partnersListImgs#" index="src">
                     <cfset imagepath="#folderpath##src#">
@@ -90,21 +99,7 @@
                     <cfoutput>
                         <img src="#srcimg#" style="width: #newWidth#px">
                     </cfoutput>
-
                 </cfloop>
-
-                <!---
-                <cfloop array="#partnersListImgs#" index="src">
-                    <cfimage source="#src#" name="thisImage">
-                    <cfscript>
-                        writeOutput("<script>console.log('" & imageGetHeight(thisImage) & "')</script>");
-                    </cfscript>
-                    <cfoutput>
-                        <img src="#replaceNoCase(src, '/var/www', '')#">
-                    </cfoutput>
-                </cfloop>
-            --->
-
             </div>
         </div>
     </div>
@@ -159,9 +154,8 @@
                     <h1>25%</h1>
                     <h3>Less Energy</h3>
                     <p>
-                        Targeted airflow creates optimal 
-                        temperatures with less effort leading to 
-                        significant reductions in power usage and 
+                        Targeted airflow creates less effort leading 
+                        to significant reductions in power usage and 
                         operational costs.
                         <sup>
                             <a href="https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf" target="_blank">
@@ -191,19 +185,34 @@
                     <div class="svg_icon">
                         <img src="./assets/img/Longevity_blue.svg">
                     </div>
+                    <h1>300%</h1>
                     <h3>Longevity</h3>
                     <p>
-                        Protect servers from thermal stresses
+                        The failure rate of disk drives could be 3x lower
+                        compared to less controlled environment.
+                        <sup>
+                            <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2014/11/Reliability-FAST16.pdf" target="_blank">
+                                4
+                            </a>
+                        </sup>
+                        
                     </p>
                 </div>
                 <div>
                     <div class="svg_icon">
                         <img src="./assets/img/leaf_blue.svg">
                     </div>
-                    
+                    <h1>240 twh</h1>
                     <h3>Sustainability</h3>
                     <p>
-                        Less energy means less environmental impact
+                        Data centers use significant amounts of 
+                        energy per year. Cooling is the main consumer 
+                        of energy.
+                        <sup>
+                            <a href="https://www.science.org/doi/abs/10.1126/science.aba3758?mc_cid=a7138e6359" target="_blank">
+                                3
+                            </a>
+                        </sup>
                     </p>
                 </div>
             </div>
@@ -244,7 +253,7 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card" href="rigidContainment.html">
+            <a class="card" href="rigidContainment.cfm">
                 <div class="image_crop_box">
                     <img src="./assets/img/Double_Sliding_Door.png">
                 </div>

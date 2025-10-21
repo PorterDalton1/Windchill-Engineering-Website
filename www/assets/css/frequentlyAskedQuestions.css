@@ -85,11 +85,13 @@
 .heading .text_heading .button_flex {
   display: flex;
   justify-content: space-between;
-  width: 90%;
   font-family: "Sansation", sans-serif;
 }
+.heading .text_heading .button_flex a {
+  flex-shrink: 1;
+}
 .heading .text_heading .button_flex button {
-  font-size: 1.05em;
+  font-size: 1.05rem;
   font-weight: 600;
   background-color: #ffa200;
   color: white;
@@ -373,6 +375,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 }
 
 #nav_icons a, .mobile_buttons a {
+  text-decoration: none;
   padding: 0.75rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -622,38 +625,52 @@ section > div {
   padding-bottom: 2rem;
   font-size: 1.3rem;
   width: 100%;
-  cursor: pointer;
   border-bottom: 1px solid #5b5b5b;
-  /*
-  &:hover {
-      outline: 3px solid base.$raspberryBlue;
-      .nf-md-plus {
-          color: base.$raspberryBlue;
-          transform: scale(1.05);
-      }
-  }
-  */
-  /*
-  .nf-md-minus {
-      display: none;
-  }
-  */
 }
 .faq_card .nf {
   font-size: 1.5rem;
+  transform: rotate(0deg);
+  transition: transform 500ms;
+  will-change: transform;
+}
+.faq_card .nf.rotate {
+  transform: rotate(225deg);
 }
 .faq_card .question {
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: space-between;
   font-size: 1.5rem;
   font-weight: 400;
 }
+.faq_card .question:hover {
+  color: black;
+}
 .faq_card .answer {
-  display: none;
   font-size: 1.1rem;
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0px;
+  transition: opacity 400ms ease, max-height 400ms;
+  will-change: opacity, max-height;
+}
+.faq_card .answer.show {
+  opacity: 1;
+  max-height: 1000px;
 }
 
+@media (max-width: 800px) {
+  section {
+    background-color: white;
+  }
+  section > div {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    width: 90%;
+    border: none;
+  }
+}
 .center_flex {
   display: flex;
   align-items: center;
@@ -884,24 +901,14 @@ footer #website_creds img {
   height: 1em;
 }
 
-.show_answer {
-  display: block !important;
-}
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 600ms ease;
-  will-change: opacity;
-}
-.fade-in.show {
-  opacity: 1;
-}
-
+/*
 .slide_in {
-  transform: translateX(100%);
-  transition: transform 400ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 300ms ease;
-  will-change: transform, opacity;
+    transform: translateX(100%);
+    transition: transform 400ms cubic-bezier(.2,.9,.2,1), opacity 300ms ease;
+    will-change: transform, opacity;
+
+    &.is_visible {
+        transform: translateX(0);
+    }
 }
-.slide_in.is_visible {
-  transform: translateX(0);
-}/*# sourceMappingURL=frequentlyAskedQuestions.css.map */
+*//*# sourceMappingURL=frequentlyAskedQuestions.css.map */

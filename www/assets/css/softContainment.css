@@ -74,7 +74,7 @@
 }
 .heading .text_heading h2 span {
   font-weight: 600;
-  color: #ffa200;
+  color: #75B09C;
 }
 .heading .text_heading p {
   margin-top: 0.5em;
@@ -85,15 +85,17 @@
 .heading .text_heading .button_flex {
   display: flex;
   justify-content: space-between;
-  width: 90%;
   font-family: "Sansation", sans-serif;
 }
+.heading .text_heading .button_flex a {
+  flex-shrink: 1;
+}
 .heading .text_heading .button_flex button {
-  font-size: 1.05em;
+  font-size: 1.05rem;
   font-weight: 600;
-  background-color: #ffa200;
+  background-color: #75B09C;
   color: white;
-  border: 1px solid #ffa200;
+  border: 1px solid #75B09C;
   outline: none;
   padding: 1em;
   padding-left: 1.5em;
@@ -104,7 +106,7 @@
   font-family: "Sansation", sans-serif;
 }
 .heading .text_heading .button_flex button:hover {
-  color: #ffa200;
+  color: #75B09C;
   background-color: white;
 }
 
@@ -171,6 +173,158 @@
     align-items: center;
   }
 }
+.content_heading {
+  background: #cccccc;
+  background: radial-gradient(circle, #cccccc 0%, rgb(167, 167, 167) 100%);
+}
+
+#soft_second h4 {
+  color: #75B09C;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+#soft_second h3 {
+  color: white;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 1.17rem;
+  margin-bottom: 0.2rem;
+  font-weight: 200;
+}
+#soft_second h2 {
+  color: #75B09C;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 200;
+}
+#soft_second p {
+  color: white;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  font-weight: 200;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+#soft_second h1 {
+  font-weight: 400;
+}
+#soft_second h3 {
+  font-weight: 400;
+}
+#soft_second h2 {
+  font-weight: 400;
+}
+#soft_second p {
+  font-weight: 400;
+  line-height: 1.7;
+}
+#soft_second .single_span, #soft_second .double_span {
+  margin-left: 10%;
+  width: 80%;
+}
+#soft_second .double_span {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  gap: 2rem;
+}
+#soft_second .double_span > span {
+  min-width: 25ch;
+}
+#soft_second .double_span > span:first-child {
+  flex: 45;
+}
+#soft_second .double_span > span:last-child {
+  flex: 55;
+}
+#soft_second .double_span:has(ul) > span {
+  flex: 55 !important;
+}
+#soft_second .double_span:has(ul) > span:has(ul) {
+  flex: 45 !important;
+}
+#soft_second ul {
+  list-style: none;
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+}
+#soft_second ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+#soft_second ul .nf {
+  display: inline-flex;
+  vertical-align: middle;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  border: 1px solid #75B09C;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}
+@media (max-width: 500px) {
+  #soft_second h2 {
+    font-size: 1.3rem;
+  }
+  #soft_second h3 {
+    font-size: 1.1rem;
+  }
+  #soft_second p {
+    font-size: 1rem;
+  }
+  #soft_second .single_span, #soft_second .double_span {
+    margin-left: 3%;
+    width: 94%;
+  }
+}
+
+#soft_second {
+  border-top: 8px solid #0062B8;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: #5b5b5b;
+}
+#soft_second .double_span {
+  width: 80%;
+}
+#soft_second .has_img {
+  display: grid;
+  grid-template-areas: "bar foo foo" "biz foo foo";
+  justify-content: end;
+  gap: 30px;
+  grid-template-rows: 180px 180px;
+  grid-template-columns: 180px 180px 180px;
+}
+#soft_second .has_img img.foo {
+  grid-area: foo;
+}
+#soft_second .has_img img.bar {
+  grid-area: bar;
+}
+#soft_second .has_img img.biz {
+  grid-area: biz;
+}
+#soft_second .has_img img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  height: min-content;
+  object-fit: contain;
+  display: block;
+}
+
 .roboto-tmp {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -373,6 +527,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 }
 
 #nav_icons a, .mobile_buttons a {
+  text-decoration: none;
   padding: 0.75rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -816,15 +971,6 @@ footer #web_dev_info {
 footer #web_dev_info > span > span {
   text-decoration: underline;
   font-weight: 600;
-}
-footer #website_creds {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-footer #website_creds img {
-  height: 1em;
-}/*# sourceMappingURL=softContainment.css.map */weight: 600;
 }
 footer #website_creds {
   display: flex;

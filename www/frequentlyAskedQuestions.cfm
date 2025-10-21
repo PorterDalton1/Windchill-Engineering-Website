@@ -10,7 +10,7 @@
                 </span>
                 <i class="nf nf-md-plus"></i>
             </span>
-            <div class="answer fade-in">
+            <div class="answer">
                 #answer#
             </div>
         </div>
@@ -79,7 +79,7 @@
                             containment vary by customer priorities and design objectives. </p> <p>Key purposes of containment:
     
                             </p> 
-                            <ol> 
+                            <ul> 
                                 <li>Eliminate hot spots and improve temperature uniformity</li> 
                                 <li>Right-size cooling and electrical infrastructure</li> 
                                 <li>Optimize capacity planning and future growth flexibility</li>
@@ -89,7 +89,7 @@
                                 <li>Improve CRAC unit performance and part‑load efficiency</li> 
                                 <li>Enhance physical security with lockable doors and rigid enclosures</li> 
                                 <li>Improve overall facility appearance and organization</li> 
-                            </ol> 
+                            </ul> 
                             <p> 
                                 Both hot-aisle and cold-aisle containment use doors at row ends; they differ in airflow routing. 
                                 Hot-aisle containment typically employs overhead walls or ceilings to channel exhaust air back 

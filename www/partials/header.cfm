@@ -24,9 +24,9 @@
                 </span>
             </span>
             <div id="nav_icons">
-                <a>
+                <a href="/vendorLogin.cfm">
                     <i class="nf nf-fa-user_tie"></i>
-                    Vendor Login
+                    Vendor Log In
                 </a>
                 <a>
                     <i class="nf nf-fa-search"></i>
@@ -58,9 +58,9 @@
                 <span>Contact</span>
                 <i class="nf nf-fa-angle_down"></i>
                 <div class="dropdown_content">
-                    <div class="option">
+                    <a class="option" href="getAQuote.cfm">
                         Get a Quote
-                    </div>
+                    </a>
                     <div class="option">
                         Support
                     </div>
@@ -70,9 +70,9 @@
                 <span>Resources</span> 
                 <i class="nf nf-fa-angle_down"></i>
                 <div class="dropdown_content">
-                    <div class="option">
+                    <a class="option" href="/vendorLogin.cfm">
                         Vendor Resources
-                    </div>
+                    </a>
                     <div class="option">
                         Careers
                     </div>

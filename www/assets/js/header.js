@@ -102,64 +102,16 @@ $('document').ready(function () {
     });
 
 
-
-    /*
-    // Show / Hide header
-    let lastScrollTop = $(window).scrollTop();
-    let transitionEnd = true;
-    const MOVE_THRESHOLD = 200;
-
-    function onTransitionEnd() {
-        transitionEnd = true;
-    }
-
-    function showHeader() {
-        if ($('#site_header').hasClass('is_visible')) return;
-
-        $('.init_header').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', onTransitionEnd);
-        $('#site_header').addClass('is_visible'); //start transition to show
-
-        lastScrollTop = $(window).scrollTop();
-    }
-
-    function hideHeader() {
-        if (!$('#site_header').hasClass('is_visible')) return;
-        
-        $('.init_header').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', onTransitionEnd);
-
-        $('#site_header').removeClass('is_visible'); //start transition to hide
-
-        lastScrollTop = $(window).scrollTop();
-    }
-
-
-
-    $(window).on('scroll', function () {
-        if (!transitionEnd) return;
-
-        const currentScrollTop = $(this).scrollTop(); // Current scroll position
-        const delta = currentScrollTop - lastScrollTop;
-
-        if (Math.abs(delta) < MOVE_THRESHOLD) return;
-
-        if (delta > 0) { //user scrolls down
-            hideHeader();
-        } else {   // user scrolls up
-            showHeader();
-        }
-        lastScrollTop = currentScrollTop;
-    });
-    */
-
-
     //Steps for header hide/show;
-
 
     //distance from top of page
     let lastScrollTop = $(window).scrollTop();
     let headerStyle = 0;
 
     $(window).on('scroll', function () {
+
+        
+
         $siteHeader = $('#site_header');
 
         const headerHeight = $siteHeader.height();
@@ -167,8 +119,6 @@ $('document').ready(function () {
         const delta = currentScrollTop - lastScrollTop; //amount changed by
         
         headerStyle = headerStyle + delta;
-
-        console.log('header')
 
         if (headerStyle >= headerHeight) {
             headerStyle = headerHeight;

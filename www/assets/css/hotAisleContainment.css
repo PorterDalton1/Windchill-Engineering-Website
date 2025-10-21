@@ -85,11 +85,13 @@
 .heading .text_heading .button_flex {
   display: flex;
   justify-content: space-between;
-  width: 90%;
   font-family: "Sansation", sans-serif;
 }
+.heading .text_heading .button_flex a {
+  flex-shrink: 1;
+}
 .heading .text_heading .button_flex button {
-  font-size: 1.05em;
+  font-size: 1.05rem;
   font-weight: 600;
   background-color: #97005E;
   color: white;
@@ -373,6 +375,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 }
 
 #nav_icons a, .mobile_buttons a {
+  text-decoration: none;
   padding: 0.75rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -702,6 +705,21 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   margin-right: 0.5rem;
   margin-top: 0.3rem;
 }
+@media (max-width: 500px) {
+  #second_hot h2 {
+    font-size: 1.3rem;
+  }
+  #second_hot h3 {
+    font-size: 1.1rem;
+  }
+  #second_hot p {
+    font-size: 1rem;
+  }
+  #second_hot .single_span, #second_hot .double_span {
+    margin-left: 3%;
+    width: 94%;
+  }
+}
 #second_hot h2 {
   font-weight: 400;
 }
@@ -813,6 +831,21 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   border-radius: 50%;
   margin-right: 0.5rem;
   margin-top: 0.3rem;
+}
+@media (max-width: 500px) {
+  #third_hot h2 {
+    font-size: 1.3rem;
+  }
+  #third_hot h3 {
+    font-size: 1.1rem;
+  }
+  #third_hot p {
+    font-size: 1rem;
+  }
+  #third_hot .single_span, #third_hot .double_span {
+    margin-left: 3%;
+    width: 94%;
+  }
 }
 #third_hot h2 {
   font-weight: 400;
@@ -1142,15 +1175,6 @@ footer #web_dev_info {
 footer #web_dev_info > span > span {
   text-decoration: underline;
   font-weight: 600;
-}
-footer #website_creds {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-footer #website_creds img {
-  height: 1em;
-}/*# sourceMappingURL=hotAisleContainment.css.map */ht: 600;
 }
 footer #website_creds {
   display: flex;

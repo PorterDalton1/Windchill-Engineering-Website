@@ -1,0 +1,215 @@
+@use "partials/base";
+@include base.universalStyle;
+
+$loginBlue: #005891;
+
+#login_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    background-color: base.$windchillBlue;
+
+    #go_back {
+        position: absolute;
+        text-decoration: none;
+        top: 0;
+        left: 0;
+        color: white;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#login_card {
+    background-color: white;
+    width: 1100px;
+    min-height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+#login_form {
+
+    max-width: 90vw;
+
+    h2, p, .user_input span {
+        color: $loginBlue;
+    }
+
+    padding: 3rem;
+    img {
+        height: 80px;
+    }
+
+    .other_links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: rgb(115, 159, 170);
+        }
+    }
+
+    .user_input {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 1rem;
+
+        span {
+            text-transform: capitalize;
+        }
+
+        input {
+            padding: .5rem;
+            border: 1px solid rgb(173, 186, 230);
+            border-radius: .3rem;
+            color: $loginBlue;
+            font-size: 1rem;
+            // padding-block: 0px;
+            // padding-inline: 0px;
+
+            &:focus {
+                outline: none;
+                border-color: grey;
+                color: base.$mainDark;
+            }
+        }
+
+        &.password {
+
+            span:has(input) {
+                display: flex;
+            }
+
+            input {
+                width: 100%;
+                border-right: none;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                flex-shrink: 1;
+                flex-grow: 1;
+            }
+
+            input:focus, input:focus + .nf,  input:focus + .nf + .nf{
+                border-color: grey;
+                outline: none;
+            }
+
+            .nf {
+                font-size: 1rem;
+                border-top-right-radius: .3rem;
+                border-bottom-right-radius: .3rem;
+                border: 1px solid rgb(173, 186, 230);
+                border-left: none;
+                padding: .5rem;
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    #flex_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        button {
+            background-color: #005891;
+            color: white;
+            font-size: 1rem;
+    
+            padding: .8rem 2.4rem .8rem 2.4rem;
+            border-radius: 8px;
+    
+            cursor: pointer;
+    
+            &:hover {
+                background-color: grey;
+            }
+    
+            font-weight: 800;
+            border: none;
+            outline: none;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+#graphic {
+    width: 60%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+        height: 60%;
+        max-width: 90%;
+    }
+}
+
+#bottom_card {
+    position: absolute;
+    background-color: rgb(211, 234, 255);
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    z-index: 1;
+}
+
+@media (max-width: 800px) {
+
+    #login_form {
+        padding: 1rem;
+    }
+
+    #graphic {
+        display: none;
+    }
+
+    #login_card {
+        justify-content: center;
+        max-width: 500px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    #login_card {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    #go_back {
+        position: relative !important;
+        display: block;
+    }
+
+    #login_flex {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+
+// Jquery Classes
+
+.hide-me {
+    display: none !important;
+}

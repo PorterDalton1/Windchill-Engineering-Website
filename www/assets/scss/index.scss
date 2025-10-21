@@ -7,6 +7,26 @@
 @include base.universalStyle;
 @include header.headerStyle;
 
+.heading .button_flex {
+    width: 100%;
+
+    a {
+        text-decoration: none;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+
+        div:not(.arrow) {
+            width: 15ch;
+        }
+    }
+}
+
 #contact_button {
     background: base.$windchillBlue;
     color: white;
@@ -278,6 +298,25 @@ div.arrow {
     #client_list {
         gap: .1%;
         animation: 80s linear 0s slide infinite;
+    }
+
+    #stats_card {
+        color: base.$mainDark;
+        position: relative;
+        z-index: 2;
+        border-radius: 0px;
+        background-color: white;
+        // padding-top: 3rem;
+        margin-left: 0rem;
+        width: 100%;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        margin-bottom: -250px;
+    }
+
+    #icon_content_flex {
+        flex-direction: column !important;
+        align-items: center
     }
 }
 

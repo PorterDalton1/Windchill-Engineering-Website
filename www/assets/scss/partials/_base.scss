@@ -165,7 +165,25 @@ $mainFont: "Sansation", sans-serif;
             margin-right: .5rem;
             margin-top: .3rem;
         }
+    }
 
+    @media (max-width: 500px) {
+
+        h2 {
+            font-size: 1.3rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .single_span, .double_span {
+            margin-left: 3%;
+            width: 94%;
+        }
     }
 }
 

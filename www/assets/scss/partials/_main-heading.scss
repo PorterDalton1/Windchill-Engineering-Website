@@ -74,19 +74,25 @@ $default-order: true !default;
         .button_flex {
             display: flex;
             justify-content: space-between;
-            width: 90%;
+            // width: 90%;
             font-family: "Sansation", sans-serif;
 
+            a {
+                flex-shrink: 1;
+            }
+
             button {
-                font-size: 1.05em;
+                font-size: 1.05rem;
                 font-weight: 600;
                 background-color: $color-main;
                 color: white;
                 border: 1px solid $color-main;
                 outline: none;
+                
                 padding: 1em;
                 padding-left: 1.5em;
                 padding-right: 1.5em;
+        
                 cursor: pointer;
                 transition-property: color, background-color;
                 transition-duration: .5s;
