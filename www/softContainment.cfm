@@ -43,7 +43,16 @@
                 <p>Vinyl (soft) containment has been used since the very beginning. </p>
                 --->
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe recusandae exercitationem velit quia beatae eligendi nihil sint, minus totam maiores doloremque, rem porro natus eveniet distinctio mollitia fugit incidunt ut tenetur harum ducimus. In dicta eaque sequi! Blanditiis adipisci, dolore nemo voluptates cum quisquam illo similique veniam magnam et!
+                    Data center containment during early applications were mainly applied by vinyl curtains. The same
+                    kind you'd find in refrigeration units in food warehouses. The main advantages of soft containment
+                    is the easy installation, wide versatility, customizability, and "swiss army knife" variations of 
+                    solutions it can solve. For hot aisle solutions it comes with fire complience when installed with
+                    fusable links that will break away at abnormal high temperatures. 
+                </p>
+                <p>
+                    Do to the versatility of vinyl, most our applications of curtains are installed to accomodate
+                    pre-existing infristructure with complicated layouts, those that made it hard to fit regular 
+                    rigid containment neatly. 
                 </p>
             </span>
             <span class="has_img">

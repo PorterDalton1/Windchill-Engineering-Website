@@ -1,4 +1,4 @@
-<footer id="main_footer">
+<footer id="main_footer" class="WC_fade-in">
     <div id="footer_content_flex">
         <div id="footer_logo_flex">
             <img id="footer_logo" src="/assets/img/logo.png">
@@ -30,11 +30,10 @@
                 <a href="rigidContainment.cfm">Rigid Containment</a>
                 <a href="/softContainment.cfm">Soft Containment</a>
                 <a href="">Industry Standards</a>
-                <a href="/vendorlogin.cfm">Vendor Resources</a>
+                <a href="/secure/vendorlogin.cfm">Vendor Resources</a>
                 <a href="/frequentlyAskedQuestions.cfm">Frequenty Asked Questions</a>
                 <a href="/references.cfm">References</a>
-                <a href="/getAQuote.cfm">Contact</a>
-                <a href="">About Us</a>
+                <a href="/getAQuote.cfm">Get A Quote</a>
             </div>
         </div>
     

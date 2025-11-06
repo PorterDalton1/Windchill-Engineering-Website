@@ -213,3 +213,23 @@ $loginBlue: #005891;
 .hide-me {
     display: none !important;
 }
+
+.wrong-email {
+    border-color: red !important;
+    color: red !important;
+
+    outline: 1px solid red;
+}
+
+.wrong-password {
+    outline: 1px solid red;
+    border-radius: .3rem;
+
+    input, i {
+        border-color: red !important;
+    }
+
+    input {
+        color: red !important;
+    }
+}

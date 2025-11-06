@@ -3,5 +3,5 @@
 /mysql
 /img/workspaceAssets
 /www/index_old.cfm
-/www/Application.cfc
 /.vscode
+/www/secure/.global.pepper

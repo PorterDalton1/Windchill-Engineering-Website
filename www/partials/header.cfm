@@ -24,7 +24,7 @@
                 </span>
             </span>
             <div id="nav_icons">
-                <a href="/vendorLogin.cfm">
+                <a href="/secure/vendorLogin.cfm">
                     <i class="nf nf-fa-user_tie"></i>
                     Vendor Log In
                 </a>
@@ -70,12 +70,12 @@
                 <span>Resources</span> 
                 <i class="nf nf-fa-angle_down"></i>
                 <div class="dropdown_content">
-                    <a class="option" href="/vendorLogin.cfm">
+                    <a class="option" href="/secure/vendorLogin.cfm">
                         Vendor Resources
                     </a>
-                    <div class="option">
+                    <a class="option" href="careers.cfm">
                         Careers
-                    </div>
+                    </a>
                     <div class="option">
                         Industry Standards
                     </div>

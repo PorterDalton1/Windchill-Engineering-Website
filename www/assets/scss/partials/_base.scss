@@ -13,7 +13,7 @@ $windchillYellowLight: #F4B860;
 $mainFont: "Sansation", sans-serif;
 
 @mixin universalStyle {
-    @import "https://www.nerdfonts.com/assets/css/webfont.css";
+    @import "/assets/css/lib/nerdfonts.css";
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,432;1,432&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
     .roboto-tmp {
@@ -37,6 +37,9 @@ $mainFont: "Sansation", sans-serif;
         margin: 0px;
         padding: 0px;
         font-size: 100%;
+
+        max-width: 100%;
+        overflow-x: hidden;
     }
 }
 
@@ -107,6 +110,7 @@ $mainFont: "Sansation", sans-serif;
     .single_span, .double_span {
         margin-left: 10%;
         width: 80%;
+        display: inline-block;
     }
 
     .double_span {

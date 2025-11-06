@@ -50,8 +50,7 @@
                     Additionally, a Hot Aisle Containment configuration effectively transforms the general 
                     working area into a cold aisle, improving the overall comfort of the environment. In data centers, 
                     HAC eliminates hot spots, reduces the need for extensive cooling hardware, allows for an increase 
-                    in cooling setpoints, and can eliminate the requirement for additional humidity control. These 
-                    efficiencies typically result in a return on investment (ROI) of three years or less.
+                    in cooling setpoints, and can eliminate the requirement for additional humidity control.
                 </p>
             </span>
         </div>

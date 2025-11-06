@@ -15,16 +15,18 @@
     <title>WindChill Engineering | Data Center Containment</title>
     <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/min/index-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/lib/WC-animate-min.css">
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Home">
     <cfinclude template="./partials/header.cfm">
     <div id="first_content" class="heading">
         <div>
-            <div class="text_heading">
+            <div class="text_heading WC_fade-in WC_slide-right">
                 <h2>Understand the <br><span>WindChill Advantage</span></h2>
                 <p>We are committed to working with our clients to create and maintain the best solutions in the industry.</p>
                 <div class="button_flex">
@@ -52,15 +54,15 @@
                 </div>
             </div>
         </div>
-        <div class="content_heading">
+        <div class="content_heading animated WC_fade-in WC_slide-left">
             <video autoplay loop muted id="data_center_video">
                 <source src="/assets/video/data_center_video.mp4">
             </video>
         </div>
     </div>
 
-    <div id="second_content">
-        <h2>Trusted Across The Industry</h2>
+    <div id="second_content" class="WC_fade-in">
+        <h2 class="WC_slide-right WC_fade-in">Trusted Across The Industry</h2>
         <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, optio!</h3>
         <div id="spacing_client_list">
             <div id="client_list">
@@ -105,7 +107,7 @@
     </div>
 
     <section id="text_content">
-        <div class="single_span">
+        <div class="single_span WC_slide-right WC_fade-in">
             <span>
                 <h3>Data Center Containment Specialists</h3>
                 <h2>custom designed solutions exceeding needs</h2>
@@ -120,8 +122,9 @@
                 </p>
             </span>
         </div>
+
         <div class="double_span">
-            <span>
+            <span class="WC_slide-right WC_fade-in">
                 <h3>Origins</h3>
                 <h2>40 years combined experience</h2>
                 <p>
@@ -131,7 +134,7 @@
                     diverse clientele—including small businesses, colocation facilities, large private institutions, and Fortune 500 enterprises.
                 </p>
             </span>
-            <span>
+            <span class="WC_slide-right WC_fade-in">
                 <h3>Meaningful Customer Connections</h3>
                 <h2>Direct support and stress-free </h2>
                 <p>
@@ -143,11 +146,11 @@
             </span>
         </div>
 
-        <div id="stats_card">
+        <div id="stats_card" class="WC_fade-in">
             <h3 class="advantage">Data Center Containment</h3>
             <h2 class="advantage">Advantages</h2>
             <div id="icon_content_flex">
-                <div>
+                <div class="WC_fade-in WC_slide-right">
                     <div class="svg_icon">
                         <img src="./assets/img/propeller_blue.svg">
                     </div>
@@ -164,7 +167,7 @@
                         </sup>
                     </p>
                 </div>
-                <div>
+                <div class="WC_fade-in WC_slide-right">
                     <div class="svg_icon">
                         <img src="./assets/img/ROI_blue.svg">
                     </div>
@@ -181,7 +184,7 @@
                         </sup>
                     </p>
                 </div>
-                <div>
+                <div class="WC_fade-in WC_slide-right">
                     <div class="svg_icon">
                         <img src="./assets/img/Longevity_blue.svg">
                     </div>
@@ -198,7 +201,7 @@
                         
                     </p>
                 </div>
-                <div>
+                <div class="WC_fade-in WC_slide-right">
                     <div class="svg_icon">
                         <img src="./assets/img/leaf_blue.svg">
                     </div>
@@ -219,8 +222,8 @@
         </div>
     </section>
     <section id="third_content">
-        <div class="single_span">
-            <span>
+        <div class="single_span WC_fade-in WC_slide-right">
+            <span class="">
                 <h3 id="third_content_h3">LEARN</h3>
                 <h2 id="third_content_h2">Delivering Custom Solutions</h2>
                 <p>
@@ -233,7 +236,7 @@
             </span>
         </div>
         <div id="third_cards_flex">
-            <a class="card" href="/coldAisleContainment.cfm">
+            <a class="card WC_fade-in WC_slide-right" href="/coldAisleContainment.cfm">
                 <div class="image_crop_box">
                     <img src="./assets/img/ColdAisleMain.jpg">
                 </div>
@@ -243,7 +246,7 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card" href="hotAisleContainment.cfm">
+            <a class="card WC_fade-in WC_slide-right" href="hotAisleContainment.cfm">
                 <div class="image_crop_box">
                     <img src="./assets/img/HotAisleMain2.jpg">
                 </div>
@@ -253,7 +256,7 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card" href="rigidContainment.cfm">
+            <a class="card WC_fade-in WC_slide-right" href="rigidContainment.cfm">
                 <div class="image_crop_box">
                     <img src="./assets/img/Double_Sliding_Door.png">
                 </div>
@@ -264,7 +267,7 @@
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
     
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right" href="softContainment.cfm">
                 <div class="image_crop_box">
                     <img src="./assets/img/Soft_Containment.jpg">
                 </div>

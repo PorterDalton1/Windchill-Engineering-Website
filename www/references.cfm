@@ -30,7 +30,10 @@
             [2]
             <br>
             (2011)
-            <i>Google’s Green Data Centers: Network POP Case Study</i> [PDF].
+            <i>
+                Google’s Green Data Centers: Network POP Case Study
+            </i> 
+            [PDF].
             (110523)
             Google
             <br>

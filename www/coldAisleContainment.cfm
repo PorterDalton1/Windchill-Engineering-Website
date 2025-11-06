@@ -16,15 +16,17 @@
     <title>Cold Aisle Containment</title>
     <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/min/coldAisleContainment-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/lib/WC-animate-min.css">
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Cold Aisle Containment">
     <cfinclude template="./partials/header.cfm">
     <div id="first_hot" class="heading">
         <div>
-            <div class="text_heading">
+            <div class="text_heading WC_fade-in WC_slide-left">
                 <h2>The Advantage of <br><span>Cold Aisle Containment</span></h2>
                 <p>
                     Cold Aisle Containment focuses on the cold air, or the air that is fed to the servers so 
@@ -38,16 +40,16 @@
                 </div>
             </div>
         </div>
-        <div class="content_heading">
+        <div class="content_heading WC_slide-right WC_fade-in">
             <img src="/assets/img/_Cold_aisle_iso_view_1_cropped.png">
         </div>
     </div>
     <div id="second_cold">
         <div class="single_span">
-            <span>
-                <h3>Understanding</h3>
-                <h2>Cold Aisle Containment</h2>
-                <p>
+            <span class="WC_slide-right WC_fade-in">
+                <h3 class="WC_slide-right WC_fade-in">Understanding</h3>
+                <h2 class="WC_slide-right WC_fade-in">Cold Aisle Containment</h2>
+                <p class="WC_slide-right WC_fade-in">
                     Cold-aisle containment in data centers isolates the supply of chilled air as it enters 
                     server racks. By confining and concentrating this cold air, the cooling system's capacity 
                     and energy efficiency are enhanced. The primary benefit of cold-aisle containment is that 
@@ -56,7 +58,7 @@
                     Additionally, this approach can substantially diminish—or even eliminate—requirements for 
                     moisture management.
                 </p>
-                <p>
+                <p class="WC_slide-right WC_fade-in">
                     In addition to energy savings and improved operational efficiency, cold aisle containment 
                     can also improve aesthetics and reduce noise outside and around the data center.
                 </p>
@@ -64,7 +66,7 @@
         </div>
 
         <div class="double_span">
-            <span>
+            <span class="WC_slide-right WC_fade-in">
                 <h3>Leading the Market in</h3>
                 <h2>Premium Solutions</h2>
                 <p>
@@ -74,7 +76,7 @@
                     the system minimizes air leakage, enhancing both performance and durability.
                 </p>
             </span>
-            <span>
+            <span class="WC_slide-left WC_fade-in">
                 <h3>Matching Every</h3>
                 <h2>Budget</h2>
                 <p>
@@ -86,7 +88,7 @@
             </span>
         </div>
 
-        <div class="single_span">
+        <div class="single_span WC_slide-right WC_fade-in">
             <p>
                 Understanding that each data center presents distinct challenges, WindChill excels in delivering bespoke containment 
                 designs. Whether you supply a floor plan or prefer an on-site assessment, our experts will work closely with you to 
@@ -94,9 +96,9 @@
             </p>
         </div>
     </div>
-    <div id="third_cold">
+    <div id="third_cold" class="WC_fade-in">
         <div class="single_span">
-            <span>
+            <span class="WC_slide-right WC_fade-in">
                 <h3>Leading the Industry</h3>
                 <h2>Our Market advantages</h2>
                 <p>
@@ -109,7 +111,7 @@
             </span>
         </div>
         <div class="double_span">
-            <span>
+            <span class="WC_slide-right WC_fade-in">
                 <p>
                     For a more budget-conscious alternative, we offer soft containment options. These flexible solutions can be 
                     deployed independently or integrated with rigid systems to accommodate the unique layout and operational 
@@ -118,31 +120,31 @@
                     integrity.
                 </p>
             </span>
-            <span>
+            <span class="WC_slide-right WC_fade-in">
                 <h3>Take Advantage Now</h3>
                 <h2>Benifits</h2>
                 <ul>
-                    <li>
+                    <li class="WC_slide-right WC_fade-in">
                         <i class="nf nf-fa-arrow_right"></i>
-                        <span>Lorem ipsum dolor sit amet.</span>
+                        <span>Direct cooling energy intelligently and efficiently</span>
                     </li>
-                    <li>
+                    <li class="WC_slide-right WC_fade-in">
                         <i class="nf nf-fa-arrow_right"></i>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+                        <span>Easy to implement and works with most existing infrastructure</span>
                     </li>
-                    <li>
+                    <li class="WC_slide-right WC_fade-in">
                         <i class="nf nf-fa-arrow_right"></i>
-                        Lorem ipsum dolor sit.
+                        <span>Fire complience using flame retardent material and melt away ceilings</span>
                     </li>
-                    <li>
+                    <li class="WC_slide-right WC_fade-in">
                         <i class="nf nf-fa-arrow_right"></i>
-                        Lorem ipsum dolor sit amet consectetur.
+                        <span></span>
                     </li>
                 </ul>
             </span>
         </div>
         <div id="flex_third_cold">
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/ColdAisleMain.jpg">
                 </div>
@@ -152,7 +154,7 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/HotAisleMain2.jpg">
                 </div>
@@ -162,7 +164,7 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/Double_Sliding_Door.png">
                 </div>
@@ -173,7 +175,7 @@
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
     
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/Soft_Containment.jpg">
                 </div>

@@ -1,9 +1,9 @@
 <div id="contact_us_section">
-    <div class="image_crop_background">
+    <div class="image_crop_background WC_fade-in WC_slide-left">
         <img src="/assets/img/Handshake_meeting.jpg">
     </div>
     
-    <div class="center_flex">
+    <div class="center_flex WC_fade-in WC_blow-up">
         <div id="small_card">
             <h4>Each data center is different</h4>
             <h1>Use solutions made for you</h1>

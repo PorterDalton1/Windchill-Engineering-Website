@@ -108,10 +108,7 @@ $('document').ready(function () {
     let lastScrollTop = $(window).scrollTop();
     let headerStyle = 0;
 
-    $(window).on('scroll', function () {
-
-        
-
+    $('html').on('scroll', function () {
         $siteHeader = $('#site_header');
 
         const headerHeight = $siteHeader.height();

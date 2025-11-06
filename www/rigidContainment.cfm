@@ -173,8 +173,8 @@
                 <h3>Effective</h3>
                 <h2>Ceiling Panels</h2>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et at ducimus odio nostrum. 
-                    Et dolorum sunt pariatur molestias velit iure.
+                    Used to cap off top of aisle. Made with strict fire compliance. Mainly used in cold aisle
+                    applications, ceiling panels tend to be quick to install and are extremely effective.
                 </p>
             </span>
         </div>
@@ -186,8 +186,7 @@
                 </div>
                 <h3>Shrink Away Ceiling</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatum exercitationem 
-                    dolorum excepturi officia asperiores perspiciatis
+                    Caps off top of aisle. Made with melt away heat shrink plastic for fire complience. 
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
@@ -197,8 +196,9 @@
                 </div>
                 <h3>Mechanical Heat Activated Ceiling</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatum exercitationem 
-                    dolorum excepturi officia asperiores perspiciatis
+                    More sophesticated setup common for more strict complience where on top of the normal
+                    shrink away plastic, there is also a mechanical switch, which opens the panel through
+                    an electrical system. 
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>

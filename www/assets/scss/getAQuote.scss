@@ -8,39 +8,50 @@
 @include header.headerStyle;
 
 section.contact {
-
-    @include base.paragraphSpans($primary: white, $secondary: base.$raspberryBlue);
     position: relative;
 
-    #filter_card {
+    #flex_section {
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         z-index: 5;
-        background-color: rgba(17, 0, 255, 0.2);
+        background-color: rgba(31, 154, 255, 0.377);
+        backdrop-filter: blur(5px);
 
-        .single_span {
-            display: block;
-            max-width: 50ch;
-            width: 80%;
-            margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: left;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 50ch;
+        padding-left: 10%;
+        padding-right: calc((90% - 50ch));
+    }
 
-            h3 {
-                font-size: 1.5rem;
-            }
-            h2 {
-                font-size: 2rem;
-                border-bottom: 4px solid base.$windchillYellow;
-            }
-            p {
-                font-size: 1.3rem;
-            }
+    #filter_card {
+        display: block;
+        // max-width: 55ch;
+        @include base.textStyle($h3-color: white, $h2-color: base.$windchillPurple, $p-color: white, $h4-color: white);
 
-            * {
-                font-weight: 800 !important;
-            }
+        h3 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 4px solid base.$windchillYellow;
+            padding-bottom: .5em;
+            margin-bottom: .5em;
+        }
+        p {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        * {
+            font-weight: 800 !important;
         }
     }
 
@@ -56,23 +67,39 @@ section.contact {
         }
     }
 
-    // overflow: hidden;
-    // height: 500px;
-
-    /*
-    .image_crop {
-        overflow: hidden;
-        display: block;
-
+    #flex_cards_foo {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        gap: 100px;
+    }
 
-        img {
-            height: 100%;
+    #phone_card, #email_card {
+        padding: 1.5rem;
+        width: 130px;
+        height: 130px;
+        height: min-content;
+        // border-radius: 1.5rem;
+        $shadow-color: rgba(165, 165, 165, 0.25);
+        box-shadow: $shadow-color 0px 54px 55px, $shadow-color 0px -12px 30px, $shadow-color 0px 4px 6px, $shadow-color 0px 12px 13px, $shadow-color 0px -3px 5px;
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        transition-property: transform;
+        transition-duration: 200ms;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        & > svg { // img
+            height: 70px;
         }
     }
-    */
 
     .image_crop {
         z-index: 2;
@@ -91,6 +118,8 @@ section.contact {
         }
     }
 }
+
+
 
 @include contactUs.contactUsStyle;
 @include footer.footerStyle;
