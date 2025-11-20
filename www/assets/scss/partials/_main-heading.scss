@@ -47,14 +47,7 @@ $default-order: true !default;
 
     .text_heading {
         h2 {
-            /*
-            margin: 0;
-            padding: 0;
-            margin-block-start: 0;
-            margin-block-end: 0;
-            font-weight: 400;
-            */
-            font-size: 2.5em;
+            font-size: 40px;
             text-transform: uppercase;
             color: base.$mainDark;
 
@@ -73,31 +66,22 @@ $default-order: true !default;
 
         .button_flex {
             display: flex;
-            justify-content: space-between;
-            // width: 90%;
-            font-family: "Sansation", sans-serif;
-
-            a {
-                flex-shrink: 1;
-            }
-
+            flex-shrink: 0;
+            flex-wrap: wrap;
             button {
-                font-size: 1.05rem;
+                font-size: 1rem;
                 font-weight: 600;
                 background-color: $color-main;
-                color: white;
-                border: 1px solid $color-main;
-                outline: none;
-                
+                color: white;                
                 padding: 1em;
                 padding-left: 1.5em;
                 padding-right: 1.5em;
+                border: none;
+                outline: none;
         
                 cursor: pointer;
-                transition-property: color, background-color;
-                transition-duration: .5s;
+                transition: color 150ms, background-color 150ms;
 
-                font-family: "Sansation", sans-serif;
                 &:hover {
                     color: $color-main;
                     background-color: white;
@@ -138,13 +122,7 @@ $default-order: true !default;
         justify-content: center;
     }
 
-    .heading .button_flex {
-        flex-direction: column;
-        gap: 1.5em;
-        width: 100%;
-    }
-
     .heading h2 {
-        font-size: 2.2em !important;
+        font-size: 35px !important;
     }
 }

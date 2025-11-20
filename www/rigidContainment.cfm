@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rigid Containment</title>
     <link rel="icon" href="/assets/img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="/assets/css/min/rigidContainment-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/rigidContainment-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Rigid Containment">
     <cfinclude template="./partials/header.cfm">
     <div id="rigid_first" class="heading">
         <div>
-            <div class="text_heading">
+            <div class="text_heading WC_fade-in WC_slide-right">
                 <h2>Our Products <br><span>Rigid Containment</span></h2>
                 <p>
                     Our products are all custom made. Our rigid containment is made with high quality 
@@ -25,17 +27,26 @@
                         View Products
                         <i class="nf nf-cod-chevron_down"></i>
                     </button>
+                    <script>
+                        $(document).ready(function () {
+                            $('#contact_button').on('click', function () {
+                                $('html,body').animate({
+                                    scrollTop: $("#rigid_second").offset().top
+                                }, 'slow');
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </div>
-        <div class="content_heading">
+        <div class="content_heading WC_fade-in WC_slide-left">
             <img src="/assets/img/free_standing_cropped.png">
         </div>
     </div>
     
     <div id="rigid_second">
         <div class="double_span">
-            <span>
+            <span class="WC_fade-in WC_slide-right">
                 <h3>versatile</h3>
                 <h2>Rigid Wall</h2>
                 <p>
@@ -45,23 +56,23 @@
                     finish. All our data center containment is custom made to meet specific needs.
                 </p>
             </span>
-            <span>
+            <span class="WC_fade-in WC_slide-right">
                 <h3>multiple</h3>
                 <h2>Applications</h2>
                 <ul>
-                    <li>
+                    <li class="WC_fade-in WC_slide-right">
                         <i class="nf nf-fa-arrow_right"></i>
                         <span>Place to fill missing cabinets</span>
                     </li>
-                    <li>
+                    <li class="WC_fade-in WC_slide-right">
                         <i class="nf nf-fa-arrow_right"></i>
                         <span>Above cabinets</span>
                     </li>
-                    <li>
+                    <li class="WC_fade-in WC_slide-right">
                         <i class="nf nf-fa-arrow_right"></i>
                         Around Chimneys
                     </li>
-                    <li>
+                    <li class="WC_fade-in WC_slide-right">
                         <i class="nf nf-fa-arrow_right"></i>
                         Cap off aisles
                     </li>
@@ -70,7 +81,7 @@
         </div>
 
         <div class="flex_rigid">
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/RW_filler_panel.png">
                 </div>
@@ -82,7 +93,7 @@
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
 
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/RW_sliding_access.png">
                 </div>
@@ -94,7 +105,7 @@
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
 
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/Economy_Rigid_Wall.png">
                 </div>
@@ -108,7 +119,7 @@
     </div>
     <div id="rigid_third">
         <div class="double_span">
-            <span>
+            <span class="WC_fade-in WC_slide-right">
                 <h3>Premium</h3>
                 <h2>Rigid Doors</h2>
                 <p>
@@ -121,7 +132,7 @@
             </span>
         </div>
         <div class="flex_rigid">
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/DoubleSlidingDoor.png">
                 </div>
@@ -132,7 +143,7 @@
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/single_sliding_door_cropped.png">
                 </div>
@@ -143,7 +154,7 @@
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/single_hinged_door_cropped.png">
                 </div>
@@ -154,7 +165,7 @@
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/single_hinged_door_cropped.png">
                 </div>
@@ -168,7 +179,7 @@
         </div>
     </div>
     <div id="rigid_fourth">
-        <div class="single_span">
+        <div class="single_span WC_fade-in WC_slide-right">
             <span>
                 <h3>Effective</h3>
                 <h2>Ceiling Panels</h2>
@@ -180,7 +191,7 @@
         </div>
 
         <div class="flex_rigid">
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/Ceiling_panel.png">
                 </div>
@@ -190,7 +201,7 @@
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
-            <a class="card">
+            <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
                     <img src="/assets/img/MHAC.png">
                 </div>

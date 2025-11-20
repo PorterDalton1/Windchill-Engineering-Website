@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rigid Containment</title>
+    <title>Soft Containment</title>
     <link rel="icon" href="/assets/img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="/assets/css/min/softContainment-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/softContainment-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Soft Containment">
@@ -15,7 +17,7 @@
 
     <div id="soft_first" class="heading">
         <div>
-            <div class="text_heading">
+            <div class="text_heading WC_fade-in WC_slide-right">
                 <h2>Our Products <br><span>Soft Containment</span></h2>
                 <p>
                     Some of the first data center containment was made with vinyl curtains.
@@ -26,17 +28,26 @@
                         View Products
                         <i class="nf nf-cod-chevron_down"></i>
                     </button>
+                    <script>
+                        $(document).ready(function () {
+                            $('#contact_button').on('click', function () {
+                                $('html,body').animate({
+                                    scrollTop: $("#soft_second").offset().top
+                                }, 'slow');
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </div>
-        <div class="content_heading">
+        <div class="content_heading WC_fade-in WC_slide-left">
             <img src="./assets/img/Thermal_heading(cropped).png">
         </div>
     </div>
 
     <section id="soft_second">
-        <div class="double_span">
-            <span>
+        <div class="double_span ">
+            <span class="WC_fade-in WC_slide-right">
                 <h3>Simple</h3>
                 <h2>Traditional</h2>
                 <!---
@@ -55,7 +66,7 @@
                     rigid containment neatly. 
                 </p>
             </span>
-            <span class="has_img">
+            <span class="has_img WC_fade-in WC_slide-right">
                 <img class="foo" src="/assets/img/CurtainDrawing.png">
                 <img class="bar" src="/assets/img/Track_connecting.png">
                 <img class="biz" src="/assets/img/fusible_link.png">

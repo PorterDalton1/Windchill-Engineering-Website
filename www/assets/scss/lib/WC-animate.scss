@@ -1,5 +1,6 @@
 @use "sass:map";
-$duration: .8s;
+$duration: .5s;
+$childDelay: 150ms;
 
 $fade-in: fadeIn $duration ease-out forwards;
 
@@ -13,7 +14,7 @@ $animations: (
 
 $init_property: (
     slide-left: translateX(15%),
-    slide-right: translateX(-15%),
+    slide-right: translateX(-120px),
     slide-down: translateY(-15%),
     slide-up: translateY(15%),
     blow-up: scale(.8)
@@ -72,7 +73,7 @@ $init_property: (
         }
         @for $i from 1 through 6 {
             &:nth-child(#{$i}) {
-                animation-delay: 200ms * $i;
+                animation-delay: $childDelay * $i;
             }
         }
     }
@@ -86,7 +87,7 @@ $init_property: (
         }
         @for $i from 1 through 6 {
             &:nth-child(#{$i}) {
-                animation-delay: (200ms * $i) - 200;
+                animation-delay: ($childDelay * $i) - $childDelay;
             }
         }
     }

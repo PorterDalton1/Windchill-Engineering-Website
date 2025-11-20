@@ -11,44 +11,35 @@
 @include header.headerStyle;
 
 
-section {
-    // @include base.textStyle;
+#faq_title {
+    @include base.topTitle;
+}
 
-    background-color: rgb(206, 220, 226);
-
-    h1 {
-        text-align: center;
-        font-size: 3rem;
-    }
+#faq_main {
 
     & > div {
         padding-top: 75px;
         padding-bottom: 75px;
-        background-color: white;
-        padding-left: 4rem;
-        padding-right: 4rem;
 
-        width: calc(50% + 8rem);
+        width: 900px;
+        max-width: 90%;
 
-        //width: calc((60% / 70% * 100%) - 8rem);
         height: 100%;
         margin: 0 auto;
-        border-left: 1px solid lightgray;
-        border-right: 1px solid lightgray;
     }
 }
 
 
 
 .faq_card {
-    background-color: white;
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: 1.3rem;
     width: 100%;
-    border-bottom: 1px solid base.$mainDark;
+    border-bottom: 1px solid lightgrey;
 
-    .nf {
+    .nf.nf-md-plus {
+        color: base.$windchillBlue !important;
         font-size: 1.5rem;
         transform: rotate(0deg);
         transition: transform 500ms;
@@ -86,21 +77,6 @@ section {
             max-height: 1000px;
         }
     }
-}
-
-@media (max-width: 800px) {
-
-    section {
-        background-color: white;
-    }
-
-    section > div {
-        padding-left: 0rem;
-        padding-right: 0rem;
-        width: 90%;
-
-        border: none;
-    }        
 }
 
 @include contactUs.contactUsStyle;

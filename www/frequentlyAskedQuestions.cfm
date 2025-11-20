@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link rel="icon" href="/assets/img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="/assets/css/min/frequentlyAskedQuestions-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/frequentlyAskedQuestions-min.css">
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/header.js"></script>
     <script src="/assets/js/frequentlyAskedQuestions.js"></script>
@@ -34,9 +34,18 @@
     <cfset websiteTitle="FAQ">
     <cfinclude template="./partials/header.cfm">
 
-    <section>
+    <section id="faq_title">
+        <span class="center_h1_flex">
+            <h1><b>FAQ</b></h1>
+        </span>
+        <div class="image_crop">
+            <img src="/assets/img/stand_up_talk.jpg">
+        </div>
+    </section>
+
+
+    <section id="faq_main">
         <div>
-            <h1>FAQ</h1>
             <cfoutput>
     
                 #questionCard(

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Login</title>
     <link rel="icon" href="/assets/img/user-tie_icon.png">
-    <link rel="stylesheet" type="text/css" href="../assets/css/min/vendorLogin-min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendorLogin-min.css">
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/vendorLogin.js"></script>
 </head>

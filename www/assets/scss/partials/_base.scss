@@ -9,6 +9,13 @@ $windchillYellowLight: #F4B860;
     $mainDark: #5b5b5b;
     $backgroundLightGrey: #ececec;
 
+    // hover colors
+    $hover-windchillBlue: #548fc4;
+    $hover-raspberryBlue: #66bce0;
+
+    $hover-mainDark: grey;
+
+
 // Fonts
 $mainFont: "Sansation", sans-serif;
 
@@ -39,7 +46,13 @@ $mainFont: "Sansation", sans-serif;
         font-size: 100%;
 
         max-width: 100%;
-        overflow-x: hidden;
+        overflow-x: clip;
+    }
+    
+    html {
+    }
+    
+    body {
     }
 }
 
@@ -73,7 +86,7 @@ $mainFont: "Sansation", sans-serif;
     p {
         color: $p-color;
         line-height: 1.5;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 200;
         margin-block-start: 1rem;
         margin-block-end: 1rem;
@@ -119,10 +132,8 @@ $mainFont: "Sansation", sans-serif;
         flex-wrap: wrap;
         flex-grow: 1;
         flex-shrink: 1;
-        &  > span {
-            min-width: 25ch;
-        }
-        gap: 2rem;
+
+        gap: 32px;
 
         & > span:first-child {
             flex: 45;
@@ -174,10 +185,10 @@ $mainFont: "Sansation", sans-serif;
     @media (max-width: 500px) {
 
         h2 {
-            font-size: 1.3rem;
+            font-size: 32px;
         }
         h3 {
-            font-size: 1.1rem;
+            font-size: 19px;
         }
 
         p {
@@ -213,7 +224,7 @@ $mainFont: "Sansation", sans-serif;
         width: 350px;
         min-height: 450px;
         height: auto;
-        border: 2px solid $border-color;
+        border: 1px solid $border-color;
         background-color: white;
         cursor: pointer;
         transform: scale(1);
@@ -233,7 +244,7 @@ $mainFont: "Sansation", sans-serif;
             position: relative;
             background-color: white;
             object-fit: cover;
-            border-bottom: 2px solid $border-color;
+            border-bottom: 1px solid $border-color;
 
             img {
                 width: 100%;
@@ -284,5 +295,59 @@ $mainFont: "Sansation", sans-serif;
             align-items: center;
         }
 
+    }
+}
+
+@mixin topTitle($filterColor: $windchillBlue) {
+    position: relative;
+
+    .center_h1_flex {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > h1 {
+            z-index: 3;
+            font-size: 3.5rem;
+            color: white;
+            font-weight: 200;
+            text-transform: uppercase;
+            text-align: center;
+    
+            b {
+                font-weight: 600;
+            }
+        }
+    }
+
+
+    .image_crop {
+        z-index: 2;
+        width: 100%;
+        height: 375px;
+        overflow: hidden;
+        position: relative;
+        object-fit: cover;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        &::after {
+            box-shadow: inset 0 0 0 1000px #{$filterColor}6c;
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 3;
+        }
     }
 }

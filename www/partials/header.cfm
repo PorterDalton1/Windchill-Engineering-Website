@@ -2,7 +2,7 @@
     <cfthrow message="You need to define a websiteTitle variable before using this cfinclude header.cfm">
 </cfif>
 
-<header id="main_header">
+<header id="main_header" class="WC_fade-in">
     <div id="top_header">
         <i class="nf nf-fa-phone"></i>
         <a href="tel:+1 (801) 494-2098">+1 (801) 494-2098</a>
@@ -24,12 +24,12 @@
                 </span>
             </span>
             <div id="nav_icons">
-                <a href="/secure/vendorLogin.cfm">
-                    <i class="nf nf-fa-user_tie"></i>
+                <a href="/secure/vendorLogin.cfm" class="header__btn--primary vendor--primary">
+                    <i class="nf nf-md-account_tie_outline"></i>
                     Vendor Log In
                 </a>
-                <a>
-                    <i class="nf nf-fa-search"></i>
+                <a class="header__btn--primary search--primary">
+                    <i class="nf nf-oct-search"></i>
                     Search
                 </a>
             </div>
@@ -61,9 +61,6 @@
                     <a class="option" href="getAQuote.cfm">
                         Get a Quote
                     </a>
-                    <div class="option">
-                        Support
-                    </div>
                 </div>
             </div>
             <div>
@@ -76,9 +73,9 @@
                     <a class="option" href="careers.cfm">
                         Careers
                     </a>
-                    <div class="option">
-                        Industry Standards
-                    </div>
+                    <a class="option" href="webLinks.cfm">
+                        Useful Resources
+                    </a>
                 </div>
             </div>
             <div>
@@ -91,10 +88,12 @@
                     <a class="option" href="frequentlyAskedQuestions.cfm">
                         Frequently Asked Questions
                     </a>
+                    <a class="option" href="aboutUs.cfm">
+                        About Us
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
-    <div id="header_margin"></div>
 </header>
 

@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cold Aisle Containment</title>
     <link rel="icon" href="/assets/img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="/assets/css/min/coldAisleContainment-min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/lib/WC-animate-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/coldAisleContainment-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/header.js"></script>
     <script src="/assets/js/lib/WC-animate.js"></script>
@@ -37,6 +37,15 @@
                         Find Out More
                         <i class="nf nf-cod-chevron_down"></i>
                     </button>
+                    <script>
+                        $(document).ready(function () {
+                            $('#find_out').on('click', function () {
+                                $('html,body').animate({
+                                    scrollTop: $("#second_cold").offset().top
+                                }, 'slow');
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </div>
@@ -45,11 +54,11 @@
         </div>
     </div>
     <div id="second_cold">
-        <div class="single_span">
-            <span class="WC_slide-right WC_fade-in">
-                <h3 class="WC_slide-right WC_fade-in">Understanding</h3>
-                <h2 class="WC_slide-right WC_fade-in">Cold Aisle Containment</h2>
-                <p class="WC_slide-right WC_fade-in">
+        <div class="single_span WC_fade-in WC_slide-right">
+            <span>
+                <h3>Understanding</h3>
+                <h2>Cold Aisle Containment</h2>
+                <p>
                     Cold-aisle containment in data centers isolates the supply of chilled air as it enters 
                     server racks. By confining and concentrating this cold air, the cooling system's capacity 
                     and energy efficiency are enhanced. The primary benefit of cold-aisle containment is that 
@@ -58,7 +67,7 @@
                     Additionally, this approach can substantially diminish—or even eliminate—requirements for 
                     moisture management.
                 </p>
-                <p class="WC_slide-right WC_fade-in">
+                <p>
                     In addition to energy savings and improved operational efficiency, cold aisle containment 
                     can also improve aesthetics and reduce noise outside and around the data center.
                 </p>
@@ -76,7 +85,7 @@
                     the system minimizes air leakage, enhancing both performance and durability.
                 </p>
             </span>
-            <span class="WC_slide-left WC_fade-in">
+            <span class="WC_fade-in WC_slide-right">
                 <h3>Matching Every</h3>
                 <h2>Budget</h2>
                 <p>
@@ -96,9 +105,9 @@
             </p>
         </div>
     </div>
-    <div id="third_cold" class="WC_fade-in">
+    <div id="third_cold" class="WC_fade-in WC_slide-right">
         <div class="single_span">
-            <span class="WC_slide-right WC_fade-in">
+            <span>
                 <h3>Leading the Industry</h3>
                 <h2>Our Market advantages</h2>
                 <p>
@@ -120,7 +129,7 @@
                     integrity.
                 </p>
             </span>
-            <span class="WC_slide-right WC_fade-in">
+            <span class="WC_fade-in">
                 <h3>Take Advantage Now</h3>
                 <h2>Benifits</h2>
                 <ul>

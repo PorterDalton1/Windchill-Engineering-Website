@@ -7,7 +7,7 @@ const observer = new IntersectionObserver( function (entries) {
             
             $target.one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
                 $(this).removeClass((index, className) => {
-                  return (className.match(/\bWC_[^\s]*/g) || []).join(' ');
+                  return (className.match(/\bWC_[^\s]*/g) || []).join(' '); // Starts with 'WC_'
                 });
             });
             

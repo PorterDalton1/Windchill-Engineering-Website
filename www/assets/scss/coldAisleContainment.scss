@@ -12,6 +12,11 @@
 @include base.universalStyle;
 @include header.headerStyle;
 
+.text_heading .button_flex #find_out:hover {
+    background-color: base.$hover-raspberryBlue;
+    color: white;
+}
+
 .content_heading {
     img {
         background-color: base.$mainDark;

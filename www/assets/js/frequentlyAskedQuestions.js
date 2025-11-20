@@ -15,11 +15,9 @@ $(document).ready(function () {
 
         $('.answer').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
 
-
-
-            $('html, body').animate({
+/*             $('html, body').animate({
                 scrollTop: $faqCard.offset().top - 100
-            }, 10);
+            }, 10); */
         });
 
         $faqCard.find('.nf-md-plus').addClass('rotate');

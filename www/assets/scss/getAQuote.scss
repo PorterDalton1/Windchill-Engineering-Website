@@ -7,118 +7,47 @@
 @include base.universalStyle;
 @include header.headerStyle;
 
-section.contact {
-    position: relative;
+#quote_one {
+    @include base.topTitle;
+}
 
-    #flex_section {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 5;
-        background-color: rgba(31, 154, 255, 0.377);
-        backdrop-filter: blur(5px);
+#quote_two {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    @include base.paragraphSpans($primary: base.$mainDark, $secondary: base.$windchillBlue);
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: left;
-        flex-grow: 0;
-        flex-shrink: 0;
-        width: 50ch;
-        padding-left: 10%;
-        padding-right: calc((90% - 50ch));
+    // display: block;
+
+    #contact_us_foo {
+        margin-top: 2.5rem;
     }
 
-    #filter_card {
-        display: block;
-        // max-width: 55ch;
-        @include base.textStyle($h3-color: white, $h2-color: base.$windchillPurple, $p-color: white, $h4-color: white);
-
-        h3 {
-            font-size: 1.5rem;
-        }
-        h2 {
-            font-size: 2rem;
-            border-bottom: 4px solid base.$windchillYellow;
-            padding-bottom: .5em;
-            margin-bottom: .5em;
-        }
-        p {
-            margin-top: 0;
-            font-size: 1.3rem;
-        }
-
-        * {
-            font-weight: 800 !important;
-        }
-    }
-
-    #buttons {
-        button {
-            border: 4px solid base.$windchillYellow;
-            outline: none;
-            background: none;
-            padding: 1rem;
-            font-size: 1.3rem;
-            color: white;
-            font-weight: 800;
-        }
-    }
-
-    #flex_cards_foo {
-        display: flex;
-        justify-content: space-around;
-        gap: 100px;
-    }
-
-    #phone_card, #email_card {
-        padding: 1.5rem;
-        width: 130px;
-        height: 130px;
-        height: min-content;
-        // border-radius: 1.5rem;
-        $shadow-color: rgba(165, 165, 165, 0.25);
-        box-shadow: $shadow-color 0px 54px 55px, $shadow-color 0px -12px 30px, $shadow-color 0px 4px 6px, $shadow-color 0px 12px 13px, $shadow-color 0px -3px 5px;
+    a {
+        color: white;
+        padding: .75rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        font-size: 1.25rem;
+        background-color: base.$raspberryBlue;
+        margin-right: .5rem;
         cursor: pointer;
-        display: flex;
-        gap: 1rem;
-        flex-direction: column;
-        align-items: center;
-        font-size: 1.5rem;
-        background-color: rgba(255, 255, 255, 0.5);
-
-        transition-property: transform;
-        transition-duration: 200ms;
+        transition: background-color 250ms;
 
         &:hover {
-            transform: scale(1.05);
+            background-color: base.$hover-raspberryBlue;
         }
 
-        & > svg { // img
-            height: 70px;
-        }
-    }
 
-    .image_crop {
-        z-index: 2;
-        width: 100%;
-        height: 600px;
-        overflow: hidden;
-        position: relative;
-        object-fit: cover;
+        &:last-child {
+            background-color: base.$mainDark;
+            margin-right: 0;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
+            &:hover {
+                background-color: base.$hover-mainDark;
+            }
         }
     }
 }
-
 
 
 @include contactUs.contactUsStyle;

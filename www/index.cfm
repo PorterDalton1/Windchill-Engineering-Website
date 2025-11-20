@@ -14,11 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WindChill Engineering | Data Center Containment</title>
     <link rel="icon" href="/assets/img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="/assets/css/min/index-min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/lib/WC-animate-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/index-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/header.js?version=3"></script>
     <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
@@ -31,10 +31,8 @@
                 <p>We are committed to working with our clients to create and maintain the best solutions in the industry.</p>
                 <div class="button_flex">
                     <a href="/getAQuote.cfm">
-                        <button id="contact_button" class="sansation-light">
-                            <div>    
-                                Contact Us to Get Started
-                            </div>
+                        <button id="contact_button">
+                            <div>Contact Us</div>
                             <div class="arrow">
                                 <i class="nf nf-cod-arrow_right"></i>
                             </div>
@@ -42,9 +40,9 @@
                     </a>
     
                     <a href="">
-                        <button id="learn_button" class="sansation-light">
+                        <button id="learn_button">
                             <div>    
-                                How We Make a Difference
+                                What We Do
                             </div>
                             <div class="arrow">
                                 <i class="nf nf-cod-arrow_right"></i>
@@ -61,9 +59,9 @@
         </div>
     </div>
 
-    <div id="second_content" class="WC_fade-in">
-        <h2 class="WC_slide-right WC_fade-in">Trusted Across The Industry</h2>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, optio!</h3>
+    <div id="second_content" class="WC_fade-in WC_slide-right">
+        <h2>Trusted Across The Industry</h2>
+        <h3>Used and trusted by top companies for data center cooling needs and solutions </h3>
         <div id="spacing_client_list">
             <div id="client_list">
 

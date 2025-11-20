@@ -34,13 +34,13 @@ $('document').ready(function () {
         $mobileNav.addClass('is_visible');
 
         //const fromTop = $mobileNav[0].getBoundingClientRect().top; 
-        const fromTop = $('#site_header').height() + $('#top_header').height(); 
+        const fromTop = $('#main_header').height(); 
 
         const screenHeight = document.documentElement.clientHeight;
 
         const elemHeight = screenHeight - fromTop;
 
-        $mobileNav.css('margin-top', fromTop);
+        // $mobileNav.css('margin-top', fromTop);
         $mobileNav.css('height', elemHeight);
 
         $('.mobile_nav > div:not(.mobile_buttons)').on('click', function () {
@@ -102,23 +102,31 @@ $('document').ready(function () {
     });
 
 
-    //Steps for header hide/show;
+
+
+    // --- Steps for header hide/show; --- //
 
     //distance from top of page
     let lastScrollTop = $(window).scrollTop();
     let headerStyle = 0;
 
-    $('html').on('scroll', function () {
-        $siteHeader = $('#site_header');
-
+    $(window).on('scroll', function () {
+        $siteHeader = $('#main_header');
+        
+        if ($(window).scrollTop() <= 0) {
+            $siteHeader.css('transform', 'translateY(0)');
+            return;
+        }
+        
+        const tabsHeight = $('#nav_tabs').height();
         const headerHeight = $siteHeader.height();
         const currentScrollTop = $(window).scrollTop();
         const delta = currentScrollTop - lastScrollTop; //amount changed by
         
         headerStyle = headerStyle + delta;
 
-        if (headerStyle >= headerHeight) {
-            headerStyle = headerHeight;
+        if (headerStyle >= (headerHeight - tabsHeight)) {
+            headerStyle = headerHeight - tabsHeight;
         }
         if (headerStyle <= 0) {
             headerStyle = 0;

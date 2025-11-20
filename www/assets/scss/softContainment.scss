@@ -1,4 +1,5 @@
 $green: #75B09C;
+$hover-green: #90aaa1;
 @use "partials/base";
 @use "partials/header";
 @use "partials/main-heading" with (
@@ -33,9 +34,11 @@ $green: #75B09C;
                              "biz foo foo";
 
         justify-content: end;
-        $fizz: 180px;
+        $fizz: 1fr;
+        max-width: 550px;
+        height: min-content;
 
-        gap: $fizz / 6;
+        gap: 20px;
 
         grid-template-rows: $fizz $fizz;
 
@@ -61,6 +64,49 @@ $green: #75B09C;
             object-fit: contain;
             display: block;
         }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    #soft_second .has_img {
+        display: grid;
+        grid-template-areas: "bar biz"
+                             "foo foo"
+                             "foo foo";
+
+        justify-content: end;
+        $fizz: 1fr;
+        height: min-content;
+        max-width: 350px;
+
+        grid-template-rows: $fizz $fizz $fizz;
+
+        grid-template-columns: $fizz $fizz;
+
+        img.foo {
+            grid-area: foo;
+        }
+
+        img.bar {
+            grid-area: bar;
+        }
+
+        img.biz {
+            grid-area: biz;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #soft_second .double_span {
+        justify-content: center;
+    }
+};
+
+@media (max-width: 500px) {
+    #soft_second .double_span {
+        width: 90%;
     }
 }
 

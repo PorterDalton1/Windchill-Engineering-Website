@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Aisle Containment</title>
     <link rel="icon" href="/assets/img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/min/hotAisleContainment-min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/hotAisleContainment-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Hot Aisle Containment">
     <cfinclude template="./partials/header.cfm">
     <section id="first_hot" class="heading">
         <div>
-            <div class="text_heading">
+            <div class="text_heading WC_fade-in WC_slide-right">
                 <h2>The Advantage of <br><span>Hot Aisle Containment</span></h2>
                 <p>
                     Hot Aisle Containment in Data Centers helps to eliminates hot spots, 
@@ -26,15 +28,24 @@
                         Find Out More
                         <i class="nf nf-cod-chevron_down"></i>
                     </button>
+                    <script>
+                        $(document).ready(function () {
+                            $('#find_out').on('click', function () {
+                                $('html,body').animate({
+                                    scrollTop: $("#second_hot").offset().top
+                                }, 'slow');
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </div>
-        <div class="content_heading">
+        <div class="content_heading WC_fade-in WC_slide-right">
             <img src="/assets/img/cropped_upscaled_hot_aisle1.png">
         </div>
     </section>
     <section id="second_hot">
-        <div class="single_span">
+        <div class="single_span WC_fade-in WC_slide-right">
             <span>
                 <h3>Understanding</h3>
                 <h2>Hot Aisle Containment</h2>
@@ -55,7 +66,7 @@
             </span>
         </div>
         <div class="double_span">
-            <span>
+            <span class="WC_fade-in WC_slide-right">
                 <h3>Leading the Market in</h3>
                 <h2>Premium Solutions</h2>
                 <p>
@@ -66,7 +77,7 @@
                     optimizing thermal performance and extending system longevity.
                 </p>
             </span>
-            <span>
+            <span class="WC_fade-in WC_slide-right">
                 <h3>Matching Every</h3>
                 <h2>Budget</h2>
                 <p>
@@ -77,7 +88,7 @@
                 </p>
             </span>
         </div>
-        <div class="single_span">
+        <div class="single_span WC_fade-in WC_slide-right">
             <span>
                 <p>
                     Recognizing that every data center has its unique needs, WindChill specializes in creating custom 
@@ -90,7 +101,7 @@
     </section>
 
     <section id="third_hot">
-        <div class="single_span">
+        <div class="single_span WC_fade-in WC_slide-right">
             <span>
                 <h3>Leading the Industry</h3>
                 <h2>Our Market advantages</h2>
@@ -110,7 +121,7 @@
             </span>
         </div>
         <div id="flex_third_hot">
-            <a class="card" href="/rigidContainment.cfm">
+            <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
                     <img src="/assets/img/freestanding_hot_small.png">
                 </div>
@@ -120,7 +131,7 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card" href="/rigidContainment.cfm">
+            <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
                     <img src="/assets/img/Hot_aisle_iso_view_2.png">
                 </div>
@@ -131,7 +142,7 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card" href="/rigidContainment.cfm">
+            <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
                     <img src="/assets/img/hot_example_1.png">
                 </div>
@@ -142,7 +153,7 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card" href="/rigidContainment.cfm">
+            <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
                     <img src="/assets/img/Soft_Containment.jpg">
                 </div>
