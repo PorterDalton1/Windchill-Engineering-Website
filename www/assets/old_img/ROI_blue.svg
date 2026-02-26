@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg3"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <path
+     d="m 22,7 -7.8498,7.939 c -0.1377,0.1394 -0.3013,0.25 -0.4813,0.3254 -0.18,0.0754 -0.3729,0.1143 -0.5678,0.1143 -0.1948,0 -0.3878,-0.0389 -0.5678,-0.1143 -0.18,-0.0754 -0.3435,-0.186 -0.4813,-0.3254 L 8.95919,11.811 C 8.82146,11.6716 8.65791,11.561 8.47791,11.4856 8.2979,11.4102 8.10496,11.3713 7.91011,11.3713 c -0.19485,0 -0.38779,0.0389 -0.56779,0.1143 -0.18001,0.0754 -0.34355,0.186 -0.48129,0.3254 L 2,16.1147"
+     stroke="#ffffff"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path1"
+     style="stroke:#0062b8;stroke-opacity:1" />
+  <path
+     d="m 2,1.5 v 21"
+     stroke="#ffffff"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path2"
+     style="stroke:#0062b8;stroke-opacity:1" />
+  <path
+     d="M 22,12 V 7 h -5"
+     stroke="#ffffff"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path3"
+     style="stroke:#0062b8;stroke-opacity:1" />
+</svg>

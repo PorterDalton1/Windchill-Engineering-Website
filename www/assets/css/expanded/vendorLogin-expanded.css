@@ -55,6 +55,7 @@ body, html {
 #login_card {
   background-color: white;
   width: 1100px;
+  max-width: 95%;
   min-height: 500px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -68,10 +69,16 @@ body, html {
 
 #login_form {
   max-width: 90vw;
-  padding: 3rem;
+  min-width: 350px;
 }
 #login_form h2, #login_form p, #login_form .user_input span {
   color: #005891;
+}
+#login_form p {
+  padding-bottom: 32px;
+}
+#login_form {
+  padding: 3rem;
 }
 #login_form img {
   height: 80px;
@@ -161,13 +168,22 @@ body, html {
   padding: 0.8rem 2.4rem 0.8rem 2.4rem;
   border-radius: 8px;
   cursor: pointer;
+}
+#login_form #flex_button button:hover {
+  background-color: #50738a;
+}
+#login_form #flex_button button {
   font-weight: 800;
   border: none;
   outline: none;
   margin: 0 auto;
 }
-#login_form #flex_button button:hover {
-  background-color: grey;
+
+#no_account {
+  cursor: pointer;
+}
+#no_account:hover {
+  text-decoration: underline;
 }
 
 #graphic {
@@ -198,25 +214,127 @@ body, html {
   z-index: 1;
 }
 
+#no_account_pop_up {
+  display: none;
+}
+
+#no_account_pop_up.show {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#no_account_card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3rem auto 5rem;
+  background-color: white;
+  color: #5b5b5b;
+  width: 400px;
+  max-width: calc(90% - 4rem);
+  min-height: 125px;
+  padding: 2rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 1rem;
+}
+#no_account_card h2 {
+  grid-column: span 2;
+  margin: 0;
+  padding: 0;
+}
+#no_account_card .contact_text {
+  grid-column: span 2;
+}
+#no_account_card .contact_button {
+  color: white;
+  width: 7rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0062B8;
+  -ms-flex-item-align: end;
+      align-self: end;
+  cursor: pointer;
+  text-decoration: none;
+}
+#no_account_card .contact_button:hover {
+  background-color: #548fc4;
+  text-decoration: none;
+}
+#no_account_card .cancel_button {
+  justify-self: end;
+  -ms-flex-item-align: end;
+      align-self: end;
+  width: 7rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+#no_account_card .cancel_button:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 800px) {
-  #login_form {
-    padding: 1rem;
-  }
-  #graphic {
-    display: none;
-  }
   #login_card {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 500px;
     width: 90%;
+  }
+  #login_form {
+    padding: 1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #graphic {
+    display: none;
   }
 }
 @media (max-width: 500px) {
   #login_card {
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas: "graphic" "login";
     width: 100%;
     border-radius: 0px;
+    min-height: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   #go_back {
     position: relative !important;
@@ -233,6 +351,20 @@ body, html {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+  }
+  #login_form {
+    grid-area: login;
+    padding-top: none;
+  }
+  #graphic {
+    grid-area: graphic;
+    display: block;
+    justify-self: center;
+    background: none;
+    align-self: center;
+  }
+  #bottom_card {
+    display: none;
   }
 }
 .hide-me {

@@ -26,6 +26,10 @@
     #contact_icons {
         display: flex;
         justify-content: space-around;
+        a {
+            color: base.$mainDark;
+            text-decoration: none;
+        }
     }
     
     
@@ -66,16 +70,24 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            
+
+            .contact_option_div {
+                margin-top: .5rem;
+                text-align: center;
+            }
+
             img {
                 height: 4rem;
-                
                 &.contact_hover {
                     display: none;
                 }
             }
+            
             &:hover {
-                color: base.$windchillBlue;
+                .contact_option_div {
+                    color: base.$windchillBlue !important;
+                    font-weight: 800;
+                }
                 
                 img {
                     &.contact_hover {

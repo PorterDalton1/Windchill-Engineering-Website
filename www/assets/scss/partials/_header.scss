@@ -1,6 +1,65 @@
 @use "base";
 
 @mixin headerStyle {
+
+    #search--overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        backdrop-filter: blur(6px);
+        z-index: 3000;
+        display: none;
+        justify-content: center;
+
+        &.show_me {
+            display: flex;
+        }
+
+        & > div {
+            margin-top: 12rem;
+            height: min-content;
+        }
+
+        input[name="search"] {
+            max-width: 90vw;
+            font-size: 1.2rem;
+            padding: .7rem;
+            outline: none;
+            border: none;
+            background-color: base.$mainDark;
+            color: white;
+            width: auto;
+            margin: 0px;
+        }
+    }
+
+    #search--input_bar {
+        display: flex;
+        overflow: hidden;
+        border-radius: .55rem;
+        transition: transform 250ms ease-out;
+        box-shadow: rgba(250, 253, 255, 0.3) 0px 1px 2px 0px, rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+
+        &:has(input[name="search"]:focus) {
+            transform: scale(1.05) translateY(10px);
+        }
+    }
+
+    #search_button--overlay {
+        font-size: 1.2rem;
+        background-color: base.$mainDark;
+        color: rgb(163, 163, 163);
+        padding: .7rem;
+        margin-left: -1px;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
+    }
+
     header {
         position: sticky;
         top: 0;
@@ -399,10 +458,6 @@
     }
     
     @media (max-width: 400px) {
-
-        .mobile_buttons {
-            gap: 0 !important;
-        }
     
         .mobile_nav .mobile_buttons a {
             display: inline-block;

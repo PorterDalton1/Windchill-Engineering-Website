@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get a Quote</title>
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/getAQuote-min.css">
-    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/header.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Get A Quote">
@@ -18,7 +13,7 @@
             <h1>Get a <b>Quote</b></h1>
         </span>
         <div class="image_crop">
-            <img src="/assets/img/planning-out-on-table1.jpg">
+            <img src="/assets/img/planning-out-on-table1.webp">
         </div>
     </section>
 
@@ -39,8 +34,8 @@
                 </p>
             </span>
             <div id="contact_us_foo">
-                <a>Email Us</a>
-                <a>Call Us</a>
+                <a href="mailto:info@theWindChill.com">Email Us</a>
+                <a href="tel:+1 (801) 494-2098">Call Us</a>
             </div>
         </div>
     </section>

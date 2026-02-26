@@ -10,16 +10,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WindChill Engineering | Data Center Containment</title>
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/index-min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
-    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/header.js?version=3"></script>
-    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Home">
@@ -39,9 +31,9 @@
                         </button>
                     </a>
     
-                    <a href="">
+                    <a href="/frequentlyAskedQuestions.cfm">
                         <button id="learn_button">
-                            <div>    
+                            <div>
                                 What We Do
                             </div>
                             <div class="arrow">
@@ -236,7 +228,7 @@
         <div id="third_cards_flex">
             <a class="card WC_fade-in WC_slide-right" href="/coldAisleContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="./assets/img/ColdAisleMain.jpg">
+                    <img src="./assets/img/ColdAisleMain.webp">
                 </div>
                 <h3>Cold Aisle Containment</h3>
                 <p>
@@ -246,7 +238,7 @@
             </a>
             <a class="card WC_fade-in WC_slide-right" href="hotAisleContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="./assets/img/HotAisleMain2.jpg">
+                    <img src="./assets/img/HotAisleMain2.webp">
                 </div>
                 <h3>Hot Aisle Containment</h3>
                 <p>
@@ -256,18 +248,18 @@
             </a>
             <a class="card WC_fade-in WC_slide-right" href="rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="./assets/img/Double_Sliding_Door.png">
+                    <img src="./assets/img/Double_Sliding_Door.webp">
                 </div>
                 <h3>Rigid Containment</h3>
                 <p>
-                    WindChill rigid doors, rigid walls, cieling panels, and GapHOG products combine to create the best value in data center airflow containment.
+                    WindChill rigid doors, rigid walls, ceiling panels, and GapHOG products combine to create the best value in data center airflow containment.
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
     
             <a class="card WC_fade-in WC_slide-right" href="softContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="./assets/img/Soft_Containment.jpg">
+                    <img src="./assets/img/Soft_Containment.webp">
                 </div>
                 <h3>Soft Containment</h3>
                 <p>
@@ -279,5 +271,7 @@
     </section>
     <cfinclude template="./partials/contactUs.cfm">
     <cfinclude template="./partials/footer.cfm">
+
+    <script src="/assets/js/index.js"></script>
 </body>
 </html> 

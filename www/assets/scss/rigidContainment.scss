@@ -1,7 +1,8 @@
 @use "partials/base";
+$accent-color: base.$windchillYellow; 
 @use "partials/header";
 @use "partials/main-heading" with (
-    $color-main: base.$windchillYellow
+    $color-main: $accent-color
 );
 
 @use "partials/contactUs";
@@ -10,21 +11,36 @@
 @include base.universalStyle;
 @include header.headerStyle;
 
+#contact_button:hover {
+    color: white !important;
+    background-color: base.$windchillYellowLight !important;
+}
+
 .content_heading {
     background: #ffebc9;
     background: radial-gradient(circle,rgba(255, 235, 201, 1) 0%, rgba(244, 184, 96, 1) 100%);
 }
 
+.image_crop_box {
+    background-color: white;
+}
+.card p {
+    color: white !important;
+}
+
+#rigid_second {
+    padding-top: 75px;
+}
 
 #rigid_second, #rigid_third, #rigid_fourth {
-    padding-top: 75px;
-    padding-bottom: 75px;
-    @include base.paragraphSpans($secondary: base.$windchillYellow);
+    background-color: base.$mainDark;
+    @include base.paragraphSpans($primary: white, $secondary: $accent-color);
 
+    .double_span li span {
+        color: white !important;
+    }
     .flex_rigid {
-        @include base.cardsFlex($h3-color: base.$windchillYellow, $border-color: base.$windchillBlue);
-        justify-content: start;
-        gap: 20px;
+        @include base.cardsDisplay($accent-color);
         .card {
             cursor: default !important;
         }
@@ -38,20 +54,22 @@
 }
 
 #rigid_second {
-    border-top: 8px solid base.$windchillBlue;
-    background-color: base.$backgroundLightGrey;
+    //border-top: 8px solid base.$windchillBlue;
+    //background-color: base.$backgroundLightGrey;
 }
 
 #rigid_third {
+    /*
     background-color: base.$mainDark;
     border-top: 8px solid base.$raspberryBlue;
     h3:not(.card h3), p:not(.card p), .nf {
         color: white !important;
     }
+        */
 }
 
 #rigid_fourth {
-    border-top: 8px solid base.$windchillPurple;
+    //border-top: 8px solid base.$windchillPurple;
 }
 
 @include contactUs.contactUsStyle;

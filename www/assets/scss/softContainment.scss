@@ -1,5 +1,5 @@
 $green: #75B09C;
-$hover-green: #90aaa1;
+$hover-green: #b1e5d3;
 @use "partials/base";
 @use "partials/header";
 @use "partials/main-heading" with (
@@ -8,6 +8,11 @@ $hover-green: #90aaa1;
 
 @use "partials/contactUs";
 @use "partials/footer";
+
+#contact_button:hover {
+    color: white !important;
+    background-color: $hover-green !important;
+}
 
 .content_heading {
     background: #cccccc;

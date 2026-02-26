@@ -7,7 +7,7 @@ function removeMobileNav() {
     $('.mobile_nav').removeClass('is_visible');
 }
 
-$('document').ready(function () {
+$(document).ready(function () {
     $('#nav_icon').on('click', function () {
 
         if ($('.mobile_nav').length) {
@@ -99,7 +99,67 @@ $('document').ready(function () {
             $('#nav_tabs > div').children('.dropdown_content').removeClass('show_dropdown');
         });
 
+        
     });
+
+    $('header').on('click', '.header__btn--primary.search--primary', function (e) {
+        var didFocusOut = true;
+
+        if ($('.mobile_nav.slide_in.is_visible').length) {
+            $('#nav_icon').trigger('click');
+        }
+
+        $('#search--overlay').addClass('show_me');
+
+        $('#search--overlay.show_me').on('focusout', '#search_input--overlay', function () {
+            didFocusOut = false;
+            setTimeout(function() { didFocusOut = true; }, 0);
+        });
+
+        $('#search--overlay.show_me').on('click', function (e) {
+            if (e.target !== this) {
+                return;
+            }
+
+            if (didFocusOut) {
+            } else {
+                didFocusOut = true;
+                return;
+            }
+
+            $(this).off();
+
+            $(this).removeClass('show_me');
+        });
+
+
+
+
+        $('#search--overlay.show_me').on('click', '#search_button--overlay', function () {
+    
+            const searchValue = $('#search_input--overlay').val();
+            if (searchValue === "") {
+                return;
+            }
+            
+            const formURL = `https://www.duckduckgo.com/?q=site:www.windchillengineering.com+${encodeURI(searchValue)}&ia=web`;
+    
+            window.location.href = formURL;
+        });
+    
+        $('#search--overlay.show_me').on('keydown', '#search_input--overlay', function (e) {
+            
+            if (e.key === "Escape" || e.keyCode === 27) {
+                $('#search_input--overlay').blur();
+                return;
+            }
+
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                $('#search_button--overlay').trigger('click');
+            }
+        });
+    });
+
 
 
 

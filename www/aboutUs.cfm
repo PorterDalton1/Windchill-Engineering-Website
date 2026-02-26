@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/aboutUs-min.css">
-    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/header.js"></script>
 </head>
 <body>
     <cfset websiteTitle="About Us">
@@ -18,7 +13,7 @@
             <h1>About <b>Us</b></h1>
         </span>
         <div class="image_crop">
-            <img src="/assets/img/stand_up_talk.jpg">
+            <img src="/assets/img/stand_up_talk.webp">
         </div>
     </section>
 

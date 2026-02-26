@@ -1,7 +1,8 @@
 @use "partials/base";
+$accent-color: base.$windchillPurple;
 @use "partials/header";
 @use "partials/main-heading" with (
-    $color-main: base.$windchillPurple,
+    $color-main: $accent-color,
     $default-order: false
 );
 @use "partials/contactUs";
@@ -10,6 +11,11 @@
 @include base.universalStyle;
 @include header.headerStyle;
 
+
+#find_out:hover {
+    color: white !important;
+    background-color: base.$hover-windchillPurple;
+}
 
 .content_heading {
     img {
@@ -22,7 +28,7 @@
     border-top: 8px solid base.$windchillYellow;
     padding-top: 75px;
     padding-bottom: 75px;
-    @include base.paragraphSpans($primary: base.$mainDark, $secondary: base.$windchillPurple);
+    @include base.paragraphSpans($primary: base.$mainDark, $secondary: $accent-color);
 
     h2 {
         font-weight: 400;
@@ -32,13 +38,13 @@
         margin-top: 2.5rem;
         margin-bottom: 1.25rem;
         padding-bottom: 1.25rem;
-        border-bottom: 2px solid base.$windchillPurple;
+        border-bottom: 2px solid $accent-color;
     }
 }
 
 #third_hot {
     border-top: 8px solid #7583b0;
-    @include base.paragraphSpans($primary: base.$mainDark, $secondary: base.$windchillPurple);
+    @include base.paragraphSpans($primary: base.$mainDark, $secondary: $accent-color);
     padding-top: 75px;
     padding-bottom: 75px;
     background-color: white;
@@ -53,7 +59,7 @@
 }
 
 #flex_third_hot {
-    @include base.cardsFlex($h3-color: base.$windchillPurple, $border-color: base.$windchillPurple);
+    @include base.cardsDisplay($accent-color);
 }
 
 @include contactUs.contactUsStyle;

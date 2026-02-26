@@ -1,35 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers</title>
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/careers-min.css">
-    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/header.js"></script>
-    <script>
-        $(document).ready(function () {
-            var labelState = false;
-            $('#lang_input').on('change', function () {
-                $('.lang_text.selected').removeClass('selected');
-                $('section.hide_me').removeClass('hide_me');
-                if (labelState) {
-                    $('#lang_english').addClass('selected');
-                    $('#career_es').addClass('hide_me');
-                    labelState = false;
-                } else {
-                    $('#lang_spanish').addClass('selected');
-                    $('#career_en').addClass('hide_me');
-                    labelState = true;
-                }
-            });
-        });
-    </script>
 </head>
 <body>
     <cfset websiteTitle="Careers">
-    <cfinclude template="./partials/header.cfm">
+    <cfinclude template="/partials/header.cfm">
 
     <div id="toggle_language">
         <span id="lang_english" class="lang_text selected">English</span>
@@ -42,7 +19,7 @@
     <section id="career_en">
         <h1>Open Positions</h1>
         <h2>Shop Manufactering</h2>
-        <img src="./assets/img/Blue-collar-design.png">
+        <img src="/assets/img/Blue-collar-design.webp">
         <span>
             <div>
                 <h2>About the Position</h2>
@@ -97,8 +74,10 @@
                     <p>
                         Please send your resume or a brief summary of your experience to
                         <a href="mailto:jnorth@windchillengineering.com ">jnorth@windchillengineering.com</a>
-                        or apply in person at: 
-                        <strong>435 W Airport Rd, Heber, UT 84032</strong>.
+                        or apply in person at:
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=WindChill+Engineering" target="_blank">
+                            435 W Airport Rd, Heber, UT 84032
+                        </a>
                     </p>
                     <p>
                         If you have specific shop experience, certifications, or a resume detailing tool/machine 
@@ -119,7 +98,7 @@
     <section id="career_es" class="hide_me">
         <h1>Oportunidades Laborales</h1>
         <h2>Producción en Taller</h2>
-        <img src="./assets/img/Blue-collar-design.png">
+        <img src="./assets/img/Blue-collar-design.webp">
         <span>
             <div>
                 <h2>Descripción del Puesto</h2>
@@ -175,7 +154,7 @@
                         Envíe su currículum o un resumen breve de su experiencia a
                         <a href="mailto:jnorth@windchillengineering.com ">jnorth@windchillengineering.com</a>,
                         o preséntese personalmente en: 
-                        <strong>435 W Airport Rd, Heber, UT 84032</strong>.
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=WindChill+Engineering" target="_blank">435 W Airport Rd, Heber, UT 84032</a>
                     </p>
                     <p>
                         Si tiene experiencia específica en talleres, certificaciones o experiencia con herramientas y maquinaria, indíquelo en su mensaje para acelerar la consideración de su candidatura.
@@ -193,5 +172,24 @@
         </span>
     </section>
     <cfinclude template="./partials/footer.cfm">
+
+    <script>
+        $(document).ready(function () {
+            var labelState = false;
+            $('#lang_input').on('change', function () {
+                $('.lang_text.selected').removeClass('selected');
+                $('section.hide_me').removeClass('hide_me');
+                if (labelState) {
+                    $('#lang_english').addClass('selected');
+                    $('#career_es').addClass('hide_me');
+                    labelState = false;
+                } else {
+                    $('#lang_spanish').addClass('selected');
+                    $('#career_en').addClass('hide_me');
+                    labelState = true;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,11 +1,12 @@
 @use "partials/base";
+$accent-color: base.$raspberryBlue;
 @use "partials/header";
 @use "partials/contactUs";
 
 @use "partials/footer";
 
 @use "partials/main-heading" with (
-    $color-main: base.$raspberryBlue,
+    $color-main: $accent-color,
     $default-order: false
 );
 
@@ -28,13 +29,13 @@
     padding-top: 75px;
     padding-bottom: 75px;
     background-color: base.$backgroundLightGrey;
-    @include base.paragraphSpans($primary: base.$mainDark, $secondary: base.$raspberryBlue);
+    @include base.paragraphSpans($primary: base.$mainDark, $secondary: $accent-color);
 
     .double_span {
         margin-top: 2.5em;
         margin-bottom: 1.25em;
         padding-bottom: 1.25em;
-        border-bottom: 2px solid base.$raspberryBlue;
+        border-bottom: 2px solid $accent-color;
     }
 }
 
@@ -44,7 +45,7 @@
 }
 
 #flex_third_cold {
-    @include base.cardsFlex(base.$raspberryBlue);
+    @include base.cardsDisplay($accent-color);
 }
 
 @include contactUs.contactUsStyle;

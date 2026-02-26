@@ -4,4 +4,5 @@
 /img/workspaceAssets
 /www/index_old.cfm
 /.vscode
+/www/secure/.global.password
 /www/secure/.global.pepper

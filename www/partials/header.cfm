@@ -2,6 +2,20 @@
     <cfthrow message="You need to define a websiteTitle variable before using this cfinclude header.cfm">
 </cfif>
 
+<cfhtmlhead>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/img/WindChill_Icon.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
+    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
+</cfhtmlhead>
+
+<cfhtmlbody>
+    <script src="/assets/js/lib/WC-animate.js"></script>
+    <script src="/assets/js/header.js"></script>
+</cfhtmlbody>
+
+
 <header id="main_header" class="WC_fade-in">
     <div id="top_header">
         <i class="nf nf-fa-phone"></i>
@@ -97,3 +111,18 @@
     </nav>
 </header>
 
+<div id="search--overlay">
+    <div>
+        <div id="search--input_bar" class="WC_fade-in WC_slide-right">
+            <label for="search" style="display: none"></label>
+            <input
+                id="search_input--overlay"
+                type="text" 
+                name="search"
+                autocomplete="no" 
+                placeholder="Search Website" 
+            >
+            <i class="nf nf-oct-search" id="search_button--overlay"></i>
+        </div>
+    </div>
+</div>

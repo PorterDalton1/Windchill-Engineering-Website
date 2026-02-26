@@ -63,6 +63,73 @@ body, html {
   overflow-x: clip;
 }
 
+#search--overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(6px);
+  z-index: 3000;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#search--overlay.show_me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#search--overlay > div {
+  margin-top: 12rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+#search--overlay input[name=search] {
+  max-width: 90vw;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  outline: none;
+  border: none;
+  background-color: #5b5b5b;
+  color: white;
+  width: auto;
+  margin: 0px;
+}
+
+#search--input_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.55rem;
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
+  -webkit-box-shadow: rgba(250, 253, 255, 0.3) 0px 1px 2px 0px, rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+          box-shadow: rgba(250, 253, 255, 0.3) 0px 1px 2px 0px, rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+}
+#search--input_bar:has(input[name=search]:focus) {
+  -webkit-transform: scale(1.05) translateY(10px);
+      -ms-transform: scale(1.05) translateY(10px);
+          transform: scale(1.05) translateY(10px);
+}
+
+#search_button--overlay {
+  font-size: 1.2rem;
+  background-color: #5b5b5b;
+  color: rgb(163, 163, 163);
+  padding: 0.7rem;
+  margin-left: -1px;
+  cursor: pointer;
+}
+#search_button--overlay:hover {
+  color: white;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -518,9 +585,6 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   }
 }
 @media (max-width: 400px) {
-  .mobile_buttons {
-    gap: 0 !important;
-  }
   .mobile_nav .mobile_buttons a {
     display: inline-block;
     scale: 0.8;
@@ -691,14 +755,13 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+#contact_icons a {
+  color: #5b5b5b;
+  text-decoration: none;
+}
 
 #contact_us_section {
   border-top: 8px solid #0062B8;
-  position: relative;
-  z-index: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 600px;
 }
 #contact_us_section h4 {
   color: #0062B8;
@@ -740,6 +803,13 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 #contact_us_section h1 {
   font-weight: 400;
 }
+#contact_us_section {
+  position: relative;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 600px;
+}
 #contact_us_section .image_crop_background {
   z-index: 8;
   position: absolute;
@@ -779,14 +849,19 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
       -ms-flex-align: center;
           align-items: center;
 }
+#contact_us_section .contact_option .contact_option_div {
+  margin-top: 0.5rem;
+  text-align: center;
+}
 #contact_us_section .contact_option img {
   height: 4rem;
 }
 #contact_us_section .contact_option img.contact_hover {
   display: none;
 }
-#contact_us_section .contact_option:hover {
-  color: #0062B8;
+#contact_us_section .contact_option:hover .contact_option_div {
+  color: #0062B8 !important;
+  font-weight: 800;
 }
 #contact_us_section .contact_option:hover img.contact_hover {
   display: inline;
@@ -807,8 +882,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -845,11 +919,6 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
     background-color: transparent;
   }
 }
-footer {
-  background-color: #ececec;
-  padding-top: 70px;
-  font-size: 0.9rem;
-}
 footer h3 {
   display: block;
   font-size: 0.9rem;
@@ -858,6 +927,11 @@ footer h3 {
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+}
+footer {
+  background-color: #ececec;
+  padding-top: 70px;
+  font-size: 0.9rem;
 }
 footer #footer_content_flex {
   display: -webkit-box;

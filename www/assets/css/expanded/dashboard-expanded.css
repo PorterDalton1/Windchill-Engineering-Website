@@ -1,0 +1,141 @@
+@import "/assets/css/lib/nerdfonts.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,432;1,432&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+.roboto-tmp {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 432;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.sansation-light {
+  font-family: "Sansation", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body, html {
+  font-family: "Sansation", sans-serif;
+  color: #5b5b5b;
+  margin: 0px;
+  padding: 0px;
+  font-size: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  background-color: #333;
+  color: white;
+}
+
+/* header */
+#dashboard_nav {
+  background-color: #0062B8;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+#dashboard_nav span {
+  font-size: 2.5rem;
+}
+#dashboard_nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  background-color: #548fc4;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+#dashboard_nav a:hover {
+  background-color: #749dc2;
+}
+#dashboard_nav a:visited {
+  color: white;
+}
+#dashboard_nav img {
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 7px;
+  height: 80px;
+  margin: 10px;
+}
+
+section {
+  margin: 0 auto;
+  width: 1500px;
+  max-width: 90%;
+}
+section #file_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+section #file_cards > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #444;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-wrap: break-word;
+  width: 325px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+section #file_cards > a:hover {
+  color: rgb(201, 201, 201);
+}
+section #file_cards > a:visited {
+  color: white;
+}
+section #file_cards > a .box--image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 100%;
+}
+section #file_cards > a .box--image img {
+  max-width: calc(100% - 25px);
+  max-height: calc(100% - 25px);
+}
+section #file_cards > a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  padding: 25px;
+  border-top: 1px solid #333;
+}/*# sourceMappingURL=dashboard-expanded.css.map */

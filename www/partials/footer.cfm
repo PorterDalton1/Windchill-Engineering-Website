@@ -5,8 +5,8 @@
             <div>
                 <div>Follow Us:</div>
                 <span>
-                    <a href="https://www.facebook.com/WindChillEng/about/" class="nf nf-fa-facebook_square" style="color: #1778F2"></a>
-                    <a href="https://www.linkedin.com/company/windchill-engineering/" class="nf nf-fa-linkedin_square" style="color: #0077B5"></a>
+                    <a href="https://www.facebook.com/WindChillEng/about/" target="_blank" class="nf nf-fa-facebook_square" style="color: #1778F2"></a>
+                    <a href="https://www.linkedin.com/company/windchill-engineering/" target="_blank" class="nf nf-fa-linkedin_square" style="color: #0077B5"></a>
                 </span>
             </div>
         </div>
@@ -29,11 +29,12 @@
                 <a href="/hotAisleContainment.cfm">Hot Aisle Containment</a>
                 <a href="rigidContainment.cfm">Rigid Containment</a>
                 <a href="/softContainment.cfm">Soft Containment</a>
-                <a href="">Industry Standards</a>
+                <a href="/webLinks.cfm">Industry Standards</a>
                 <a href="/secure/vendorlogin.cfm">Vendor Resources</a>
-                <a href="/frequentlyAskedQuestions.cfm">Frequenty Asked Questions</a>
+                <a href="/frequentlyAskedQuestions.cfm">Frequently Asked Questions</a>
                 <a href="/references.cfm">References</a>
                 <a href="/getAQuote.cfm">Get A Quote</a>
+                <a href="/careers.cfm">Careers</a>
             </div>
         </div>
     

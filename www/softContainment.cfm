@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soft Containment</title>
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/softContainment-min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
-    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/header.js"></script>
-    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Soft Containment">
@@ -41,7 +34,7 @@
             </div>
         </div>
         <div class="content_heading WC_fade-in WC_slide-left">
-            <img src="./assets/img/Thermal_heading(cropped).png">
+            <img src="./assets/img/Thermal_heading(cropped).webp">
         </div>
     </div>
 
@@ -67,9 +60,9 @@
                 </p>
             </span>
             <span class="has_img WC_fade-in WC_slide-right">
-                <img class="foo" src="/assets/img/CurtainDrawing.png">
-                <img class="bar" src="/assets/img/Track_connecting.png">
-                <img class="biz" src="/assets/img/fusible_link.png">
+                <img class="foo" src="/assets/img/CurtainDrawing.webp">
+                <img class="bar" src="/assets/img/Track_connecting.webp">
+                <img class="biz" src="/assets/img/fusible_link.webp">
             </span>
         </div>
     </section>

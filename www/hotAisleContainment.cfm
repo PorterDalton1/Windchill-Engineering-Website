@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Aisle Containment</title>
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="assets/css/hotAisleContainment-min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
-    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/header.js"></script>
-    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Hot Aisle Containment">
@@ -41,7 +34,7 @@
             </div>
         </div>
         <div class="content_heading WC_fade-in WC_slide-right">
-            <img src="/assets/img/cropped_upscaled_hot_aisle1.png">
+            <img src="/assets/img/cropped_upscaled_hot_aisle1.webp">
         </div>
     </section>
     <section id="second_hot">
@@ -105,6 +98,7 @@
             <span>
                 <h3>Leading the Industry</h3>
                 <h2>Our Market advantages</h2>
+                <!---
                 <p>
                     We offer a comprehensive range of Hot Aisle Containment solutions tailored to meet diverse 
                     operational needs. Our rigid containment systems represent the most efficient option, featuring 
@@ -118,22 +112,23 @@
                     configurations. For instance, vinyl curtains are ideal for areas where racks are frequently repositioned 
                     or where gaps exist beneath rigid walls—offering flexible coverage without compromising airflow control.
                 </p>
+                --->
             </span>
         </div>
         <div id="flex_third_hot">
             <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="/assets/img/freestanding_hot_small.png">
+                    <img src="/assets/img/freestanding_hot_small.webp">
                 </div>
                 <h3>Free Standing</h3>
                 <p>
-                    Our most premium and durable choice. Frame the entire aisle and Suround it with rigid containment.
+                    Our most premium and durable choice. Frame the entire aisle and Surround it with rigid containment.
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
             <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="/assets/img/Hot_aisle_iso_view_2.png">
+                    <img src="/assets/img/Hot_aisle_iso_view_2.webp">
                 </div>
                 <h3>Rigid</h3>
                 <p>
@@ -144,7 +139,7 @@
             </a>
             <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="/assets/img/hot_example_1.png">
+                    <img src="/assets/img/hot_example_1.webp">
                 </div>
                 <h3>Custom Solution</h3>
                 <p>
@@ -153,13 +148,13 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
-            <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
+            <a class="card WC_fade-in WC_slide-right" href="/softContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="/assets/img/Soft_Containment.jpg">
+                    <img src="/assets/img/Soft_Containment.webp">
                 </div>
                 <h3>Soft Containment</h3>
                 <p>
-                    Our soft containment provide a cost-effective solution forhot aisle configurations, effectively preventing 
+                    Our soft containment provide a cost-effective solution for hot aisle configurations, effectively preventing 
                     the mixing of conditioned and heated air.
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>

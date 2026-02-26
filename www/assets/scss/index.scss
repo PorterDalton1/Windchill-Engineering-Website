@@ -85,10 +85,12 @@ div.arrow {
     }
 
 }
+
 #spacing_client_list {
     height: 300px;
 
-} 
+}
+
 #client_list {
     position: absolute;
     left:0;
@@ -215,7 +217,7 @@ div.arrow {
     @include base.paragraphSpans;
     
     #third_cards_flex {
-        @include base.cardsFlex($h3-color: base.$windchillBlue, $border-color: rgb(153, 153, 153));
+        @include base.cardsDisplay(base.$windchillBlue);
     }
 }
 

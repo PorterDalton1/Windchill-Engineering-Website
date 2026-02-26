@@ -11,15 +11,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cold Aisle Containment</title>
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/coldAisleContainment-min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
-    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/header.js"></script>
-    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Cold Aisle Containment">
@@ -50,7 +43,7 @@
             </div>
         </div>
         <div class="content_heading WC_slide-right WC_fade-in">
-            <img src="/assets/img/_Cold_aisle_iso_view_1_cropped.png">
+            <img src="/assets/img/_Cold_aisle_iso_view_1_cropped.webp">
         </div>
     </div>
     <div id="second_cold">
@@ -131,7 +124,7 @@
             </span>
             <span class="WC_fade-in">
                 <h3>Take Advantage Now</h3>
-                <h2>Benifits</h2>
+                <h2>Benefits</h2>
                 <ul>
                     <li class="WC_slide-right WC_fade-in">
                         <i class="nf nf-fa-arrow_right"></i>
@@ -143,50 +136,26 @@
                     </li>
                     <li class="WC_slide-right WC_fade-in">
                         <i class="nf nf-fa-arrow_right"></i>
-                        <span>Fire complience using flame retardent material and melt away ceilings</span>
-                    </li>
-                    <li class="WC_slide-right WC_fade-in">
-                        <i class="nf nf-fa-arrow_right"></i>
-                        <span></span>
+                        <span>Fire compliance using flame retardant material and melt away ceilings</span>
                     </li>
                 </ul>
             </span>
         </div>
         <div id="flex_third_cold">
-            <a class="card WC_fade-in WC_slide-right">
+            <a class="card WC_fade-in WC_slide-right" href="/rigidContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="/assets/img/ColdAisleMain.jpg">
-                </div>
-                <h3>Cold Aisle Containment</h3>
-                <p>
-                    Cold Aisle Containment in data centers isolates the cold air as it is fed into the racks.
-                </p>
-                <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
-            </a>
-            <a class="card WC_fade-in WC_slide-right">
-                <div class="image_crop_box">
-                    <img src="/assets/img/HotAisleMain2.jpg">
-                </div>
-                <h3>Hot Aisle Containment</h3>
-                <p>
-                    Hot Aisle Containment is isolating the hot air in the return aisle and directing it back to the cooling unit.
-                </p>
-                <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
-            </a>
-            <a class="card WC_fade-in WC_slide-right">
-                <div class="image_crop_box">
-                    <img src="/assets/img/Double_Sliding_Door.png">
+                    <img src="/assets/img/Double_Sliding_Door.webp">
                 </div>
                 <h3>Rigid Containment</h3>
                 <p>
-                    WindChill rigid doors, rigid walls, cieling panels, and GapHOG products combine to create the best value in data center airflow containment.
+                    WindChill rigid doors, rigid walls, ceiling panels, and GapHOG products combine to create the best value in data center airflow containment.
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
     
-            <a class="card WC_fade-in WC_slide-right">
+            <a class="card WC_fade-in WC_slide-right" href="/softContainment.cfm">
                 <div class="image_crop_box">
-                    <img src="/assets/img/Soft_Containment.jpg">
+                    <img src="/assets/img/Soft_Containment.webp">
                 </div>
                 <h3>Soft Containment</h3>
                 <p>
@@ -194,6 +163,8 @@
                 </p>
                 <div class="learn_more">Learn More <i class="nf nf-fa-arrow_right"></i></div>
             </a>
+            <a style="height: 1px; visibility: none"></a>
+            <a style="height: 1px; visibility: none"></a>
         </div>
     </div>
     <cfinclude template="./partials/contactUs.cfm">

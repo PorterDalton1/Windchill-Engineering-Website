@@ -30,6 +30,7 @@ $loginBlue: #005891;
 #login_card {
     background-color: white;
     width: 1100px;
+    max-width: 95%;
     min-height: 500px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
@@ -42,9 +43,14 @@ $loginBlue: #005891;
 #login_form {
 
     max-width: 90vw;
+    min-width: 350px;
 
     h2, p, .user_input span {
         color: $loginBlue;
+    }
+
+    p {
+        padding-bottom: 32px;
     }
 
     padding: 3rem;
@@ -138,7 +144,7 @@ $loginBlue: #005891;
             cursor: pointer;
     
             &:hover {
-                background-color: grey;
+                background-color: #50738a;
             }
     
             font-weight: 800;
@@ -148,6 +154,14 @@ $loginBlue: #005891;
         }
     }
 
+}
+
+#no_account {
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 #graphic {
@@ -173,27 +187,111 @@ $loginBlue: #005891;
     z-index: 1;
 }
 
+#no_account_pop_up {
+    display: none;
+}
+
+#no_account_pop_up.show {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#no_account_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3rem auto 5rem;
+
+    background-color: white;
+    color: base.$mainDark;
+    width: 400px;
+    max-width: calc(90% - 4rem);
+
+    min-height: 125px;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 1rem;
+
+    h2 {
+        grid-column: span 2;
+        margin: 0;
+        padding: 0;
+    }
+    .contact_text {
+        grid-column: span 2;
+    }
+    
+    .contact_button {
+        color: white;
+        width: 7rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: base.$windchillBlue;
+        align-self: end;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            background-color: base.$hover-windchillBlue;
+            text-decoration: none;
+        }
+    }
+
+    .cancel_button {
+        justify-self: end;
+        align-self: end;
+        width: 7rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 @media (max-width: 800px) {
 
+    #login_card {
+        justify-content: center;
+        align-items: center;
+        max-width: 500px;
+        width: 90%;
+    }
     #login_form {
         padding: 1rem;
+        height: fit-content;
     }
 
     #graphic {
         display: none;
     }
 
-    #login_card {
-        justify-content: center;
-        max-width: 500px;
-        width: 90%;
-    }
 }
 
 @media (max-width: 500px) {
     #login_card {
+        display: grid;
+        grid-template-rows: 200px 1fr;
+        grid-template-areas: "graphic"
+                             "login";
         width: 100%;
         border-radius: 0px;
+        min-height: 100%;
+        align-items: start;
     }
 
     #go_back {
@@ -205,6 +303,22 @@ $loginBlue: #005891;
         flex-direction: column;
         justify-content: start;
         align-items: start;
+    }
+
+    #login_form {
+        grid-area: login;
+        padding-top: none;
+    }
+
+    #graphic {
+        grid-area: graphic;
+        display: block;
+        justify-self: center;
+        background: none;
+        align-self: center;
+    }
+    #bottom_card {
+        display: none;
     }
 }
 

@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rigid Containment</title>
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/rigidContainment-min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
-    <script src="/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/header.js"></script>
-    <script src="/assets/js/lib/WC-animate.js"></script>
 </head>
 <body>
     <cfset websiteTitle="Rigid Containment">
@@ -40,7 +33,7 @@
             </div>
         </div>
         <div class="content_heading WC_fade-in WC_slide-left">
-            <img src="/assets/img/free_standing_cropped.png">
+            <img src="/assets/img/free_standing_cropped.webp">
         </div>
     </div>
     
@@ -62,19 +55,19 @@
                 <ul>
                     <li class="WC_fade-in WC_slide-right">
                         <i class="nf nf-fa-arrow_right"></i>
-                        <span>Place to fill missing cabinets</span>
+                        <span>Cabinet Fillers</span>
                     </li>
                     <li class="WC_fade-in WC_slide-right">
                         <i class="nf nf-fa-arrow_right"></i>
-                        <span>Above cabinets</span>
+                        <span>Extend Height of Cabinets</span>
                     </li>
                     <li class="WC_fade-in WC_slide-right">
                         <i class="nf nf-fa-arrow_right"></i>
-                        Around Chimneys
+                        <span>Around Chimneys</span>
                     </li>
                     <li class="WC_fade-in WC_slide-right">
                         <i class="nf nf-fa-arrow_right"></i>
-                        Cap off aisles
+                        <span>Cap Off Aisles</span>
                     </li>
                 </ul>
             </span>
@@ -83,7 +76,7 @@
         <div class="flex_rigid">
             <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
-                    <img src="/assets/img/RW_filler_panel.png">
+                    <img src="/assets/img/RW_filler_panel.webp">
                 </div>
                 <h3>Filler Panel</h3>
                 <p>
@@ -95,7 +88,7 @@
 
             <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
-                    <img src="/assets/img/RW_sliding_access.png">
+                    <img src="/assets/img/RW_sliding_access.webp">
                 </div>
                 <h3>Sliding Access Panel</h3>
                 <p>
@@ -107,7 +100,7 @@
 
             <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
-                    <img src="/assets/img/Economy_Rigid_Wall.png">
+                    <img src="/assets/img/Economy_Rigid_Wall.webp">
                 </div>
                 <h3>Economy Rigid Wall</h3>
                 <p>
@@ -115,6 +108,7 @@
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
+            <a style="height: 1px; visibility: none"></a>
         </div>
     </div>
     <div id="rigid_third">
@@ -134,7 +128,7 @@
         <div class="flex_rigid">
             <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
-                    <img src="/assets/img/DoubleSlidingDoor.png">
+                    <img src="/assets/img/DoubleSlidingDoor.webp">
                 </div>
                 <h3>Double Sliding Door</h3>
                 <p>
@@ -145,7 +139,7 @@
             </a>
             <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
-                    <img src="/assets/img/single_sliding_door_cropped.png">
+                    <img src="/assets/img/single_sliding_door_cropped.webp">
                 </div>
                 <h3>Single Sliding Door</h3>
                 <p>
@@ -156,7 +150,7 @@
             </a>
             <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
-                    <img src="/assets/img/single_hinged_door_cropped.png">
+                    <img src="/assets/img/single_hinged_door_cropped.webp">
                 </div>
                 <h3>Single Hinged Door</h3>
                 <p>
@@ -165,17 +159,7 @@
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
-            <a class="card WC_fade-in WC_slide-right">
-                <div class="image_crop_box">
-                    <img src="/assets/img/single_hinged_door_cropped.png">
-                </div>
-                <h3>Double Hinged Door</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore alias iusto, libero 
-                    dicta dolores laudantium voluptates reprehenderit mollitia 
-                </p>
-                <div class="learn_more">Hot & Cold Aisle Application</div>
-            </a>
+            <a style="height: 1px; visibility: none"></a>
         </div>
     </div>
     <div id="rigid_fourth">
@@ -193,26 +177,28 @@
         <div class="flex_rigid">
             <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
-                    <img src="/assets/img/Ceiling_panel.png">
+                    <img src="/assets/img/Ceiling_panel.webp">
                 </div>
                 <h3>Shrink Away Ceiling</h3>
                 <p>
-                    Caps off top of aisle. Made with melt away heat shrink plastic for fire complience. 
+                    Caps off top of aisle. Made with melt away heat shrink plastic for fire compliance. 
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
             <a class="card WC_fade-in WC_slide-right">
                 <div class="image_crop_box">
-                    <img src="/assets/img/MHAC.png">
+                    <img src="/assets/img/MHAC.webp">
                 </div>
                 <h3>Mechanical Heat Activated Ceiling</h3>
                 <p>
-                    More sophesticated setup common for more strict complience where on top of the normal
+                    More sophisticated setup common for more strict compliance where on top of the normal
                     shrink away plastic, there is also a mechanical switch, which opens the panel through
                     an electrical system. 
                 </p>
                 <div class="learn_more">Hot & Cold Aisle Application</div>
             </a>
+            <a style="height: 1px; visibility: none"></a>
+            <a style="height: 1px; visibility: none"></a>
         </div>
     </div>
     <cfinclude template="./partials/contactUs.cfm">
