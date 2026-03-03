@@ -2,37 +2,6 @@
 
 // @include base.centerFlex($x: false);
 @mixin contactUsStyle {
-    .center_flex {
-        display: flex;
-        align-items: center;
-        //justify-content: center;
-        height: 100%;
-        margin-left: 10%;
-        flex-wrap: nowrap;
-        gap: 2.5rem;
-    }
-    
-    
-    #contact_about_card {
-        background-color: white;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        max-width: 45ch;
-        flex-direction: column;
-        justify-content: center;
-        border-left: 2px solid base.$backgroundLightGrey;
-    }
-    
-    #contact_icons {
-        display: flex;
-        justify-content: space-around;
-        a {
-            color: base.$mainDark;
-            text-decoration: none;
-        }
-    }
-    
-    
     #contact_us_section {
         border-top: 8px solid base.$windchillBlue;
         @include base.textStyle;
@@ -42,7 +11,18 @@
         
         object-fit: cover;
         height: 600px;
-        
+
+        .center_flex {
+            display: flex;
+            //justify-content: center;
+            height: 100%;
+            flex-wrap: nowrap;
+            gap: 2.5rem;
+            width: 95%;
+            max-width: 1500px;
+            align-items: center;
+        }
+
         .image_crop_background {
             z-index: 8;
             position: absolute;
@@ -104,8 +84,67 @@
             text-align: center;
         }
     }
+
+
     
-    @media (max-width: 1300px) {
+    
+    #contact_about_card {
+        background-color: white;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        max-width: 45ch;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 2px solid base.$backgroundLightGrey;
+    }
+    
+    #contact_icons {
+        display: flex;
+        justify-content: space-around;
+        a {
+            color: base.$mainDark;
+            text-decoration: none;
+        }
+    }
+    
+    @media (min-width: 1551px) {
+        #contact_us_section {
+            .center_flex {
+                margin: 0 auto;
+            }
+        }
+
+    }
+
+    @media (800px < width < 1550px) {
+        #contact_us_section {
+            .center_flex {
+                flex-direction: column;
+                align-items: center !important;
+                justify-content: center;
+                width: 60% !important;
+                max-width: none;
+                margin-left: 5%;
+            }
+        }
+
+        #small_card {
+            text-align: center !important;
+            width: 45ch;
+            padding: 0 !important;
+        }
+
+        #contact_about_card {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            border-left: none !important;
+            border-top: 2px solid #ececec;
+            padding-top: 2.5rem;
+            
+        }
+    }
+
+    @media (max-width: 800px) {
         #contact_us_section {
             height: 37.5rem;
             .center_flex {
@@ -115,7 +154,7 @@
                 background-color: rgba(255, 255, 255, 0.651);
                 margin-left: 0px;
                 width: fit-content;
-                max-width: 85%;
+                max-width: 95%;
                 margin: 0 auto;
             }
     
@@ -133,24 +172,29 @@
     
         #small_card {
             text-align: center;
-            padding-top: 2.5rem;
-            padding-bottom: 2.5rem;
+            padding-top: 0;
+            padding-bottom: 0;
             max-width: 80%;
         }
     
         #contact_about_card {
             border-left: none;
             background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
         }
         
     }
+    
 }
 
+    /*
     @media (max-width: 500px) {
         #contact_us_section .center_flex {
             max-width: 95% !important;
         }
     }
+    */
 
 /*
 #false_border {

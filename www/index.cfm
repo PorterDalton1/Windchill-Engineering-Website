@@ -22,24 +22,14 @@
                 <h2>Understand the <br><span>WindChill Advantage</span></h2>
                 <p>We are committed to working with our clients to create and maintain the best solutions in the industry.</p>
                 <div class="button_flex">
-                    <a href="/getAQuote.cfm">
-                        <button id="contact_button">
-                            <div>Contact Us</div>
-                            <div class="arrow">
-                                <i class="nf nf-cod-arrow_right"></i>
-                            </div>
-                        </button>
+                    <a id="contact_button" href="/getAQuote.cfm">
+                        <span>Contact Us</span>
+                        <i class="nf nf-cod-arrow_right arrow"></i>
                     </a>
     
-                    <a href="/frequentlyAskedQuestions.cfm">
-                        <button id="learn_button">
-                            <div>
-                                What We Do
-                            </div>
-                            <div class="arrow">
-                                <i class="nf nf-cod-arrow_right"></i>
-                            </div>
-                        </button>
+                    <a id="learn_button" href="/frequentlyAskedQuestions.cfm">
+                        <span>What We Do</span>
+                        <i class="nf nf-cod-arrow_right arrow"></i>
                     </a>
                 </div>
             </div>

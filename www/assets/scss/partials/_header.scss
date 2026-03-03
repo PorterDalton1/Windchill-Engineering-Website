@@ -118,9 +118,9 @@
             align-items: center;
             justify-content: space-between;
             height: max-content;
-            padding-left: 30px;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding-left: 15px;
+            // padding-top: 15px;
+            // padding-bottom: 15px;
         }
     
         #nav_tabs {
@@ -157,6 +157,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 10px;
+        margin: 5px;
     
         &:hover {
             background-color: lightgray;
@@ -171,7 +173,7 @@
     #webpage_title {
         font-size: 1.5rem;
         font-weight: 800;
-        margin-left: 40px;
+        margin-left: 25px;
         padding-left: 40px;
         border-left: 3px solid lightgray;
         font-weight: 400;
@@ -470,7 +472,7 @@
         }
     
         #main_block {
-            margin-left: 25px;
+            margin-left: 0px;
         }
     
         #windchill_logo {

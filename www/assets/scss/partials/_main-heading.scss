@@ -60,6 +60,7 @@ $default-order: true !default;
         p {
             margin-top: .5em;
             margin-bottom: .5em;
+            padding-bottom: .6rem;
             max-width: 40ch;
             font-weight: 400;
         }
@@ -68,16 +69,22 @@ $default-order: true !default;
             display: flex;
             flex-shrink: 0;
             flex-wrap: wrap;
-            button {
+            & > a, & > button {
+                font-family: base.$mainFont;
                 font-size: 1rem;
-                font-weight: 600;
+                font-weight: 400;
                 background-color: $color-main;
                 color: white;                
-                padding: 1em;
-                padding-left: 1.5em;
-                padding-right: 1.5em;
+                height: 2.6rem;
+                padding-left: 1.3rem;
+                padding-right: 1.3rem;
+                border-radius: .4rem;
                 border: none;
                 outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .6rem;
         
                 cursor: pointer;
                 transition: color 150ms, background-color 150ms;

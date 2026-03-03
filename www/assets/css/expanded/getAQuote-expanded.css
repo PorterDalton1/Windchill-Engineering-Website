@@ -1,10 +1,12 @@
 @import "/assets/css/lib/nerdfonts.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,432;1,432&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+/*
 @media (max-width: 500px) {
-  #contact_us_section .center_flex {
-    max-width: 95% !important;
-  }
+    #contact_us_section .center_flex {
+        max-width: 95% !important;
+    }
 }
+*/
 /*
 #false_border {
     position: absolute;
@@ -184,9 +186,7 @@ header #main_block {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding-left: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 15px;
 }
 header #nav_tabs {
   display: -webkit-box;
@@ -235,6 +235,8 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
+  margin: 5px;
 }
 #img_home_link:hover {
   background-color: lightgray;
@@ -252,7 +254,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 #webpage_title {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-left: 40px;
+  margin-left: 25px;
   padding-left: 40px;
   border-left: 3px solid lightgray;
   font-weight: 400;
@@ -594,7 +596,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
     margin-right: 25px;
   }
   #main_block {
-    margin-left: 25px;
+    margin-left: 0px;
   }
   #windchill_logo {
     height: 40px;
@@ -835,25 +837,37 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   }
 }
 #quote_two #contact_us_foo {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 #quote_two #contact_us_foo a {
   text-decoration: none;
 }
 #quote_two a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   color: white;
-  padding: 0.75rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  font-size: 1.25rem;
-  background-color: #2DABE3;
-  margin-right: 0.5rem;
+  height: 2.6rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  border-radius: 0.4rem;
+  background-color: #0062B8;
+  margin-right: 1.6rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms;
   transition: background-color 250ms;
 }
 #quote_two a:hover {
-  background-color: #66bce0;
+  background-color: #548fc4;
 }
 #quote_two a:last-child {
   background-color: #5b5b5b;
@@ -861,47 +875,6 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 }
 #quote_two a:last-child:hover {
   background-color: grey;
-}
-
-.center_flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  margin-left: 10%;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  gap: 2.5rem;
-}
-
-#contact_about_card {
-  background-color: white;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  max-width: 45ch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-left: 2px solid #ececec;
-}
-
-#contact_icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-#contact_icons a {
-  color: #5b5b5b;
-  text-decoration: none;
 }
 
 #contact_us_section {
@@ -953,6 +926,20 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   -o-object-fit: cover;
      object-fit: cover;
   height: 600px;
+}
+#contact_us_section .center_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 2.5rem;
+  width: 95%;
+  max-width: 1500px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #contact_us_section .image_crop_background {
   z-index: 8;
@@ -1017,7 +1004,68 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   text-align: center;
 }
 
-@media (max-width: 1300px) {
+#contact_about_card {
+  background-color: white;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  max-width: 45ch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-left: 2px solid #ececec;
+}
+
+#contact_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#contact_icons a {
+  color: #5b5b5b;
+  text-decoration: none;
+}
+
+@media (min-width: 1551px) {
+  #contact_us_section .center_flex {
+    margin: 0 auto;
+  }
+}
+@media (800px < width < 1550px) {
+  #contact_us_section .center_flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 60% !important;
+    max-width: none;
+    margin-left: 5%;
+  }
+  #small_card {
+    text-align: center !important;
+    width: 45ch;
+    padding: 0 !important;
+  }
+  #contact_about_card {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    border-left: none !important;
+    border-top: 2px solid #ececec;
+    padding-top: 2.5rem;
+  }
+}
+@media (max-width: 800px) {
   #contact_us_section {
     height: 37.5rem;
   }
@@ -1035,7 +1083,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    max-width: 85%;
+    max-width: 95%;
     margin: 0 auto;
   }
   #contact_us_section .image_crop_background {
@@ -1054,13 +1102,15 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   }
   #small_card {
     text-align: center;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
     max-width: 80%;
   }
   #contact_about_card {
     border-left: none;
     background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 footer h3 {

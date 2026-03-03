@@ -19,25 +19,29 @@
     // display: block;
 
     #contact_us_foo {
-        margin-top: 2.5rem;
+        margin-top: 1.5rem;
         a {
             text-decoration: none;
         }
     }
 
     a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 0;
         color: white;
-        padding: .75rem;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-        font-size: 1.25rem;
-        background-color: base.$raspberryBlue;
-        margin-right: .5rem;
+        height: 2.6rem;
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+        border-radius: .4rem;
+        background-color: base.$windchillBlue;
+        margin-right: 1.6rem;
         cursor: pointer;
         transition: background-color 250ms;
 
         &:hover {
-            background-color: base.$hover-raspberryBlue;
+            background-color: base.$hover-windchillBlue;
         }
 
 

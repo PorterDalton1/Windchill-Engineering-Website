@@ -22,6 +22,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <title>Vendor Dashboard</title>
     <link rel="icon" href="/assets/img/user-tie_icon.png">
     <link rel="stylesheet" type="text/css" href="../assets/css/dashboard-min.css">

@@ -1,10 +1,12 @@
 @import "/assets/css/lib/nerdfonts.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,432;1,432&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+/*
 @media (max-width: 500px) {
-  #contact_us_section .center_flex {
-    max-width: 95% !important;
-  }
+    #contact_us_section .center_flex {
+        max-width: 95% !important;
+    }
 }
+*/
 /*
 #false_border {
     position: absolute;
@@ -184,9 +186,7 @@ header #main_block {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding-left: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 15px;
 }
 header #nav_tabs {
   display: -webkit-box;
@@ -235,6 +235,8 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
+  margin: 5px;
 }
 #img_home_link:hover {
   background-color: lightgray;
@@ -252,7 +254,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
 #webpage_title {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-left: 40px;
+  margin-left: 25px;
   padding-left: 40px;
   border-left: 3px solid lightgray;
   font-weight: 400;
@@ -594,7 +596,7 @@ header #nav_tabs > div:hover:not(:has(.dropdown_content:hover)) {
     margin-right: 25px;
   }
   #main_block {
-    margin-left: 25px;
+    margin-left: 0px;
   }
   #windchill_logo {
     height: 40px;

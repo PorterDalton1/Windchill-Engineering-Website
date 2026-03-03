@@ -21,15 +21,6 @@
                         Find Out More
                         <i class="nf nf-cod-chevron_down"></i>
                     </button>
-                    <script>
-                        $(document).ready(function () {
-                            $('#find_out').on('click', function () {
-                                $('html,body').animate({
-                                    scrollTop: $("#second_hot").offset().top
-                                }, 'slow');
-                            });
-                        });
-                    </script>
                 </div>
             </div>
         </div>
@@ -163,5 +154,15 @@
     </section>
     <cfinclude template="./partials/contactUs.cfm">
     <cfinclude template="./partials/footer.cfm">
+    
+    <script>
+        $(document).ready(function () {
+            $('#find_out').on('click', function () {
+                $('html,body').animate({
+                    scrollTop: $("#second_hot").offset().top
+                }, 'slow');
+            });
+        });
+    </script>
 </body>
 </html>

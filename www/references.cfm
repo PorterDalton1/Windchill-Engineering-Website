@@ -3,6 +3,7 @@
 <head>
     <title>References</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/references-min.css">
+    <meta name="robots" content="noindex">
 </head>
 <body>
     <cfset websiteTitle="References">
