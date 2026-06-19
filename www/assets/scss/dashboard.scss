@@ -1,0 +1,85 @@
+@use "partials/base";
+@include base.universalStyle;
+
+$highlightBlue: base.$hover-windchillBlue;
+$hover-highlightBlue: #749dc2;
+
+$accent-mainDark: grey;
+
+$grey1: #333;
+$grey2: rgba(0, 0, 0, 0.15);
+
+$grey3: #444;
+
+body {
+    background-color: $grey1;
+    color: white;
+}
+
+/* header */
+#dashboard_nav {
+    background-color: base.$windchillBlue;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    span {
+        font-size: 2.5rem;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        background-color: $highlightBlue;
+        padding: .5rem;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $hover-highlightBlue;
+        }
+
+        &:visited {
+            color: white;
+        }
+    }
+
+    img {
+        background-color: white;
+        //       t&b  l&r   
+        padding: 8px 15px;
+        border-radius: 7px;
+        height: 80px;
+        margin: 10px;
+    }
+
+}
+
+section {
+    margin: 0 auto;
+    width: 1500px;
+    max-width: 90%;
+
+    #file_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & > a {
+            color: white;
+
+            &:not(:first-child) {
+                border-top: 2px solid grey;
+                padding-top: 20px;
+            }
+
+            &:hover {
+                color: rgb(201, 201, 201);
+            }
+
+            &:visited {
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@use "partials/base";
+@use "partials/header";
+
+@use "partials/contactUs";
+@use "partials/footer";
+
+@include base.universalStyle;
+@include header.headerStyle;
+
+#quote_one {
+    @include base.topTitle;
+}
+
+#quote_two {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    @include base.paragraphSpans($primary: base.$mainDark, $secondary: base.$windchillBlue);
+
+    // display: block;
+
+    #contact_us_foo {
+        margin-top: 1.5rem;
+        a {
+            text-decoration: none;
+        }
+    }
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 0;
+        color: white;
+        height: 2.6rem;
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+        border-radius: .4rem;
+        background-color: base.$windchillBlue;
+        margin-right: 1.6rem;
+        cursor: pointer;
+        transition: background-color 250ms;
+
+        &:hover {
+            background-color: base.$hover-windchillBlue;
+        }
+
+
+        &:last-child {
+            background-color: base.$mainDark;
+            margin-right: 0;
+
+            &:hover {
+                background-color: base.$hover-mainDark;
+            }
+        }
+    }
+}
+
+
+@include contactUs.contactUsStyle;
+@include footer.footerStyle;

@@ -1,0 +1,97 @@
+@use "partials/base";
+@use "partials/header";
+@use "partials/main-heading" with (
+    $color-main: base.$windchillYellow
+);
+
+@use "partials/contactUs";
+@use "partials/footer";
+
+@include base.universalStyle;
+@include header.headerStyle;
+
+
+#faq_title {
+    @include base.topTitle;
+}
+
+#faq_main {
+
+    & > div {
+        padding-top: 75px;
+        padding-bottom: 75px;
+
+        width: 900px;
+        max-width: 90%;
+
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+.faq_card {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.3rem;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+
+    .nf.nf-md-plus {
+        color: base.$windchillBlue !important;
+        font-size: 1.5rem;
+        transform: rotate(0deg);
+        transition: transform 500ms;
+        will-change: transform;
+
+        &.rotate {
+            transform: rotate(225deg);
+        }
+    }
+
+    .question {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        &:hover {
+            color: black;
+        }
+
+    }
+    
+    .answer {
+        font-size: 1.1rem;
+        overflow: hidden;
+        opacity: 0;
+        max-height: 0px;
+        transition: opacity 400ms ease, max-height 400ms;
+        will-change: opacity, max-height;
+    
+        &.show {
+            opacity: 1;
+            max-height: 1000px;
+        }
+    }
+}
+
+@include contactUs.contactUsStyle;
+@include footer.footerStyle;
+
+// Jquerry Classes
+
+/*
+.slide_in {
+    transform: translateX(100%);
+    transition: transform 400ms cubic-bezier(.2,.9,.2,1), opacity 300ms ease;
+    will-change: transform, opacity;
+
+    &.is_visible {
+        transform: translateX(0);
+    }
+}
+*/

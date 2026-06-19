@@ -1,0 +1,414 @@
+// Colors
+$windchillBlue: #0062B8;
+$raspberryBlue: #2DABE3;
+$windchillPurple: #97005E;
+$windchillYellow: #ffa200;
+$windchillYellowLight: #F4B860;
+
+    // Different greys used
+    $mainDark: #5b5b5b;
+    $backgroundLightGrey: #ececec;
+
+    // hover colors
+    $hover-windchillBlue: #548fc4;
+    $hover-raspberryBlue: #66bce0;
+    $hover-windchillPurple: #9b5681;
+
+    $hover-mainDark: grey;
+
+
+// Fonts
+$mainFont: "Sansation", sans-serif;
+
+@mixin universalStyle {
+    @import "/assets/css/lib/nerdfonts.css";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,432;1,432&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+    .roboto-tmp {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 432;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+    .sansation-light {
+        font-family: "Sansation", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    body, html {
+        font-family: $mainFont;
+        color: $mainDark;
+        margin: 0px;
+        padding: 0px;
+        font-size: 100%;
+
+        max-width: 100%;
+        overflow-x: clip;
+    }
+}
+
+@mixin textStyle($h3-color: $mainDark, $h2-color: $windchillBlue, $p-color: $mainDark, $h4-color: $windchillBlue) {
+    h4 {
+        color: $h4-color;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        color: $h3-color;
+        text-transform: uppercase;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 1.17rem;
+        margin-bottom: .2rem;
+        font-weight: 200;
+    }
+
+    h2 {
+        color: $h2-color;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-weight: 200;
+    }
+
+    p {
+        color: $p-color;
+        line-height: 1.5;
+        font-size: 1rem;
+        font-weight: 200;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+    }
+
+    h1 {
+        font-weight: 400;
+    }
+}
+
+@mixin sectionDefs {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@mixin paragraphSpans($primary: $mainDark, $secondary: $windchillBlue) {
+    @include textStyle($h3-color: $primary, $h2-color: $secondary, $p-color: $primary, $h4-color: $secondary);
+
+    h3 {
+        font-weight: 400;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 1.7;
+    }
+
+    .single_span, .double_span {
+        display: block;
+        margin: 0 auto;
+        max-width: 1500px;
+        width: 95%;
+    }
+
+    .double_span {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        gap: 32px;
+
+        & > span:first-child {
+            flex: 9 1 30rem;
+        }
+
+        & > span:last-child {
+            flex: 11 1 30rem;
+        }
+    }
+
+    .double_span:has(ul) {
+        & > span {
+            flex: 11 1 30rem !important;
+        }
+
+        & > span:has(ul) {
+            flex: 9 1 30rem !important;
+        }
+    }
+
+    ul {
+        list-style: none;
+        font-size: 1.3rem;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: .5rem;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+            line-height: 1.5;
+        }
+
+        .nf {
+            display: inline-flex;
+            vertical-align: middle;
+            color: $primary;
+            font-size: .7rem;
+            padding: .3rem;
+            border: 1px solid $secondary;
+            border-radius: 50%;
+            margin-right: .5rem;
+            margin-top: .3rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        h2 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 19px;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+@mixin cardsFlex($h3-color, $border-color: $raspberryBlue) {
+
+    $marginCard: 1.2rem;
+
+    @include textStyle($h3-color: $h3-color);
+
+    display: flex;
+    justify-content: space-between;
+    row-gap: 40px;
+    width: 80%;
+    margin-left: 10%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    a.card {
+        text-decoration: none;
+    }
+
+    .card {
+        width: 350px;
+        min-height: 450px;
+        height: auto;
+        border: 1px solid $border-color;
+        background-color: white;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.3s ease;
+        display: grid;
+        grid-template-rows: 248px 2.5rem 1fr 1rem;
+        padding-bottom: $marginCard;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        .image_crop_box {
+            width: 100%;
+            height: 248px;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+            object-fit: cover;
+            border-bottom: 1px solid $border-color;
+
+            img {
+                width: 100%;
+                height: 248px;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            padding-left: $marginCard;
+            padding-top: $marginCard;
+            color: $h3-color;
+            font-weight: 400;
+            flex-grow: 1;
+        }
+        
+        p {
+            flex-grow: 1;
+            padding: $marginCard;
+        }
+
+        .learn_more {
+            color: $h3-color;
+            text-align: right;
+            padding-right: $marginCard;
+        }
+    }
+
+    @media (max-width: 1350px) {
+        justify-content: space-evenly !important;
+    }
+}
+
+@mixin cardsDisplay($accent-color) {
+    $marginCard: 1.2rem;
+    @include textStyle($h3-color: $accent-color);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 1rem;
+    max-width: 1500px;
+    width: 95%;
+    margin: 0 auto;
+
+    row-gap: 0px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    a.card {
+        text-decoration: none;
+    }
+
+    .card {
+        min-height: 450px;
+        height: auto;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.3s ease;
+        display: grid;
+        grid-template-rows: 248px 2.9rem 1fr 1rem;
+        padding-bottom: 1rem;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        .image_crop_box {
+            width: 100%;
+            height: 248px;
+            overflow: hidden;
+            position: relative;
+            // background-color: white;
+            object-fit: cover;
+
+            img {
+                width: 100%;
+                height: 248px;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+
+        h3 {
+            border-top: .4rem solid $accent-color;
+            padding-top: 1.25rem;
+            text-transform: uppercase;
+            color: $accent-color;
+            font-weight: 600;
+            flex-grow: 1;
+        }
+        
+        p {
+            flex-grow: 1;
+            font-weight: 600;
+        }
+
+        .learn_more {
+            display: none;
+        }
+    }
+}
+
+@mixin centerFlex($x: true, $y: true) {
+    .center_flex {
+        display: flex;
+
+        @if $x {
+            width: 100%;
+            justify-content: center;
+        }
+
+        @if $y {
+            height: 100%;
+            align-items: center;
+        }
+
+    }
+}
+
+@mixin topTitle($filterColor: $windchillBlue) {
+    position: relative;
+
+    .center_h1_flex {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > h1 {
+            z-index: 3;
+            font-size: 3.5rem;
+            color: white;
+            font-weight: 200;
+            text-transform: uppercase;
+            text-align: center;
+    
+            b {
+                font-weight: 600;
+            }
+        }
+    }
+
+
+    .image_crop {
+        z-index: 2;
+        width: 100%;
+        height: 375px;
+        overflow: hidden;
+        position: relative;
+        object-fit: cover;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        &::after {
+            box-shadow: inset 0 0 0 1000px #{$filterColor}6c;
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 3;
+        }
+    }
+}
