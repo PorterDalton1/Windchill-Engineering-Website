@@ -1,4 +1,0 @@
-FROM lucee/lucee:latest
-
-COPY config/lucee/ /opt/lucee/web/
-COPY www /var/www
