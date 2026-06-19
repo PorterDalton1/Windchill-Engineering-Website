@@ -53,5 +53,8 @@
 
     <cfinclude template="./partials/contactUs.cfm">
     <cfinclude template="./partials/footer.cfm">
+    <cfoutput>
+        #eof_html#
+    </cfoutput>
 </body>
 </html>

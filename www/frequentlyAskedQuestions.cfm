@@ -229,5 +229,8 @@
     <cfinclude template="./partials/footer.cfm">
     
     <script src="/assets/js/frequentlyAskedQuestions.js"></script>
+    <cfoutput>
+        #eof_html#
+    </cfoutput>
 </body>
 </html>

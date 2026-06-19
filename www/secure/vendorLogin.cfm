@@ -3,12 +3,14 @@
         url.wrongpassword = false;
     }
 
-    if ((structKeyExists(session, "isAuthenticated") AND session.isAuthenticated EQ true)) {
-        location 
-            url = "/secure/dashboard.cfm"
-        ;
+    if (!isDefined("session")) {
+
+    }
+    else if ((structKeyExists(session, "isAuthenticated") AND session.isAuthenticated EQ true)) {
+        cflocation(url="/secure/dashboard.cfm");
     }
     session.isAuthenticated = false;
+
 </cfscript>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,11 +75,11 @@
         </div>
     </div>
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/vendorLogin.js"></script>
+    <script src="/assets/js/vendorLogin.js?rev=1.0"></script>
     <cfif "#url.wrongpassword#" EQ "true">
         <script>
             $(document).ready(function () {
-                $('#user_password').addClass('wrong-password');
+                $('.user_input.password > span:last-child').addClass('wrong-password');
             });
         </script>
     </cfif>

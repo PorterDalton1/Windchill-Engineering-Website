@@ -2,18 +2,18 @@
     <cfthrow message="You need to define a websiteTitle variable before using this cfinclude header.cfm">
 </cfif>
 
-<cfhtmlhead>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/img/WindChill_Icon.png">
-    <link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">
-    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
-</cfhtmlhead>
+<cfhtmlhead text='<meta charset="UTF-8">'>
+<cfhtmlhead text='<meta name="viewport" content="width=device-width, initial-scale=1.0">'>
+<cfhtmlhead text='<link rel="icon" href="/assets/img/WindChill_Icon.png">'>
+<cfhtmlhead text='<link rel="stylesheet" type="text/css" href="/assets/css/WC-animate-min.css">'>
+<cfhtmlhead text='<script src="/assets/js/lib/jquery-3.7.1.min.js"></script>'>
+<cfscript>
+    eof_html = '    
+        <script src="/assets/js/lib/WC-animate.js"></script>
+        <script src="/assets/js/header.js"></script>
+    ';
+</cfscript>
 
-<cfhtmlbody>
-    <script src="/assets/js/lib/WC-animate.js"></script>
-    <script src="/assets/js/header.js"></script>
-</cfhtmlbody>
 
 
 <header id="main_header" class="WC_fade-in">
@@ -88,7 +88,7 @@
                         Careers
                     </a>
                     <a class="option" href="webLinks.cfm">
-                        Useful Resources
+                        Documents and Links
                     </a>
                 </div>
             </div>

@@ -46,42 +46,28 @@
         <h3>Used and trusted by top companies for data center cooling needs and solutions </h3>
         <div id="spacing_client_list">
             <div id="client_list">
-
-                <!--- 
-                    This could be cleaned up a bit. Svgs can't be opened in cfimage, so I created pngs
-                    of all the svg images just to get the ratio of the images. I could read all the svgs as
-                    xml objects directly, but at this point it works anyways so why change it.
-                --->
-                <cfset folderpath = "/assets/img/partners/">
-                <cfloop array="#partnersListImgs#" index="src">
-                    <cfset imagepath="#folderpath##src#">
-
-                    <cfimage source="#imagepath#" name="tmpImage">
-
-                    <cfscript>
-                        area = 180^2;
-                        imageWidth = imageGetWidth(tmpImage);
-                        imageHeight = imageGetHeight(tmpImage);
-
-                        ratio = imageHeight / imageWidth;
-
-                        newWidth = sqr(area/ratio);
-
-                        filename = listToArray(src, '.');
-                        filename.pop();
-                        filename = arrayToList(filename, '.');
-
-                        if (fileExists(expandPath(folderpath) & '.svgs/' & filename & '.svg')) {
-                            srcimg =  folderpath & '.svgs/' & filename & '.svg';
-                        } else {
-                            srcimg = imagePath;
-                        }
-                    </cfscript>
-
-                    <cfoutput>
-                        <img src="#srcimg#" style="width: #newWidth#px">
-                    </cfoutput>
-                </cfloop>
+                <img src="/assets/img/partners/.svgs/Google_2015_logo.svg" style="width: 309.5px">
+                <img src="/assets/img/partners/.svgs/Amazon_2024.svg" style="width: 311px">
+                <img src="/assets/img/partners/.svgs/Oracle_logo.svg" style="width: 500px">
+                <img src="/assets/img/partners/SymbolofLatter-daySaintchurch.png" style="width: 128px">
+                <img src="/assets/img/partners/.svgs/Seal_of_the_United_States_Space_Force.svg" style="width: 180px">
+                <img src="/assets/img/partners/.svgs/Xerox_logo.svg" style="width: 385px">
+                <img src="/assets/img/partners/.svgs/Mark_of_the_United_States_Army.svg" style="width: 180px">
+                <img src="/assets/img/partners/.svgs/Fibernet_Corp._logo.svg" style="width: 509px">
+                <img src="/assets/img/partners/.svgs/Seal_of_the_United_States_Environmental_Protection_Agency.svg" style="width: 180px">
+                <img src="/assets/img/partners/.svgs/NASA_logo.svg" style="width: 197px">
+                <img src="/assets/img/partners/.svgs/Roblox_Logo_2022.svg" style="width: 418px">
+                <img src="/assets/img/partners/.svgs/Intermountain_Health_2023_logo.svg" style="width: 326px">
+                <img src="/assets/img/partners/.svgs/Seal_of_the_United_States_National_Guard.svg" style="width: 180px">
+                <img src="/assets/img/partners/.svgs/Microsoft_logo_(2012).svg" style="width: 390px">
+                <img src="/assets/img/partners/.svgs/Brigham_Young_University_medallion.svg" style="width: 180px">
+                <img src="/assets/img/partners/.svgs/Nokia_2023.svg" style="width: 371px">
+                <img src="/assets/img/partners/.svgs/AMD_Logo.svg" style="width: 368px">
+                <img src="/assets/img/partners/.svgs/US_Air_Force_Logo_Solid_Colour.svg" style="width: 204px">
+                <img src="/assets/img/partners/.svgs/IBM_logo.svg" style="width: 298px">
+                <img src="/assets/img/partners/.svgs/Seal_of_the_U.S._National_Security_Agency.svg" style="width: 180px">
+                <img src="/assets/img/partners/.svgs/BP_Helios_logo.svg" style="width: 156px">
+                <img src="/assets/img/partners/.svgs/Wells_Fargo_Logo_(2020).svg" style="width: 180px">
             </div>
         </div>
     </div>
@@ -263,5 +249,8 @@
     <cfinclude template="./partials/footer.cfm">
 
     <script src="/assets/js/index.js"></script>
+    <cfoutput>
+        #eof_html#
+    </cfoutput>
 </body>
 </html> 

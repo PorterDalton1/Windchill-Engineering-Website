@@ -6,7 +6,10 @@
 /.vscode
 /www/secure/.global.password
 /www/secure/.global.pepper
-*-min.css
-*.css.map
-*-expanded.css*
-/assets/pdfs/*
+**-min.css
+**.css.map
+**-expanded.css**
+/www/assets/pdfs/*
+/www/assets/css/expanded
+/www/assets/css/
+/www/WebDocs/*

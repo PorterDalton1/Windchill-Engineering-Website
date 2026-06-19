@@ -1,12 +1,16 @@
 <cfscript>
+    if (!isDefined("session")) {
+        session.isAuthenticated=false;
+    }
     if ((!structKeyExists(session, "isAuthenticated") OR session.isAuthenticated EQ false)) {
-        location
-            url = "/secure/vendorLogin.cfm";
+        cflocation(url = "/secure/vendorLogin.cfm");
     }
 
-    pdfFiles = directoryList(expandPath('../assets/pdfs/'), false, "name", "", "", "file");
-    thumbnailFiles = duplicate(pdfFiles);
+    installManualFiles = directoryList(expandPath('../WebDocs/PWD/Install'), false, "name", "", "", "file");
+    dataSheetFiles = directoryList(expandPath('../WebDocs/PWD/DataSheets'), false, "name", "", "", "file");
 
+    /*
+    thumbnailFiles = duplicate(installManualFiles);
     for (i = 1; i <= arrayLen(thumbnailFiles); i++) {
         file = thumbnailFiles[i];
         file = listToArray(file, '.');
@@ -14,6 +18,7 @@
         file = arrayToList(file, '.');
         thumbnailFiles[i] = file & '.jpg';
     }
+    */
 </cfscript>
 
 
@@ -25,7 +30,25 @@
     <meta name="robots" content="noindex">
     <title>Vendor Dashboard</title>
     <link rel="icon" href="/assets/img/user-tie_icon.png">
-    <link rel="stylesheet" type="text/css" href="../assets/css/dashboard-min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/dashboard-min.css">
+    <style>
+        h1 {
+            margin-top: 3rem;
+            font-size: 2.5rem;
+        }
+
+        body {
+            margin-bottom: 10rem;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #ffffffcc !important;
+        }
+    </style>
     <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
 </head>
 <body>
@@ -39,17 +62,24 @@
     </header>
 
     <section>
-        <h2>Install Manuals</h2>
+        <h1>Install Manuals</h1>
         <div id="file_cards">
-            <cfloop index="i" from="1" to="#arrayLen(pdfFiles)#">
+            <cfloop index="i" from="1" to="#arrayLen(installManualFiles)#">
                 <cfoutput>
-                    <a href="#'/assets/pdfs/' & pdfFiles[i]#" download>
-                        <div class="box--image">
-                            <img src="#'/assets/pdfs/thumbnails/' & thumbnailFiles[i]#">
-                        </div>
-                        <span>
-                            #pdfFiles[i]#
-                        </span>
+                    <a href="#'/WebDocs/PWD/Install/' & installManualFiles[i]#" target="_blank">
+                        <span>#installManualFiles[i]#</span>
+                    </a>
+                </cfoutput>
+            </cfloop>
+        </div>
+    </section>
+    <section>
+        <h1 style="">Data Sheets</h1>
+        <div id="file_cards">
+            <cfloop index="i" from="1" to="#arrayLen(dataSheetFiles)#">
+                <cfoutput>
+                    <a href="#'/WebDocs/PWD/DataSheets/' & dataSheetFiles[i]#" target="_blank">
+                        <span>#dataSheetFiles[i]#</span>
                     </a>
                 </cfoutput>
             </cfloop>

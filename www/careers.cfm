@@ -191,5 +191,8 @@
             });
         });
     </script>
+    <cfoutput>
+        #eof_html#
+    </cfoutput>
 </body>
 </html>
